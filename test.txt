@@ -1,1 +1,23 @@
-hello world
+git 教程
+
+1. git简介
+
+1.1 安装git
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+1.2 创建版本库
+创建空目录
+mkdir new
+cd new
+pwd /e/work/new
+初始化一个Git仓库：git init
+添加文件到Git仓库：
+    第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+    第二步，使用命令git commit，完成。可以一次性传多个
+
+2.时光机穿梭
+
+要随时掌握工作区的状态：git status
+如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+
