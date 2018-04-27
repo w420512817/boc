@@ -41,6 +41,8 @@ git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
 删除版本库中文件： git rm test.txt
 
 3. 远程仓库
+创建ssh key：ssh-keygen -t rsa -C "youremail@example.com"
+用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 
 3.1 添加远程仓库
 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
@@ -77,3 +79,11 @@ git merge --no-ff -m "..." dev
 
 4.5 分支强制删除
 如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
+
+4.6多人协作
+查看远程库信息，使用git remote -v；
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
