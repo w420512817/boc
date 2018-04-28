@@ -40,7 +40,9 @@ git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
 
 2.5 删除文件
 删除文件管理器中文件：rm test.txt
-删除版本库中文件： git rm test.txt
+删除版本库中文件：
+git rm test.txt(从暂存区和工作区中删除)
+git rm --cached test.txt (只从暂存区中删除)
 
 3. 远程仓库
 
@@ -111,3 +113,12 @@ git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
 查看远程库信息：git remote -v
 删除已有的远程库：git remote rm origin
 推送到github/码云：git push github/gitee master
+
+7. 自定义git
+显示颜色：git config --global color.ui true
+忽略某些文件时，需要编写.gitignore；
+.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
+
+更多命令
+https://blog.csdn.net/halaoda/article/details/78661334
+https://blog.csdn.net/u012556150/article/details/50736896
