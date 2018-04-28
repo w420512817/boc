@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="http://www.bocweb.cn/" />
+  <title>恭喜入选时代封面人物！</title>
+  <link rel="stylesheet" href="css/swiper.min.css" />
+  <link rel="stylesheet" href="css/style.css?v=0.04" />
+</head>
+
+<body>
+   <div id="loading">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+    <p>Loading...</p>
+    <div class="copyright"><img src="images/icon/boc.png" alt="bocweb"></div>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="page p1">
+          <div class="watermark ani"><img src="images/p1-watermark.png" alt=""></div>
+          <div class="p1-title ani"><img src="images/p1-title.png" alt=""></div>
+          <div class="page-hint ani"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page p2">
+          <div class="p2-photo-bg ani"></div>
+          <div class="p2-time ani"><img src="images/time.png" alt=""></div>
+          <div class="p2-text ani">
+            <div class="p2-t1"><img src="images/p2-t1.png" alt=""></div>
+            <div class="p2-t2"><img src="images/p2-t2.png" alt=""></div>
+          </div>
+          <div class="page-hint ani"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page p3">
+          <div class="p3-photo-bg ani"></div>
+          <div class="p3-time"><img src="images/time.png" alt=""></div>
+          <div class="p3-text ani">
+            <div class="p3-t1"><img src="images/p2-t1.png" alt=""></div>
+            <div class="p3-t2"><img src="images/p3-t2.png" alt=""></div>
+          </div>
+          <div class="page-hint ani"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page p4">
+          <div class="p4-photo-bg ani"></div>
+          <div class="p4-time"><img src="images/time.png" alt=""></div>
+          <div class="p4-text ani">
+            <div class="p4-t1"><img src="images/p4-t1.png" alt=""></div>
+            <div class="p4-t2"><img src="images/p4-t2.png" alt=""></div>
+          </div>
+          <div class="page-hint ani"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page p5">
+          <div class="watermark ani"><img src="images/p5-watermark.png" alt=""></div>
+          <div class="p5-title ani"><img src="images/p5-title.png" alt=""></div>
+          <div class="page-hint ani"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="page p6">
+          <div class="p6-photo-bg ani"></div>
+          <div class="p6-time"><img src="images/time.png" alt=""></div>
+          <div class="p6-text ani">
+            <div class="p6-t1"><img src="images/p6-t1.png" alt=""></div>
+            <div class="p6-t2"><img src="images/p6-t2.png" alt=""></div>
+          </div>
+          <div class="p6-btn-bar ani">
+            <div class="p6-btn"><img src="images/p6-btn.png" alt=""></div>
+            <div class="p6-finger"><img src="images/finger.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="touch-container hide">
+    <div class="page choose">
+      <form class="chooseForm" action="#" method="post">
+        <div class="form-group">
+          <label for="choose-photo"><i class="icon">1</i>请上传人物照片</label>
+          <div class="upload-row">
+            <div class="input-col"><input type="file" id="choose-photo" name="choose-photo" /></div>
+            <div class="btn-col">
+              <button type="button" class="change-btn"><i class="buttonIcon changeOne"></i>换一张</button><br>
+              <button type="button" class="edit-btn"><i class="buttonIcon operate"></i>调整照片</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="manifesto"><i class="icon">2</i>请选择你的代言宣言<small>（点击可自定义编辑）</small></label>
+          <textarea name="manifesto" id="manifesto"></textarea>
+        </div>
+        <div class="form-group"><button type="button" class="change-manifesto">换一换</button></div>
+      </form>
+      <div class="chooseForm-footer"><img src="images/chooseForm-footer.jpg" alt=""></div>
+      <div class="chooseForm-submit">生成海报</div>
+    </div>
+    <div class="page edit-photo hide">
+      <div class="edit-photo-box"><div class="photo-wrap"><img src="images/example-photo.jpg" alt=""></div></div>
+      <div class="photo-border"></div>
+      <div class="preview-watermark">
+        <div class="preview-ok"><img src="images/preview-ok.png" alt=""></div>
+      </div>
+      <div class="photo-watermark hide">
+        <div class="share-btn"><img src="images/share-btn.png" alt=""></div>
+        <div class="share-btn-finger hide"><img src="images/finger.png" alt=""></div>
+      </div>
+      <div class="poster-manifesto">江北区奋斗青年给自己的小目标是先赚1个亿</div>
+      <div class="finalPhoto hide"></div>
+      <div class="operate-layer"></div>
+    </div>
+    <div class="page lottery hide">
+      <div class="logo"><img src="images/logo.png" alt=""></div>
+      <div class="lottery-box">
+        <div class="lottery-title"><img src="images/lottery-title.png" alt=""></div>
+        <div class="lottery-subtitle"><img src="images/lottery-subtitle.png" alt=""></div>
+        <div class="lottery-img" data-amount="10.0"><img src="images/lottery-img-1.png" alt=""></div>
+        <div class="lottery-footer"><img src="images/lottery-footer.png" alt=""></div>
+      </div>
+    </div>
+    <div class="mask share hide"><div class="share-arrow"><img src="images/share-arrow.png" alt=""></div></div>
+    <div class="waiting hide">
+      <div class="waiting-text">生成中,请稍后...</div>
+    </div>
+  </div>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/jquery.mobile-events.min.js"></script>
+  <script src="js/swiper.jquery.min.js"></script>
+  <script src="js/html2canvas-0.5.js"></script>
+  <script src="js/alloy-finger.js"></script>
+  <script src="js/exif.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="js/index.js?v=0.02"></script>
+</body>
+
+</html>
