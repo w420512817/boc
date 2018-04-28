@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）御泥坊拔草节挑战赛，拼的就是眼力劲儿</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+	<!-- 帮助好友 -->
+	<div class="page help hide" id="help">
+		<p class="logo"><img src="img/logo.png" /></p>
+		<p class="btn-rule" title="规则"><img src="img/btn-rule.png" /></p>
+		<p class="img01"><img src="img/img02.png" /></p>
+		<p class="txt">已有xxx人参加活动</p>
+
+		<div class="list-mod">
+			<img class="bg" src="img/help-bg.png" />
+			<img class="portrait" src="img/demo.jpg" />
+			<span class="name">小红小红小红</span>
+			<div class="list-wrap"></div>
+		</div>
+
+		<!-- 如果活动结束，这两个按钮隐藏 -->
+		<p class="btn-mod btn-help" title="助力TA"><img src="img/btn-help.png" /></p>
+		<p class="btn-mod btn-join" title="我也要拔草"><img src="img/btn-join2.png" /></p>
+
+		<div class="help-list">
+			<div class="help-wrap">
+				<p>XXXX 赠送了一次拔草机会</p>
+				<p>XXXX 赠送了一次拔草机会</p>
+				<p>XXXX 赠送了一次拔草机会</p>
+				<p>XXXX 赠送了一次拔草机会</p>
+				<p>XXXX 赠送了一次拔草机会</p>
+				<p>XXXX 赠送了一次拔草机会</p>
+			</div>
+		</div>
+
+		<!-- 如果活动结束，出现 -->
+		<div class="end-active"><img src="img/end-page.png" /></div>
+	</div>
+
+</div>
+
+<!-- 弹框：助力成功 -->
+<div class="popup popup-helpSucc hide" id="P_helpSucc">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<img src="img/help-success.png" />
+			<img src="img/help-success-btn.png" class="btn-join" />
+		</div>
+	</div>
+</div>
+
+<!-- 弹框：规则2 -->
+<div class="popup popup-rule2 hide" id="P_rule2">
+	<img src="img/ranking-close.png" class="close" />
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<img src="img/rule2.png" />
+		</div>
+	</div>
+</div>
+
+<div class="orienLayer"><div class="icons"></div> <div class="txt">竖屏效果最佳</div> </div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/com.js"></script>
+<script type="text/javascript">
+// 0-盈透美肌黑面膜
+// 1-新美白嫩肤面膜
+// 2-嫩肌酵素黑面膜
+// 3-鲜嫩美莓面膜
+// 4-水润茶萃微囊黑面膜
+// 5-小金瓶精油亮颜黑面膜
+// 6-V7伪妆素颜霜
+// 7-玉润雪肌黑白膜
+// 8-水漾冰川面膜
+// 9-安瓶黑面膜
+// 10-水润茶萃微囊洁面乳
+// 11-水润茶萃微囊精华液
+// 12-水润茶萃微囊眼霜
+// 13-水润茶萃微囊滋养乳
+// 14-水润茶萃滋养面霜
+// 15-一吻定情咬唇膏
+// 16-亮采金桂花眼膜贴
+// 17-晶亮红石榴面膜
+// 18-玫瑰滋养面膜
+</script>
+<script>
+;(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/YNF_20171026/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/YNF_20171026/help.html",
+		desc    : "参加御泥坊拔草大赛，免费得3件心仪宝贝，速来～～",
+		title   : "御泥坊拔草节挑战赛，拼的就是眼力劲儿"
+		// title   : "我马上就要拿到御泥坊礼包了，只差你这一下"   分享给好友求助力时好友收到的标题
+	});
+})();
+
+
+function loadPopup(popup){
+	$('#'+popup).removeClass('hide').addClass('animate');
+}
+
+// 规则
+$('#help .btn-rule').on('click',function(){
+	loadPopup('P_rule2');
+});
+$('#P_rule2 .close').on('click',function(){
+	$('#P_rule2').addClass('hide').removeClass('animate');
+});
+// 助力TA
+$('#help .btn-help').on('click',function(){
+	//~~助力程序，成功：
+	loadPopup('P_helpSucc');
+});
+
+// 我也要参加
+$('.btn-join').on('click',function(){
+	// 判断是否为新用户
+	var _checkNew = false;
+	if(_checkNew){
+		window.location.href="index.html";
+	}else{
+		window.location.href="mine.html";
+	}
+});
+
+
+//=========================== 入口
+// 填充好友选择的产品
+var _userProduct = ['5|1234','18|1222','15|123']; 	// 好友选择的三个产品
+initUlList(_userProduct,$('#help .list-wrap'));
+
+
+loadRES=['img/boc.png','img/btn-rule.png','img/logo2.png','img/img02.png','img/help-bg.png','img/btn-help.png','img/btn-join2.png','img/help-success.png','img/help-success-btn.png','img/rule2.png','img/ranking-close.png','img/end-page.png','img/pro00-1.png','img/pro00-2.png','img/pro01-1.png','img/pro01-2.png','img/pro02-1.png','img/pro02-2.png','img/pro03-1.png','img/pro03-2.png','img/pro04-1.png','img/pro04-2.png','img/pro05-1.png','img/pro05-2.png','img/pro06-1.png','img/pro06-2.png','img/pro07-1.png','img/pro07-2.png','img/pro08-1.png','img/pro08-2.png','img/pro09-1.png','img/pro09-2.png','img/pro10-1.png','img/pro10-2.png','img/pro11-1.png','img/pro11-2.png','img/pro12-1.png','img/pro12-2.png','img/pro13-1.png','img/pro13-2.png','img/pro14-1.png','img/pro14-2.png','img/pro15-1.png','img/pro15-2.png','img/pro16-1.png','img/pro16-2.png','img/pro17-1.png','img/pro17-2.png','img/pro18-1.png','img/pro18-2.png'];
+loading(loadRES,function(){
+	$('#help').removeClass("hide").addClass("animate").siblings('.page').addClass('hide').removeClass('animate');
+});
+</script>
+</body>
+</html>

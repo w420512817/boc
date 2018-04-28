@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="author" content="http://www.bocweb.cn/" />
+<title>（测试）我为衢州点赞</title>
+
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+	<div class="page welcome hide" id="welcome">
+		<p class="logo"><img src="img/img01.png" /></p>
+		<p class="img01"><img src="img/img02.png" /></p>
+		<p class="img02"><img src="img/img08.png" /></p>
+		<p class="img03 link-load" nextHash="index"><img src="img/img09.png" /></p>
+	</div>
+
+	<div class="page index hide" id="index">
+		<div class="img01">
+			<img src="img/img13.jpg" />
+			<div class="code" /></div>
+		</div>
+		<div class="clearfix">
+			<p class="link-load" nextHash="upload"><img src="img/img14.png" /></p>
+			<p class="btn"><img src="img/img15.png" /></p>
+		</div>
+	</div>
+
+	<!-- 上传照片 -->
+	<div class="page upload hide" id="upload">
+		<div class="upload-mod">
+			<p class="bg"><img src="img/img10-blank.png" /></p>
+			<p class="animate"><img src="img/img10.png" /></p>
+			<input type="file" id="J_upload" />
+		</div>
+		<p class="img01">请上传照片</p>
+	</div>
+
+	<!-- 调整大小 -->
+	<div class="page adjustment hide" id="adjustment">
+		<div class="poster-stage">
+			<canvas id="posterCanvas" width="583" height="870"></canvas>
+		</div>
+		<div class="toolbar">
+	        <div class="zoom-block"><input type="range" min="1" max="3.0" step="0.01" value="1.0"></div>
+	        <div class="ok-btn" id="J_ok"><img src="img/submit-btn.png" /></div>
+	    </div>
+	</div>
+
+	<!-- 预览 -->
+	<div class="page preview hide" id="preview">
+		<div class="preview-mod"><img src="" /></div>
+		<div class="clearfix">
+			<p class="link-load" nextHash="upload"><img src="img/img17.png" /></p>
+			<p class="link-load" nextHash="adjustment"><img src="img/img18.png" /></p>
+		</div>
+		<p class="img01 link-load" nextHash="end"><img src="img/img16.png" /></p>
+	</div>
+
+	<!-- 最后  -->
+	<div class="page end hide" id="end">
+		<p class="img02"><img src="img/img19.png" /></p>
+		<div class="preview-mod"><img src="" /></div>
+		<p class="img01"><img src="img/img20.png" /></p>
+	</div>
+
+</div>
+
+<!-- 规则 -->
+<div class="dialogue dialogue-rule" id="D_rule">
+	<img src="img/dialogue-img.png" class="img01" />
+	<img src="img/dialogue-close.png" class="img02" />
+</div>
+
+<!-- 分享 -->
+<div class="dialogue dialogue-share" id="D_share">
+	<img src="img/dialogue-share.png" class="img01" />
+</div>
+
+
+
+<div class="orienLayer"><div class="icons"></div> <div class="txt">竖屏效果最佳</div> </div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/XS_20170628/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/XS_20170628/",
+		desc    : "全城同点赞，争夺祥生礼。",
+		title   : "我为衢州点赞 | XXX为衢州点了第20448个赞，邀请你为衢州点赞"
+	});
+})();
+</script>
+</body>
+</html>

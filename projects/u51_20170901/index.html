@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）猜，谁给你来电话了？</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on hide" onclick="playClicked(this)"></div>
+	<div class="page phone hide" id="phone">
+		<p class="link-load" nextHash="call">
+			<img src="img/img09.png" />
+			<img src="img/img10.png" />
+		</p>
+	</div>
+	<!-- 接听中 -->
+	<div class="page call hide" id="call">
+		<p class="cut-down">00:00</p>
+		<p class="img02">
+			<img src="img/img11.png" />
+			<img src="img/img12.png" />
+		</p>
+		<p class="img01"><img src="img/img13.png" /></p>
+
+		<!-- 视屏 -->
+		<div class="video hide">
+			<video class="hide" src="video.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+				<img src="img/btn.png" class="video-btn" />
+				<p class="welcome hide link-load" nextHash="intro"><img src="img/img14.png" /></p>
+		</div>
+
+
+	</div>
+
+	<div class="page intro hide" id="intro">
+		<p class="img01"><img src="img/img01.png" /></p>
+		<p class="img02"><img src="img/img07.png" /></p>
+		<p class="img03 link-load" nextHash="signUp" title="点击报名"><img src="img/img08.png" /></p>
+	</div>
+
+	<div class="page signUp hide" id="signUp">
+		<p class="img02"><img src="img/img02.png" /></p>
+		<form class="form" id="form" name="form">
+			<label class="input-mod"><input type="text" value="" name="name" /></label>
+			<label class="input-mod"><input type="tel" value="" name="tel" maxlength="11" /></label>
+			<p class="btn"><img src="img/img05.png" /></p>
+		</form>
+
+	</div>
+
+</div>
+
+
+<div class="succ hide" id="succ">
+	<p class="img01"><img src="img/img15.png" /></p>
+	<p class="img02">
+		<img src="img/img16.png" />
+		<img src="img/img17.png" />
+	</p>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/com.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/u51_20170901/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/u51_20170901/",
+		desc    : "点开来，你有一个未接的惊喜。",
+		title   : "猜，谁给你来电话了？"
+	});
+})();
+</script>
+</body>
+</html>

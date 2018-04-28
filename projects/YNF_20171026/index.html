@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）御泥坊拔草节挑战赛，拼的就是眼力劲儿</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+<link rel="stylesheet" href="css/index.css?201710311621" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+
+	<!-- 首页 -->
+	<div class="page welcome hide" id="welcome">
+		<p class="img img01"><img src="img/img01.png" /></p>
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03">
+			<img src="img/img03.png" />
+			<span></span>
+		</p>
+		<p class="img img04"><img src="img/img04.png" /></p>
+		<p class="img img05"><img src="img/img05.png" /></p>
+		<p class="img img06"><img src="img/img06.png" /></p>
+		<p class="img img07"><img src="img/img07.png" /></p>
+		<p class="btn-ranking link-popup" nextHash="P_rule2" title="规则"><img src="img/btn-rule.png" /></p>
+		<p class="btn-join link-load" nextHash="index" title="点击参赛"><img src="img/btn-join.png" /></p>
+		<p class="logo"><img src="img/logo.png" /></p>
+		<p class="txt">已有xxx人参加活动</p>
+	</div>
+
+	<!-- 选择页面 -->
+	<div class="page index hide" id="index">
+		<p class="logo"><img src="img/logo.png" /></p>
+		<p class="btn-rule link-popup" nextHash="P_rule" title="规则"><img src="img/btn-rule.png" /></p>
+		<p class="img01"><img src="img/img02.png" /></p>
+		<p class="txt">已有xxx人参加活动</p>
+		<div class="select-mod">
+			<img class="bg" src="img/select-bg.png" />
+			<div class="select-wrap"></div>
+		</div>
+		<p class="btn-start" title="点击参赛">
+			<img src="img/btn-start.png" />
+			<img src="img/btn-start2.png" />
+		</p>
+	</div>
+
+	<!-- 游戏 -->
+	<div class="page game hide" id="game">
+		<p class="img01"><img src="img/game01.png" /></p>
+		<p class="img02"><img src="img/game02.png" /></p>
+		<p class="img03"><img src="img/game03.png" /></p>
+		<p class="img06"><img src="img/game06.png" /></p>
+		<p class="img04"><img src="img/game04.png" /></p>
+		<p class="img05"><img src="img/game05.png" /></p>
+
+		<p class="cut-down">
+			<img src="img/game09.png" />
+			<span class="sec">00</span>
+			<span class="sec1">00</span>
+		</p>
+
+		<div class="tips">
+			<img src="img/game10.png" />
+			<ul class="product-tips clearfix"></ul>
+		</div>
+
+		<p class="portrait"><img src="img/demo.jpg" /></p>
+
+		<div class="block-mod">
+			<img src="img/game12.png" />
+			<ul class="block-list clearfix"></ul>
+		</div>
+
+		<p class="img07"><img src="img/game07.png" /></p>
+		<p class="img08"><img src="img/game08.png" /></p>
+
+		<div class="ready-layer hide">
+			<p class="ready00 hide"><img src="img/game19.png" /></p>
+			<p class="ready01 hide"><img src="img/game17.png" /></p>
+			<p class="ready02 hide"><img src="img/game16.png" /></p>
+			<p class="ready03 hide"><img src="img/game20.png" /></p>
+			<p class="ready04 hide"><img src="img/game18.png" /></p>
+		</div>
+	</div>
+</div>
+
+<!-- 弹框：游戏结束 -->
+<div class="popup popup-endGame hide" id="P_endGame">
+	<div class="popup-wrap">
+		<div class="popup-container">
+
+			<p class="portrait"><img src="img/demo.jpg" /></p>
+			<div class="achievement">
+				<p>恭喜！</p>
+				<p>您的成绩为：<span class="mine-time"></span>秒</p>
+				<p>目前排名:<span class="mine-ranking"></span></p>
+			</div>
+
+			<p class="left-times">
+				<img src="img/game21.png" />
+				<span>0</span>
+			</p>
+
+			<div class="btn-mod clearfix">
+				<p class="btn-play link-load" nextHash="game" title="再次参加"><img src="img/btn-play.png" /></p>
+				<p class="btn-share link-popup" nextHash="P_share" title="分享好友" style="width:57%"><img src="img/btn-help2.png" /></p>
+			</div>
+
+			<div class="btn-mod clearfix">
+				<p class="link-popup" nextHash="P_tab" title="排行榜"><img src="img/btn-ranking2.png" /></p>
+				<p class="link-load" nextHash="welcome" title="返回首页"><img src="img/btn-index.png" /></p>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+<!-- 弹框：选项限制 -->
+<div class="popup popup-limit hide" id="P_limit">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<img src="img/select-limit.png" />
+			<img src="img/select-limit-close.png" class="close-popup" title="关闭"  />
+		</div>
+	</div>
+</div>
+
+
+<!-- 弹框：规则 -->
+<div class="popup popup-rule hide" id="P_rule">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+			        <div class="swiper-slide slide01">
+			        	<img src="img/rule01.png" />
+			        	<img src="img/rule-focus.png" />
+			        	<img src="img/rule-hand.png" />
+			        </div>
+			        <div class="swiper-slide slide02">
+			        	<img src="img/rule02.png" />
+			        	<img src="img/rule-focus.png" />
+			        	<img src="img/rule-hand.png" />
+			        </div>
+			        <div class="swiper-slide slide03">
+			        	<img src="img/rule03.png" />
+			        	<img src="img/rule-close.png" class="close-popup" title="关闭规则" />
+			        </div>
+			   </div>
+			   <div class="swiper-pagination"></div>
+			</div>
+			<p class="arrow-l hide"><img src="img/web-swipe-tip.png" /></p>
+			<p class="arrow-r"><img src="img/web-swipe-tip2.png" /></p>
+		</div>
+	</div>
+</div>
+
+<!-- 弹框：长规则 -->
+<div class="popup popup-rule2 hide" id="P_rule2">
+	<img src="img/ranking-close.png" class="close close-popup" title="关闭规则">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<img src="img/rule2.png">
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 弹框：排行榜 -->
+<div class="popup popup-tab hide" id="P_tab">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<div class="tab-container clearfix">
+				<ul class="tab-mod">
+					<li class="current" title="用时排行榜"><img src="img/ranking-tab01.png" /><img src="img/ranking-tab01-current.png" /></li>
+					<li title="产品排行榜"><img src="img/ranking-tab02.png" /><img src="img/ranking-tab02-current.png" /></li>
+				</ul>
+				<div class="tab-content">
+					<img src="img/ranking-tab-bg.png" />
+					<img src="img/ranking-close.png" class="close-popup" title="关闭排行榜" />
+
+					<!-- 用时排行榜 -->
+					<div class="tab-detail tab-time">
+						<div class="table-title">
+							<table width="95%" cellpadding="0" cellspacing="0">
+								<tbody>
+									<td width="30%">用户</td>
+									<td width="35%">时间</td>
+									<td>排行</td>
+								</tbody>
+							</table>
+						</div>
+						<div class="table-content">
+							<table width="95%" cellspacing="0" cellpadding="0" style="table-layout:fixed">
+								<tr>
+									<td width="30%"><span>昵称</span></td>
+									<td width="35%">10s</td>
+									<td>1<img src="img/ranking-icon01.png" /></td>
+								</tr>
+								<tr>
+									<td><span>昵称</span></td>
+									<td>10s</td>
+									<td>2<img src="img/ranking-icon02.png" /></td>
+								</tr>
+								<tr>
+									<td><span>昵称</span></td>
+									<td>10s</td>
+									<td>3<img src="img/ranking-icon03.png" /></td>
+								</tr>
+								<tr>
+									<td><span>昵称</span></td>
+									<td>10s</td>
+									<td>4</td>
+								</tr>
+							</table>
+						</div>
+						<p class="txt01">您的成绩为：XXXX秒<br/>目前排名:909</p>
+						<p class="txt02">*排行榜显示前100名</p>
+					</div>
+
+					<!-- 产品排行榜 -->
+					<div class="tab-detail tab-product hide">
+						<div class="table-content"></div>
+						<p class="txt02">*排行榜按种草人数排列</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 弹框：分享 -->
+<div class="popup popup-share hide" id="P_share">
+	<div class="popup-wrap">
+		<div class="popup-container">
+			<img src="img/mime-share.png" />
+		</div>
+	</div>
+</div>
+
+
+<div class="orienLayer"><div class="icons"></div> <div class="txt">竖屏效果最佳</div> </div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/com.js?201710311446"></script>
+
+
+<script type="text/javascript">
+// 0-盈透美肌黑面膜
+// 1-新美白嫩肤面膜
+// 2-嫩肌酵素黑面膜
+// 3-鲜嫩美莓面膜
+// 4-水润茶萃微囊黑面膜
+// 5-小金瓶精油亮颜黑面膜
+// 6-V7伪妆素颜霜
+// 7-玉润雪肌黑白膜
+// 8-水漾冰川面膜
+// 9-安瓶黑面膜
+// 10-水润茶萃微囊洁面乳
+// 11-水润茶萃微囊精华液
+// 12-水润茶萃微囊眼霜
+// 13-水润茶萃微囊滋养乳
+// 14-水润茶萃滋养面霜
+// 15-一吻定情咬唇膏
+// 16-亮采金桂花眼膜贴
+// 17-晶亮红石榴面膜
+// 18-玫瑰滋养面膜
+
+// 格式化index.html页面的排行榜们，格式：序号|种草人数
+var _topProduct = ['18|123','1|1','2|1','3|1','4|1','5|1','6|1','7|1','8|1','9|1','10|1','11|1','12|1','13|1','14|1','15|1','16|1','17|1','0|1'];
+initUlTable(_topProduct,$('#P_tab .tab-product .table-content'));
+initUlList(_topProduct,$('#index .select-wrap'));
+
+
+// 我选择的产品，如果没有选择，为空。如果为空，进页面会跳到welcome页，如果不为空，直接开始游戏
+// var _myProductArray = [1,2,3];
+var _myProductArray = [];
+
+
+
+//  分享以后，share页面消失
+function afterShare(){
+	$('#P_share').addClass('hide').removeClass('animate');
+}
+
+</script>
+<script src="js/main.js?201710311446"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script>
+;(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/YNF_20171026/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/YNF_20171026/",
+		desc    : "参加御泥坊拔草大赛，免费得3件心仪宝贝，速来～～",
+		title   : "御泥坊拔草节挑战赛，拼的就是眼力劲儿"
+		// title   : "我马上就要拿到御泥坊礼包了，只差你这一下"   分享给好友求助力时好友收到的标题
+	});
+})();
+
+
+</script>
+</body>
+</html>

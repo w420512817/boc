@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）福利大放送</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3?v=201803011157" id="audio_player" loop=""></audio>
+
+	<!-- 首页 -->
+	<div class="page welcome hide" id="welcome">
+
+		<p class="shan01"><img src="img/shan.png" /></p>
+		<p class="shan02"><img src="img/shan.png" /></p>
+		<p class="shan03"><img src="img/shan.png" /></p>
+		<p class="shan04"><img src="img/shan.png" /></p>
+		<p class="shan05"><img src="img/shan.png" /></p>
+		<p class="shan06"><img src="img/shan.png" /></p>
+		<p class="shan07"><img src="img/shan.png" /></p>
+		<p class="shan08"><img src="img/shan.png" /></p>
+		<p class="shan09"><img src="img/shan.png" /></p>
+
+		<p class="img01"><img src="img/img09.png" /></p>
+		<p class="img02"><img src="img/img10.png" /></p>
+		<p class="img03"><img src="img/img11.png" /></p>
+		<p class="img05"><img src="img/img13.png" /></p>
+		<p class="img06"><img src="img/img14.png" /></p>
+
+		<p class="resize"><img src="img/web-swipe-tip.png" /></p>
+	</div>
+
+	<div class="page welcome02 hide" id="welcome02">
+
+		<p class="shan01"><img src="img/shan.png" /></p>
+		<p class="shan02"><img src="img/shan.png" /></p>
+		<p class="shan03"><img src="img/shan.png" /></p>
+		<p class="shan04"><img src="img/shan.png" /></p>
+		<p class="shan05"><img src="img/shan.png" /></p>
+		<p class="shan06"><img src="img/shan.png" /></p>
+		<p class="shan07"><img src="img/shan.png" /></p>
+		<p class="shan08"><img src="img/shan.png" /></p>
+		<p class="shan09"><img src="img/shan.png" /></p>
+
+		<p class="img03"><img src="img/img17.png" /></p>
+		<p class="img04" nextHash="signup" title="点击抽奖"><img src="img/img12.png" /></p>
+	</div>
+
+	<!-- 填写姓名电话 -->
+	<div class="page signup hide" id="signup">
+		<p class="img01"><img src="img/img01.png" /></p>
+		<div class="form-mod">
+			<p class="bg"><img src="img/form-bg.png" /></p>
+			<form class="form" name="form">
+				<p class="input-title"><img src="img/img02.png" /></p>
+				<p class="input-mod">
+					<img src="img/img03.png" />
+					<input type="text" name="name" />
+				</p>
+				<p class="input-title"><img src="img/img05.png" /></p>
+				<p class="input-mod">
+					<img src="img/img03.png" />
+					<input type="tel" maxlength="11" name="tel" />
+				</p>
+				<p class="img04" id="J_submit"><img src="img/img04.png" /></p>
+			</form>
+		</div>
+	</div>
+
+	<!-- 抽奖 -->
+	<div class="page luck hide" id="luck">
+		<div class="roulette">
+	    	<div class="diskbg">
+	    		<img src="img/lottery.png" />
+	    	</div>
+	        <div class="disk" id="disk"></div>
+	        <div class="point animated"><img src="img/lottery-arrow.png" id="startbtn" /></div>
+	    </div>
+		<!-- <div class="box lottery" id="box">
+			<div class="outer"><img src="img/lottery.png" /></div>
+			<div class="inner start"><img src="img/lottery-arrow.png" /></div>
+		</div> -->
+		<p class="img01"><img src="img/img15.png" /></p>
+	</div>
+
+</div>
+
+<!-- 中奖结果 -->
+<div class="dialogue dialogue-result" id="D_result">
+	<div class="lottery-success">
+		<p class="prize-img">
+			<img src="img/prize-1.png" />
+			<img src="img/prize-2.png" />
+			<img src="img/prize-3.png" />
+			<img src="img/prize-4.png" />
+			<img src="img/prize-5.png" />
+		</p>
+		<p class="input-mod"><input type="text" name="addr" /></p>
+		<p class="close"><img src="img/close-btn.png" /></p>
+		<p class="input-submit" id="J_getPrize"><img src="img/img16.png" /></p>
+	</div>
+</div>
+
+
+<!-- 二维码 -->
+<div class="dialogue dialogue-code" id="D_code">
+	<img src="img/layer-code.png" />
+</div>
+
+
+<!-- 不在抽奖时间内 -->
+<div class="dialogue dialogue-time" id="D_time">
+	<img src="img/layer-time.png" />
+</div>
+
+
+<!-- 抽奖机会用完 -->
+<div class="dialogue dialogue-share" id="D_share">
+	<img src="img/layer-share.png" />
+</div>
+
+
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/jquery.mobile-events.min.js"></script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/GT_20180209/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/GT_20180209/",
+		desc    : "绿城房屋4S祝您阖家团圆，平安喜乐！",
+		title   : "元宵佳节福禄至，千元大奖转出来"
+	});
+})();
+</script>
+</body>
+</html>

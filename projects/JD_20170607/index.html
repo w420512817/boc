@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）贵胄天生，大匠宏图</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="music white on" onclick="playClicked(this)"></div>
+<audio src="music.mp3" id="audio_player" loop=""></audio> 
+
+<div class="page hide index" id="index">
+
+<!-- 拖拽：http://www.htmleaf.com/Demo/20141115485.html -->
+<!-- 拼图游戏:http://www.zzfriend.com/demo/youxi/m/mnpt/ -->
+
+	<p class="img01"><img src="img/img90.jpg" /></p>
+	<p class="img03">
+		<img src="img/img03-blank.png" />
+		<img src="img/img89-01.png" />
+		<img src="img/img89-02.png" />
+		<img src="img/img89-03.png" />
+		<img src="img/img89-04.png" />
+		<img src="img/img89-05.png" />
+		<img src="img/img89-06.png" />
+		<img src="img/img89-07.png" />
+		<img src="img/img89-08.png" />
+		<img src="img/img89-09.png" />
+		<img src="img/img89-10.png" />
+		<img src="img/img89-11.png" />
+		<img src="img/img89-12.png" />
+		<img src="img/img89-13.png" />
+		<img src="img/img89-14.png" />
+		<img src="img/img89-15.png" />
+	</p>
+
+	<div class="all-puzzle">
+		<div class="img" id="img">
+			<img src="img/img94-blank.png" />
+			<img src="img/img94-01.png" class="puzzle01" />
+			<img src="img/img94-02.png" class="puzzle04" />
+			<img src="img/img94-03.png" class="puzzle02" />
+			<img src="img/img94-04.png" class="puzzle03" />
+		</div>
+		<div class="block clearfix" id="block">
+			<span data-puzzle="puzzle01"><img src="img/img95.png" /></span>
+			<span data-puzzle="puzzle04"><img src="img/img95.png" /></span>
+			<span data-puzzle="puzzle02"><img src="img/img95.png" /></span>
+			<span data-puzzle="puzzle03"><img src="img/img95.png" /></span>
+		</div>
+	</div>
+
+	<!-- 拼图碎片 -->
+	<p class="puzzle puzzle01" id="puzzle01"><img src="img/img91.png" /></p>
+	<p class="puzzle puzzle02" id="puzzle02"><img src="img/img92.png" /></p>
+	<p class="puzzle puzzle03" id="puzzle03"><img src="img/img93.png" /></p>
+	<p class="puzzle puzzle04" id="puzzle04"><img src="img/img94.png" /></p>
+
+</div>
+
+<div class="page hide welcome" id="welcome">
+	<p class="img01"><img src="img/img01.jpg" /></p>
+	<p class="img02" id="J_hand"><img src="img/img02.png" /></p>
+	<p class="img03">
+		<img src="img/img03-blank.png" />
+		<img src="img/img03-01.png" />
+		<img src="img/img03-02.png" />
+		<img src="img/img03-03.png" />
+		<img src="img/img03-04.png" />
+		<img src="img/img03-05.png" />
+		<img src="img/img03-06.png" />
+		<img src="img/img03-07.png" />
+		<img src="img/img03-08.png" />
+		<img src="img/img03-09.png" />
+		<img src="img/img03-10.png" />
+		<img src="img/img03-11.png" />
+		<img src="img/img03-12.png" />
+		<img src="img/img03-13.png" />
+	</p>
+</div>
+
+
+<div class="swiper-container hide" id="page">
+	<div class="swiper-wrapper">
+        <div class="swiper-slide slide01" data-hash="slide01">
+        	<p class="img01"><img src="img/img04.png" /></p>
+        	<p class="img02"><img src="img/img05.png" /></p>
+        </div>
+        <div class="swiper-slide slide02" data-hash="slide02">
+	        <div class="wrapper">
+	        	<p class="img03"><img src="img/img06.png" /></p>
+	        	<p class="img01"><img src="img/img07.png" /></p>
+	        	<p class="img02"><img src="img/img08.png" /></p>
+	        </div>
+        </div>
+        <div class="swiper-slide slide03" data-hash="slide03">
+        	<p class="img01"><img src="img/img09.png" /></p>
+        	<p class="nav-item" nextHash="slide04"><img src="img/img10.png" /></p>
+        	<p class="nav-item" nextHash="slide08"><img src="img/img11.png" /></p>
+        	<p class="nav-item" nextHash="slide10"><img src="img/img12.png" /></p>
+        	<p class="nav-item" nextHash="slide12"><img src="img/img13.png" /></p>
+        	<p class="nav-item" nextHash="slide17"><img src="img/img14.png" /></p>
+        	<p class="nav-item" nextHash="slide20"><img src="img/img15.png" /></p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide04">
+        	<p class="img01"><img src="img/img16.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide05" data-hash="slide05">
+        	<p class="img01"><img src="img/img19.png" /></p>
+        	<p class="img02"><img src="img/img20.png" /></p>
+        	<p class="img03"><img src="img/img21.png" /></p>
+        	<p class="img04"><img src="img/img22.png" /></p>
+        	<p class="img05"><img src="img/img27.png" /></p>
+        </div>
+        <div class="swiper-slide slide06" data-hash="slide06">
+        	<p class="img01"><img src="img/img24.png" /></p>
+        	<p class="img02"><img src="img/img25.png" /></p>
+        	<p class="img03"><img src="img/img26.png" /></p>
+        	<p class="img04"><img src="img/img27.png" /></p>
+        	<p class="img05"><img src="img/img20.png" /></p>
+        </div>
+        <div class="swiper-slide slide07" data-hash="slide07">
+        	<p class="img01"><img src="img/img28.png" /></p>
+        	<p class="img02"><img src="img/img29.png" /></p>
+        	<p class="img03"><img src="img/img27.png" /></p>
+        	<p class="img04">
+        		<img src="img/img30-blank.png" />
+        		<img src="img/img30-01.png" />
+        		<img src="img/img30-02.png" />
+        		<img src="img/img30-03.png?v=201706091537" style="z-index:2" />
+        		<img src="img/img30-04.png" />
+        		<img src="img/img30-05.png" />
+                <img src="img/img30-06.png" />
+        		<img src="img/img30-07.png" />
+        	</p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide08">
+        	<p class="img01"><img src="img/img31.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide08" data-hash="slide09">
+        	<p class="img01"><img src="img/img32.png" /></p>
+        	<p class="img02"><img src="img/img33.png" /></p>
+        	<p class="img03"><img src="img/img34.png" /></p>
+        	<p class="img04"><img src="img/img35.png" /></p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide10">
+        	<p class="img01"><img src="img/img36.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide09" data-hash="slide11">
+        	<p class="img01"><img src="img/img37.png" /></p>
+        	<p class="img02"><img src="img/img38.png" /></p>
+        	<p class="img03"><img src="img/img39.png" /></p>
+        	<p class="img04"><img src="img/img40.png" /></p>
+        	<p class="img05"><img src="img/img27.png" /></p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide12">
+        	<p class="img01"><img src="img/img42.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide10" data-hash="slide13">
+        	<p class="img01"><img src="img/img43.png" /></p>
+        	<p class="img02"><img src="img/img44.png" /></p>
+        	<p class="img03"><img src="img/img45.png" /></p>
+        	<p class="img04"><img src="img/img27.png" /></p>
+        	<p class="img05"><img src="img/img47.png" /></p>
+        	<p class="img06"><img src="img/img48.png" /></p>
+        </div>
+        <div class="swiper-slide slide11" data-hash="slide14">
+        	<p class="img01"><img src="img/img49.png" /></p>
+        	<p class="img02"><img src="img/img50.png" /></p>
+        	<p class="img03"><img src="img/img51.png" /></p>
+        	<p class="img04"><img src="img/img52.png" /></p>
+        </div>
+        <div class="swiper-slide slide12" data-hash="slide15">
+        	<p class="img01"><img src="img/img53.png" /></p>
+        	<p class="img02"><img src="img/img54.png" /></p>
+        	<p class="img03"><img src="img/img55.png" /></p>
+        	<p class="img04"><img src="img/img56.png" /></p>
+        </div>
+        <div class="swiper-slide slide13" data-hash="slide16">
+        	<p class="img01"><img src="img/img57.png" /></p>
+        	<p class="img02"><img src="img/img58.png" /></p>
+        	<p class="img03"><img src="img/img59.png" /></p>
+        	<p class="img04"><img src="img/img60.png" /></p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide17">
+        	<p class="img01"><img src="img/img61.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide14" data-hash="slide18">
+        	<p class="img01"><img src="img/img62.png" /></p>
+        	<p class="img02"><img src="img/img63.png" /></p>
+        	<p class="img03"><img src="img/img64.png" /></p>
+        	<p class="img04"><img src="img/img65.png" /></p>
+        	<p class="img05"><img src="img/img66.png" /></p>
+        </div>
+        <div class="swiper-slide slide15" data-hash="slide19">
+        	<p class="img01"><img src="img/img28.png" /></p>
+        	<p class="img02"><img src="img/img68.png" /></p>
+        	<p class="img03"><img src="img/img63.png" /></p>
+        	<p class="img04"><img src="img/img69.png" /></p>
+        </div>
+        <div class="swiper-slide slide04" data-hash="slide20">
+        	<p class="img01"><img src="img/img70.png" /></p>
+        	<p class="img02"><img src="img/img17.png" /></p>
+        	<p class="img03"><img src="img/img18.png" /></p>
+        </div>
+        <div class="swiper-slide slide16" data-hash="slide21">
+        	<p class="img01"><img src="img/img71.png" /></p>
+        	<p class="img02"><img src="img/img72.png" /></p>
+        	<p class="img03"><img src="img/img28.png" /></p>
+        	<p class="img04"><img src="img/img74.png" /></p>
+        	<p class="img05"><img src="img/img75.png" /></p>
+        	<p class="img06"><img src="img/img76.png" /></p>
+        	<p class="img07"><img src="img/img27.png" /></p>
+        </div>
+        <div class="swiper-slide slide17" data-hash="slide22">
+        	<p class="img01"><img src="img/img28.png" /></p>
+        	<p class="img02"><img src="img/img79.png" /></p>
+        	<p class="img03"><img src="img/img72.png" /></p>
+        	<p class="img04"><img src="img/img80.png" /></p>
+        </div>
+        <div class="swiper-slide slide18" data-hash="slide23">
+	        <div class="wrapper">
+	        	<p class="img03"><img src="img/img06.png" /></p>
+	        	<p class="img01"><img src="img/img07.png" /></p>
+	        	<p class="img02"><img src="img/img81.png" /></p>
+	        	<p class="img04"><img src="img/img82.png" /></p>
+	        	<p class="img05"><img src="img/img83.png" /></p>
+	        </div>
+        </div>
+        <div class="swiper-slide slide19" data-hash="slide24">
+        	<p class="img01"><img src="img/img81.png" /></p>
+        	<p class="img02"><img src="img/img85.png" /></p>
+        	<p class="img03"><img src="img/img86.png" /></p>
+        	<p class="img04"><a href="tel:0576-86129999"><img src="img/img87.png" /></a></p>
+            <p class="img05"><a href="http://m.amap.com/search/mapview/keywords=%E5%8F%B0%E5%B7%9E%E5%B8%82%E9%BB%84%E5%B2%A9%E5%8C%BA%E4%BA%8C%E7%8E%AF%E8%A5%BF%E8%B7%AF%E9%BB%84%E7%9F%B3%E5%A4%A7%E9%81%93185%E5%8F%B7"><img src="img/img88.png" /></a></p>
+        	<p class="img06"><img src="img/img96.png" /></p>
+        </div>
+   </div>
+</div>
+
+<div class="resize white">
+	<img src="img/web-swipe.png" width="100%">
+</div>
+
+<div class="close hide"></div>
+
+<div class="orienLayer"><div class="icons"></div> <div class="txt">竖屏效果最佳</div> </div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  window.wxShare && window.wxShare({
+      img     : "http://wx.bocweb.cn/dingmaoyan/JD_20170607/img/share.jpg",
+      linkurl : "http://wx.bocweb.cn/dingmaoyan/JD_20170607/",
+      desc    : "京都悦府，荣耀筑品！",
+      title   : "贵胄天生，大匠宏图"
+  });
+})();
+</script>
+</body>
+</html>

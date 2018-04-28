@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）国匠之心，国乐共鸣</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+	<p class="back-icon back-index link-load" nextHash="index" title="返回首页"><img src="img/img12.png" /></p>
+
+	<!-- 首页 -->
+	<div class="page index hide" id="index">
+		<p class="logo"><img src="img/logo.png" /></p>
+		<p class="img06"><img src="img/img02.png" /></p>
+		<p class="img07"><img src="img/img01.png" /></p>
+
+		<p class="img01"><img src="img/img05.png" /></p>
+		<p class="img02"><img src="img/img04.png" /></p>
+		<p class="img03"><img src="img/img06.png" /></p>
+		<p class="img04"><img src="img/img07.png" /></p>
+		<p class="img05 link-load" nextHash="signUp" title="我要报名"><img src="img/img08.png" /></p>
+	</div>
+
+	<!-- 我要报名 -->
+	<div class="page signUp hide" id="signUp">
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03"><img src="img/img16.png" /></p>
+
+		<p class="img01"><img src="img/img13.png" /></p>
+		<form class="signUp-form" name="signUpForm" id="signUpForm">
+			<p class="input-mod clearfix"><input type="text" name="name" placeholder="姓名" /></p>
+			<p class="input-mod clearfix"><input type="tel" name="tel" maxlength="11" placeholder="电话" /></p>
+			<div class="upload-mod">
+				<img src="img/img14.png" />
+				<input type="file" name="photo" />
+			</div>
+			<div class="textarea-mod">
+				<textarea placeholder="你想说的话" name="intro" ></textarea>
+			</div>
+			<div class="upload-mod upload-certificate">
+				<p>请上传获奖证书照片（无证书可暂不上传）</p>
+				<ul class="view-mod clearfix">
+					<li class="upload-certificate">
+						<img src="img/img42.png" />
+						<input type="file" name="certificate" />
+					</li>
+					<li class="upload-certificate">
+						<img src="img/img42.png" />
+						<input type="file" name="certificate" />
+					</li>
+					<li class="upload-certificate">
+						<img src="img/img42.png" />
+						<input type="file" name="certificate" />
+					</li>
+				</ul>
+			</div>
+			<p class="img4"><img src="img/img43.png" /></p>
+			<div class="musical-mod clearfix">
+				<label><input type="checkbox" name="musical" value="1" /><img src="img/img34.png" /></label>
+				<label><input type="checkbox" name="musical" value="2" /><img src="img/img35.png" /></label>
+				<label><input type="checkbox" name="musical" value="3" /><img src="img/img36.png" /></label>
+				<label><input type="checkbox" name="musical" value="4" /><img src="img/img37.png" /></label>
+				<label><input type="checkbox" name="musical" value="5" /><img src="img/img38.png" /></label>
+				<label><input type="checkbox" name="musical" value="6" /><img src="img/img39.png" /></label>
+				<label><input type="checkbox" name="musical" value="7" /><img src="img/img40.png" /></label>
+				<label><input type="checkbox" name="musical" value="8" /><img src="img/img41.png" /></label>
+			</div>
+			<p class="btn" id="J_signUp"><img src="img/img15.png" /></p>
+		</form>
+	</div>
+
+	<!-- 排行榜 -->
+	<div class="page ranking hide" id="ranking">
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03"><img src="img/img16.png" /></p>
+		<p class="img01"><img src="img/img20.png" /></p>
+		<div class="table-content" id="list">
+			<table id="J_content" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td class="clo01" width="20%"><i class="icon"><img src="img/img21.png" /></i></td>
+					<td width="50%">张三</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td class="clo01"><i class="icon"><img src="img/img22.png" /></i></td>
+					<td>张三</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td class="clo01"><i class="icon"><img src="img/img23.png" /></i></td>
+					<td>张三</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td class="clo01">NO.4</td>
+					<td>张三</td>
+					<td>36</td>
+				</tr>
+			</table>
+		</div>
+		<p class="img04"><img src="img/img24.png" /></p>
+	</div>
+
+	<!-- 规则 -->
+	<div class="page rule hide" id="rule">
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03"><img src="img/img16.png" /></p>
+		<p class="img04"><img src="img/img25.png" /></p>
+		<p class="img05"><img src="img/img26.png" /></p>
+	</div>
+
+	<!-- 投票列表 -->
+	<div class="page vote hide" id="vote">
+		<p class="img01"><img src="img/img27.png" /></p>
+		<p class="statistics clearfix"><span>已报名:XX</span><span>投票人数:XX</span><span>点击量:XX</span></p>
+		<form class="search-form clearfix" id="searchForm" name="searchForm">
+			<p class="input-mod"><input type="text" placeholder="输入ID或者名字查找选手" name="keyword" /></p>
+			<p class="input-btn"><img src="img/img28.png" /></p>
+		</form>
+		<ul class="list clearfix">
+			<li class="vote-item link-load" nextHash="detail" data-id="1">
+				<div class="vote-wrap">
+					<p style="background:url(img/img27.png) no-repeat center center/contain"><img src="img/item-blank.png" /></p>
+					<p class="name">ID：1 李白</p>
+					<p class="info"><span class="count">1234</span>票 <i class="vote-operate" id="1"><img src="img/img29.png" /></i></p>
+				</div>
+			</li>
+			<li class="vote-item link-load" nextHash="detail" data-id="2">
+				<div class="vote-wrap">
+					<p style="background:url(img/img27.png) no-repeat center center/contain"><img src="img/item-blank.png" /></p>
+					<p class="name">ID：1 李白</p>
+					<p class="info"><span class="count">1234</span>票 <i class="vote-operate" id="2"><img src="img/img29.png" /></i></p>
+				</div>
+			</li>
+			<li class="vote-item link-load" nextHash="detail" data-id="3">
+				<div class="vote-wrap">
+					<p style="background:url(img/img27.png) no-repeat center center/contain"><img src="img/item-blank.png" /></p>
+					<p class="name">ID：1 李白</p>
+					<p class="info"><span class="count">1234</span>票 <i class="vote-operate" id="3"><img src="img/img29.png" /></i></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 详情页 -->
+	<div class="page vote-wrap hide" id="detail">
+		<p class="back-icon link-load" nextHash="vote" title="返回列表"><img src="img/img12.png" /></p>
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03"><img src="img/img16.png" /></p>
+		<div class="wrap">
+			<p class="info clearfix">
+				<span class="name" id="name"></span>
+				<span class="count" id="count"></span>
+			</p>
+			<div class="photo" id="photo"></div>
+			<p id="introduce" class="introduce"></p>
+		</div>
+		<p class="vote-operate"><img src="img/img30.png" /></p>
+	</div>
+
+	<!-- 大师介绍 -->
+	<div class="page hide master" id="master">
+		<p class="img02"><img src="img/img02.png" /></p>
+		<p class="img03"><img src="img/img16.png" /></p>
+		<p class="img04"><img src="img/img32.png" /></p>
+		<div class="wrap">
+			<img src="img/img33.png" />
+		</div>
+	</div>
+
+
+	<ul class="nav-list clearfix">
+		<li class="link-load" title="投票" nextHash="vote">
+			<img src="img/img09.png" />
+		</li><li class="link-load" title="规则" nextHash="rule">
+			<img src="img/img10.png" />
+		</li><li class="link-load" title="排行榜" nextHash="ranking">
+			<img src="img/img11.png" />
+		</li><li class="link-load" title="大师介绍" nextHash="master">
+			<img src="img/img31.png" />
+		</li>
+	</ul>
+
+
+</div>
+
+<!-- 报名成功弹框 -->
+<div class="dialogue dialogue-succ" id="D_signUp">
+	<div class="wrap">
+		<img src="img/img17.png" />
+		<img src="img/img18.png" class="close-dialogue link-load" nextHash="index" />
+	</div>
+</div>
+
+<!-- 投票成功弹框 -->
+<div class="dialogue dialogue-vote" id="D_vote">
+	<div class="wrap">
+		<img src="img/img19.png" />
+		<img src="img/img18.png" class="close" />
+		<p>今日还有<strong>3</strong>次投票机会</p>
+	</div>
+</div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/ZN_20170810/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/ZN_20170810/",
+		desc    : "中南“国乐大师班”开始授课暨国乐小行家竞技赛",
+		title   : "国匠之心，国乐共鸣"
+	});
+})();
+</script>
+</body>
+</html>

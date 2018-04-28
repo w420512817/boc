@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>（测试）大咖云集 戏说眼镜</title>
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/index.css" />
+</head>
+<body style="background-color:#000;">
+
+<div class="loading" id="loading">
+	<p class="img01">
+		<img src="img/img01.png" />
+		<img src="img/img02.png" />
+		<img src="img/img03.png" />
+	</p>
+	<p class="img02"><img src="img/img04.png" /></p>
+	<p class="img03"><img src="img/img46.png" /></p>
+</div>
+
+<div class="container">
+
+	<div class="page cutDown hide" id="cutDown">
+		<p class="time time01"><img src="img/img05.png" /></p>
+		<p class="time time02"><img src="img/img06.png" /></p>
+		<p class="time time03"><img src="img/img07.png" /></p>
+	</div>
+
+	<!-- 视频播放区域 -->
+	<div class="page video hide" id="video">
+
+		<!-- 定军山 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video01.jpg" src="video/video01.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 潜伏 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video02.jpg" src="video/video02.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 建军大业 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video03.jpg" src="video/video03.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 于无声处 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video04.jpg" src="video/video04.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 我爱我家 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video05.jpg" src="video/video05.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 爱情公寓 -->
+		<div class="video-mod">
+			<p class="play-btn"><img src="img/video-playBtn.png" /></p>
+			<video poster="img/video06.jpg" src="video/video06.mp4" preload="auto" webkit-playsinline playsinline x5-video-player-type="h5"></video>
+		</div>
+
+		<!-- 视频结束 -->
+		<div class="video-end-popup hide">
+			<p class="img01">
+				<img src="img/img19.png" class="hide" />
+				<img src="img/img22.png" class="hide" />
+				<img src="img/img23.png" class="hide" />
+				<img src="img/img24.png" class="hide" />
+				<img src="img/img25.png" class="hide" />
+			</p>
+			<p class="img02 link-load" nextHash="luck" title="领取"><img src="img/img20.png" /></p>
+			<p class="img03 link-load" nextHash="facebook" title="再来一次"><img src="img/img21.png" /></p>
+		</div>
+
+	</div>
+
+	<!-- 选择脸谱 -->
+	<div class="page facebook hide" id="facebook">
+		<div class="wrap">
+			<p class="link-load img01" nextHash="video" data-id="1">
+				<img src="img/img08.png" />
+				<img src="img/img13.png" />
+				<img src="img/img18.png" />
+			</p>
+			<p class="link-load img02" nextHash="video" data-id="2">
+				<img src="img/img09.png" />
+				<img src="img/img14.png" />
+				<img src="img/img18.png" />
+			</p>
+			<p class="link-load img03" nextHash="video" data-id="3">
+				<img src="img/img10.png" />
+				<img src="img/img15.png" />
+				<img src="img/img18.png" />
+			</p>
+			<p class="link-load img04" nextHash="video" data-id="4">
+				<img src="img/img11.png" />
+				<img src="img/img16.png" />
+				<img src="img/img18.png" />
+			</p>
+			<p class="link-load img05" nextHash="video" data-id="5">
+				<img src="img/img12.png" />
+				<img src="img/img17.png" />
+				<img src="img/img18.png" />
+			</p>
+		</div>
+		<p class="hand"><img src="img/img42.png" /></p>
+	</div>
+	
+
+	<!-- 抽奖页面 -->
+	<div class="page luck hide" id="luck">
+		<!-- 一等奖 -->
+		<div class="result result01 hide">
+			<p class="img01"><img src="img/img31.png" /></p>
+			<p class="img02"><img src="img/img32.png" /></p>
+			<p class="img03"><img src="img/img49.png" /></p>
+			<p class="redeem-code"></p>
+		</div>
+
+		<!-- 二等奖 -->
+		<div class="result result02 hide">
+			<p class="img01"><img src="img/img33.png" /></p>
+			<p class="img02"><img src="img/img34.png" /></p>
+			<p class="img03"><img src="img/img49.png" /></p>
+			<p class="redeem-code"></p>
+		</div>
+
+		<!-- 三等奖 -->
+		<div class="result result03 hide">
+			<p class="img01"><img src="img/img35.png" /></p>
+			<p class="img02"><img src="img/img36.png" /></p>
+			<p class="img03"><img src="img/img49.png" /></p>
+			<p class="redeem-code"></p>
+		</div>
+
+		<!-- 未中奖 -->
+		<div class="result result04">
+			<p class="img01"><img src="img/img26.png" /></p>
+			<p class="img03"><img src="img/img49.png" /></p>
+			<p class="img02 link-load" nextHash="facebook" title="再来一次"><img src="img/img27.png" /></p>
+			<p class="img04 link-load" nextHash="end" title="退出游戏"><img src="img/img38.png" /></p>
+		</div>
+	</div>
+
+	<div class="popup-info popup-info01 hide"><img src="img/img37.png" /></div>
+	<div class="popup-info popup-info02 hide link-load" nextHash="rule" title="中奖说明"><img src="img/img45.png" /></div>
+	<div class="popup-info popup-info03 hide link-load" nextHash="end" title="退出游戏"><img src="img/img38.png" /></div>
+
+	<!-- 活动说明 -->
+	<div class="page rule hide" id="rule">
+		<p class="img01"><img src="img/img39.png" /></p>
+		<p class="img02"><img src="img/img40.png" /></p>
+		<p class="img04 link-load" nextHash="luck" title="返回"><img src="img/img50.png" /></p>
+		<p class="img03 link-load" nextHash="end" title="退出游戏"><img src="img/img41.png" /></p>
+	</div>
+
+	<!-- 结束 -->
+	<div class="page end hide" id="end">
+		<p class="img01">
+			<img src="img/img28.png" />
+			<img src="img/img29.png" />
+			<img src="img/img30.png" />
+		</p>
+		<p class="popup"></p>
+	</div>
+</div>
+
+<div class="window-tips"></div>
+
+
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/html2canvas.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script src="js/main.js"></script>
+<script>
+;(function(){
+	window.wxShare && window.wxShare({
+		img     : "http://wx.bocweb.cn/dingmaoyan/DM_20170920/img/share.jpg",
+		linkurl : "http://wx.bocweb.cn/dingmaoyan/DM_20170920/",
+		desc    : "大咖云集 戏说眼镜",
+		title   : "大咖云集 戏说眼镜"
+	});
+})();
+</script>
+</body>
+</html>

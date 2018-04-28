@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)星耀苍南 “鸿”动全城</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<!-- <div class="page-title"><img src="img/p1_2.png" alt=""></div> -->
+			<!-- <div class="page-title"><img src="img/p1_1.png" alt=""></div> -->
+			<div class="page-text"><img src="img/p1_5.png" alt=""></div>
+			<div class="page-gua" id="scratch"></div>
+
+		</div>
+		<!-- page02 -->
+		<div class="page welcome2 hide" id="welcome2">
+			<div class="page-bg1"><img src="img/p1_3.png"></div>
+			<div class="page-bg2"><img src="img/p1_4.png"></div>
+			<div class="page-img1"><img src="img/p2_4.png" ></div>
+			<div class="page-star"><img src="img/p2_5.png" ></div>
+			<div class="page-text"><img src="img/p2_2.png" ></div>
+			<div class="page-img2"><img src="img/p2_3.png" ></div>
+			<div class="page-btn"><img src="img/p2_1.png" ></div>
+		</div>
+		<!-- page03 -->
+		<div class="page music1 hide" id="music1">
+			<div class="page-img"><img src="img/p3_1.png" ></div>
+			<div class="page-circle"><img src="img/p3_2.png" ></div>
+			<div class="page-tool"><img src="img/p3_3.png" ></div>
+			<div class="page-text"><img src="img/p3_4.png" ></div>
+			<!-- <div class="page-control1"><img src="img/p3_5.png" ></div> -->
+			<div class="page-control">
+				<strong class="time-begin">00:00</strong>
+				<p>
+					<span class="progress-val"></span>
+				</p>
+				<strong class="time-end">00:00</strong>
+			</div>
+			<audio src="media/m1.mp3" preload="auto" id="m1"></audio>
+			<div class="dialog hide">
+				<div class="page-img"><img src="img/p5_1.png" ></div>
+				<div class="page-back"><img src="img/p5_2.png" ></div>
+				<div class="page-choosea"><img src="img/p5_3.png" ></div>
+				<div class="page-chooseb"><img src="img/p5_4.png" ></div>
+				<div class="page-choosec"><img src="img/p5_5.png" ></div>
+				<div class="page-choosed"><img src="img/p5_6.png" ></div>
+			</div>
+			<div class="tip-false hide"><img src="img/p7_1.png"></div>
+			<div class="tip-true hide"><img src="img/p8_1.png"></div>
+		</div>
+		<!-- page04 -->
+		<div class="page music2 hide" id="music2">
+			<div class="page-img"><img src="img/p3_1.png" ></div>
+			<div class="page-circle"><img src="img/p3_2.png" ></div>
+			<div class="page-tool"><img src="img/p3_3.png" ></div>
+			<div class="page-text"><img src="img/p4_1.png" ></div>
+			<!-- <div class="page-control"><img src="img/p3_5.png" ></div> -->
+			<div class="page-control">
+				<strong class="time-begin">00:00</strong>
+				<p>
+					<span class="progress-val"></span>
+				</p>
+				<strong class="time-end">00:00</strong>
+			</div>
+			<audio src="media/m2.mp3"  preload="auto" id="m2"></audio>
+			<div class="dialog hide">
+				<div class="page-img"><img src="img/p5_1.png" ></div>
+				<div class="page-back"><img src="img/p5_2.png" ></div>
+				<div class="page-choosea"><img src="img/p6_1.png" ></div>
+				<div class="page-chooseb"><img src="img/p6_2.png" ></div>
+				<div class="page-choosec"><img src="img/p6_3.png" ></div>
+				<div class="page-choosed"><img src="img/p6_4.png" ></div>
+			</div>
+			<div class="tip-false hide"><img src="img/p7_1.png"></div>
+			<div class="tip-true hide"><img src="img/p8_1.png"></div>
+		</div>
+		<!-- page05 -->
+		<div class="page welcome3 hide" id="welcome3">
+			<div class="page-logo"><img src="img/p9_1.png" ></div>
+			<div class="page-text1"><img src="img/p9_2.png" ></div>
+			<div class="page-text2"><img src="img/p9_3.png" ></div>
+			<div class="page-text3"><img src="img/p9_4.png" ></div>
+			<div class="page-text4"><img src="img/p9_5.png" ></div>
+			<div class="page-text5"><img src="img/p9_6.png" ></div>
+			<div class="page-text6"><img src="img/p9_7.png" ></div>
+			<div class="page-text7"><img src="img/p9_8.png" ></div>
+			<div class="page-btn"><img src="img/p9_9.png" ></div>
+		</div>
+		<!-- page06 -->
+		<div class="page form hide" id="form">
+			<div class="page-text1"><img src="img/p10_1.png" ></div>
+			<div class="page-text2"><img src="img/p10_2.png" ></div>
+			<div class="page-img"><img src="img/p10_3.png" ></div>
+			<form action="#">
+				<input class="form-name" id="info-name" type="text" placeholder="姓名">
+				<input class="form-phone" id="info-phone" type="text" placeholder="电话">
+			</form>
+			<div class="page-btn1" id="form-submit"><img src="img/p10_4.png" ></div>
+			<div class="page-btn2"><img src="img/p10_5.png" ></div>
+		</div>
+		<!-- page07 -->
+		<div class="page end hide" id="end">
+			<div class="page-logo"><img src="img/p11_1.png" ></div>
+			<div class="page-text1"><img src="img/p11_2.png" ></div>
+			<div class="page-text2"><img src="img/p11_3.png" ></div>
+			<div class="page-img"><img src="img/p11_4.png" ></div>
+			<div class="page-btn1"><img src="img/p11_5.png" ></div>
+			<div class="page-btn2"><img src="img/p11_6.png" ></div>
+		</div>
+		
+	</div>
+	<!-- 提示 -->
+	
+	<div class="tip-way hide"><img src="img/p12_1.png"></div>
+	<div class="tip-exchange hide"><img src="img/p13_1.png"></div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/p14_1.png" alt=""></div>
+
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.dmy.scratch.min.js"></script>
+	<!-- <script src="js/jquery.dmy.scratch.js"></script> -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "听说这里能领取，游鸿明演唱会的门票？", //分享标题
+				desc: "哇，我要！我要！", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/cnjdyf_h5_1113/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/cnjdyf_h5_1113/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

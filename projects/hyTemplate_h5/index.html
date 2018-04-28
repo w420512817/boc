@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="html">
+  
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>(测试)</title>
+	<link rel="stylesheet" type="text/css" href="css/loading.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+	<script src="js/swiper-3.4.1.min.js"></script>
+</head>
+
+<body style="background: #fff;">
+	<!-- <div class="app"> -->
+	<!--加载页-->
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+	<div class="swiper-container" id="swiper1">
+		<div class="swiper-wrapper">
+			<!-- page1 -->
+			<div class="swiper-slide swiper-slide1 " data-hash="slide1">
+				<div class="logo ani"><img src="" width="100%"></div>
+				<div class="swiper1_2 ani"><img src="" width="100%"></div>
+			</div>
+			<!-- page2 -->
+			<div class="swiper-slide swiper-slide2 " data-hash="slide2">
+				
+			</div>
+		</div>
+		<div class="resize">
+			<img src="img/next.png" width="100%">
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+</body>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<!-- <script src="js/jquery.mobile-events.min.js" type="text/javascript"></script> -->
+<script src="js/main.js" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script>
+	window.wxShare && window.wxShare({
+		title: "", //分享标题
+		desc: "", //分享描述
+		linkurl: "http://wx.bocweb.cn/wangjiaqi/h5/", //分享链接
+		img: "http://wx.bocweb.cn/wangjiaqi/h5/img/share.jpg" //分享图片
+	});
+</script>
+
+</html>

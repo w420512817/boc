@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>J-life 为你读诗</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css?v=201706021341"/>
+<link rel="stylesheet" href="css/main.css?v=201706021341" />
+</head>
+<body>
+
+<section class="load">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+
+		<div class="swiper-slide slide03 swiper-no-swiping" id="slide03">
+
+			<!-- 上传图片的预览 -->
+			<div class="photo-layer"><img src="" alt="" id="bg"></div>
+
+			<p class="img01"><img src="img/slide03-bg.png" /></p>
+			<p class="img02"><img src="img/img09.png" /></p>
+
+			<div class="operate-layer"></div>
+
+			<!-- 按钮 -->
+			<div class="upload-btn">
+				<img src="img/img12.png" class="bg" />
+				<input type="file" class="up-load" id="J_upload" />
+			</div>
+
+			<div class="img-mod clearfix">
+				<div class="img" id="J_img">
+					<img src="img/img12-blank.png" class="bg" />
+					<div class="img-view" id="J_view"></div>
+				</div>
+				<div class="fr"><img src="img/img13.png" /></div>
+			</div>
+			<div class="txt-mod">
+				<textarea placeholder="点击输入你想说的话" maxlength="50"></textarea>
+			</div>
+			<p class="img03" id="J_end"><img src="img/img14.png" /></p>
+			<p class="img04"><img src="img/img15.png" /></p>
+		</div>
+	</div>
+</div>
+<div class="msg"></div>
+<script src="app/js/jquery-3.1.0.min.js?v=201706021341"></script>
+<script src="js/swiper.jquery.min.js?v=201706021341"></script>
+<script src="app/js/alloy-finger.js?v=201706021341"></script>
+<script src="app/js/exif.js?v=201706021341"></script>
+<script src="app/js/html2canvas-0.5.js?v=201706021341"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js?v=201706021341"></script>
+<script src="app/js/main.js?v=201706021341"></script>
+<script>
+	(function(){
+		window.wxShare && window.wxShare({
+			img     : "http://wx.bocweb.cn/dingmaoyan/JM_20170601/img/share.jpg",
+			linkurl : "http://wx.bocweb.cn/dingmaoyan/JM_20170601/",
+			desc    : "有温度的生活 有态度的人生",
+			title   : " J-life 为你读诗"
+		});
+	})();
+	document.ontouchmove = function(e){
+		e.preventDefault();
+	}
+</script>
+</body>
+</html>
