@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)免费礼物岂能不收？！！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="logo"><img src="img/p1_1.png"></div>
+			<div class="page-img1"><img src="img/p1_2.png"></div>
+			<div class="page-img2"><img src="img/p1_3.png"></div>
+			<div class="page-img3"><img src="img/p1_4.png"></div>
+			<div class="page-img4"><img src="img/p1_5.png"></div>
+			<div class="page-img5"><img src="img/p1_6.png"></div>
+			<div class="page-text"><img src="img/p1_7.png"></div>
+		</div>
+		<!-- page02 -->
+		<div class="page index hide" id="index">
+			<!-- <audio src="prize.mp3" id="audio1"></audio> -->
+			<div class="logo"><img src="img/p1_1.png"></div>
+			<div class="page-text"><img src="img/p2_1.png"></div>
+			<div class="page-hat"><img src="img/p2_2.png"></div>
+			<div class="page-rule"><img src="img/p2_3.png"></div>
+			<div class="page-txt"><img src="img/p2_11.png"></div>
+			<div class="page-tip ">
+				<img src="img/p2_4.png">
+				<img src="img/p2_5.png">
+			</div>
+			<div class="page-anim1 hide"><img src="img/p2_6.png"></div>
+			<div class="page-anim2 hide">
+				<img src="img/p2_7.png">
+				<img src="img/p2_8.png">
+				<img src="img/p2_9.png">
+				<img src="img/p2_10.png">
+			</div>
+			<!-- 空 -->
+			<div class="page-none hide"><img src="img/p3_1.png" alt=""></div>
+			<!-- 奖品 -->
+			<div class="page-prize hide">
+				<img src="img/p3_8.png" alt="">
+				<div class="page-btn1"><img src="img/p3_6.png" alt=""></div>
+				<div class="page-btn2"><img src="img/p3_7.png" alt=""></div>
+			</div>
+			<!-- 表单 -->
+			<div class="page-form hide">
+				<form action="#">
+					<img src="img/p3_2.png" alt="">
+					<input class="form-name" type="text" name="info-name" id="info-name">
+					<input class="form-phone" type="text" name="info-phone" id="info-phone">
+					<div class="form-btn" id="form-submit"><img src="img/p3_3.png" alt=""></div>
+					<div class="page-close"><img src="img/p4_5.png" alt=""></div>
+				</form>
+			</div>
+			<!-- 邀请 -->
+			<div class="page-share hide">
+				<img src="img/p4_1.png" alt="">
+				<ul class="page-list">
+					<li>
+						<div style="background-image:url(img/ceshi.png);"></div>
+						<p>邀请好友</p>
+					</li>
+					<li>
+						<div></div>
+						<p>邀请好友</p>
+					</li>
+					<li>
+						<div></div>
+						<p>邀请好友</p>
+					</li>
+					<li>
+						<div></div>
+						<p>邀请好友</p>
+					</li>
+					<li>
+						<div></div>
+						<p>邀请好友</p>
+					</li>
+				</ul>
+				<div class="page-btn"><img src="img/p4_3.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "免费礼物岂能不收？！！", //分享标题
+				desc: "好礼抽不停！！戳！！！", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/bgyticket_h5_1129/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/bgyticket_h5_1129/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

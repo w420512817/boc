@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>(测试)青岛星河湾微楼书</title>
+	<link rel="stylesheet" type="text/css" href="css/loading.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+	<script src="js/swiper-3.4.1.min.js"></script>
+</head>
+
+<body style="background: #000;">
+
+
+	<!--加载页-->
+<section class="load ">
+	<div class="loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+		<p>Loading...<span id="load-progress">1</span>%</p>
+		<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+	</div>
+</section>
+
+<div class="music on" onclick="playClicked(this)"></div>
+<audio src="music.mp3" id="audio_player" loop=""></audio>
+<div class="swiper-container" id="swiper1">
+	<div class="swiper-wrapper">
+		<!-- page1 首页-->
+		<div class="swiper-slide swiper-slide1 " data-hash="slide1">
+			<div class="swiper1_1 ani"><img src="img/p1_1.png" width="100%"></div>
+			<div class="swiper1_2 ani"><img src="img/p1_2.png" width="100%"></div>
+		</div>
+		<!-- page2 -->
+		<div class="swiper-slide swiper-slide2 swiper-no-swiping" data-hash="slide2">
+			<div class="swiper2_1 ani"><img src="img/p2_1.png" width="100%"></div>
+			<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+			<div class="swiper2_3 ani"><img src="img/p2_3.png" width="100%"></div>
+			<div class="swiper2_4 ani"><img src="img/p2_4.png" width="100%"></div>
+			<div class="swiper2_5 ani"><img src="img/p2_5.png" width="100%"></div>
+			<div class="swiper2_6 ani"><img src="img/p2_6.png" width="100%"></div>
+			<div class="swiper2_7 ani"><img src="img/p2_7.png" width="100%"></div>
+			<div class="swiper2_8 ani"><img src="img/p2_8.png" width="100%"></div>
+		</div>
+		<!-- page3 -->
+		<div class="swiper-slide swiper-slide3 swiper-no-swiping" data-hash="slide3">
+			<div class="swiper3_1 ani"><img src="img/p3_1.png" width="100%"></div>
+			<div class="swiper3_3 ani"><img src="img/p3_3.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h3.png" width="100%"></div>
+		</div>
+		<!-- page4 -->
+		<div class="swiper-slide swiper-slide4" data-hash="slide4">
+			<div class="swiper4_1 ani"><img src="img/p4_1.png" width="100%"></div>
+			<div class="swiper4_2 ani"><img src="img/p4_2.png" width="100%"></div>
+			<div class="swiper4_3 ani"><img src="img/p4_3.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page5 -->
+		<div class="swiper-slide swiper-slide5" data-hash="slide5">
+			<div class="swiper5_1 ani"><img src="img/p5_1.png" width="100%"></div>
+			<div class="swiper5_2 ani"><img src="img/p5_2.png" width="100%"></div>
+			<div class="swiper5_3 ani"><img src="img/p5_3.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page6 -->
+		<div class="swiper-slide swiper-slide6 swiper-no-swiping" data-hash="slide6">
+			<div class="swiper6_1 ani"><img src="img/p6_1.png" width="100%"></div>
+			<div class="swiper6_2 ani"><img src="img/p6_2.png" width="100%"></div>
+			<div class="swiper6_3 ani"><img src="img/p6_3.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page7 -->
+		<div class="swiper-slide swiper-slide7" data-hash="slide7">
+			<div class="swiper7_1 ani"><img src="img/p7_1.png" width="100%"></div>
+			<div class="swiper7_2 ani"><img src="img/p7_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h7.png" width="100%"></div>
+		</div>
+		<!-- page8 -->
+		<div class="swiper-slide swiper-slide8" data-hash="slide8">
+			<div class="swiper8_1 ani"><img src="img/p8_1.png" width="100%"></div>
+			<div class="swiper8_2 ani"><img src="img/p8_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page9 -->
+		<div class="swiper-slide swiper-slide9" data-hash="slide9">
+			<div class="swiper9_1 ani"><img src="img/p9_1.png" width="100%"></div>
+			<div class="swiper9_2 ani"><img src="img/p9_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page10 -->
+		<div class="swiper-slide swiper-slide10" data-hash="slide10">
+			<div class="swiper10_1 ani"><img src="img/p10_1.png" width="100%"></div>
+			<div class="swiper10_2 ani"><img src="img/p10_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page11 -->
+		<div class="swiper-slide swiper-slide11" data-hash="slide11">
+			<div class="swiper11_1 ani"><img src="img/p11_1.png" width="100%"></div>
+			<div class="swiper11_2 ani"><img src="img/p11_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page12 -->
+		<div class="swiper-slide swiper-slide12 swiper-no-swiping" data-hash="slide12">
+			<div class="swiper12_1 ani"><img src="img/p12_1.png" width="100%"></div>
+			<div class="swiper12_2 ani"><img src="img/p12_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h12.png" width="100%"></div>
+		</div>
+		<!-- page13 -->
+		<div class="swiper-slide swiper-slide13" data-hash="slide13">
+			<div class="swiper13_1 ani"><img src="img/p13_1.png" width="100%"></div>
+			<div class="swiper13_2 ani"><img src="img/p13_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h13.png" width="100%"></div>
+		</div>
+		<!-- page14 -->
+		<div class="swiper-slide swiper-slide14" data-hash="slide14">
+			<div class="swiper14_1 ani"><img src="img/p14_1.png" width="100%"></div>
+			<div class="swiper14_2 ani"><img src="img/p14_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page15 -->
+		<div class="swiper-slide swiper-slide15 swiper-no-swiping" data-hash="slide15">
+			<div class="swiper15_1 ani"><img src="img/p15_1.png" width="100%"></div>
+			<div class="swiper15_2 ani"><img src="img/p15_2.png" width="100%"></div>
+			<div class="swiper15_3 ani"><img src="img/p15_3.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page16 -->
+		<div class="swiper-slide swiper-slide16" data-hash="slide16">
+			<div class="swiper16_1 ani"><img src="img/p16_1.png" width="100%"></div>
+			<div class="swiper16_2 ani"><img src="img/p16_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page17 -->
+		<div class="swiper-slide swiper-slide17" data-hash="slide17">
+			<div class="swiper17_1 ani"><img src="img/p17_1.png" width="100%"></div>
+			<div class="swiper17_2 ani"><img src="img/p17_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h13.png" width="100%"></div>
+		</div>
+		<!-- page18 -->
+		<div class="swiper-slide swiper-slide18" data-hash="slide18">
+			<div class="swiper18_1 ani"><img src="img/p18_1.png" width="100%"></div>
+			<div class="swiper18_2 ani"><img src="img/p18_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page19 -->
+		<div class="swiper-slide swiper-slide19" data-hash="slide19">
+			<div class="swiper19_1 ani"><img src="img/p19_1.png" width="100%"></div>
+			<div class="swiper19_2 ani"><img src="img/p19_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page20 -->
+		<div class="swiper-slide swiper-slide20" data-hash="slide20">
+			<div class="swiper20_1 ani"><img src="img/p20_1.png" width="100%"></div>
+			<div class="swiper20_2 ani"><img src="img/p20_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homeb ani"><img src="img/h12.png" width="100%"></div>
+		</div>
+		<!-- page21 -->
+		<div class="swiper-slide swiper-slide21 swiper-no-swiping" data-hash="slide21">
+			<div class="swiper21_1 ani"><img src="img/p21_1.png" width="100%"></div>
+			<div class="swiper21_2 ani"><img src="img/p21_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h4.png" width="100%"></div>
+		</div>
+		<!-- page22 -->
+		<div class="swiper-slide swiper-slide22" data-hash="slide22">
+			<div class="swiper22_1 ani"><img src="img/p22_1.png" width="100%"></div>
+			<div class="swiper22_2 ani"><img src="img/p22_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h3.png" width="100%"></div>
+		</div>
+		<!-- page23 -->
+		<div class="swiper-slide swiper-slide23" data-hash="slide23">
+			<div class="swiper23_1 ani"><img src="img/p23_1.png" width="100%"></div>
+			<div class="swiper23_2 ani"><img src="img/p23_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h3.png" width="100%"></div>
+		</div>
+		<!-- page24 -->
+		<div class="swiper-slide swiper-slide24" data-hash="slide24">
+			<div class="swiper24_1 ani"><img src="img/p24_1.png" width="100%"></div>
+			<div class="swiper24_2 ani"><img src="img/p24_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h3.png" width="100%"></div>
+		</div>
+		<!-- page25 -->
+		<div class="swiper-slide swiper-slide25" data-hash="slide25">
+			<div class="swiper25_1 ani"><img src="img/p25_1.png" width="100%"></div>
+			<div class="swiper25_2 ani"><img src="img/p25_2.png" width="100%"></div>
+			<!-- <div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div> -->
+			<div class="homet ani"><img src="img/h3.png" width="100%"></div>
+		</div>
+	</div>
+	<div class="resize">
+		<img src="img/bottom.png" width="100%">
+	</div>
+	<div class="resizet">
+		<img src="img/top.png" width="100%">
+	</div>
+</div>
+	<!-- <div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">横屏效果最佳</div>
+	</div> -->
+</body>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-events.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script>
+window.wxShare && window.wxShare({
+	title: "青岛星河湾微楼书", //分享标题
+	desc: "青岛星河湾微楼书", //分享描述
+	linkurl: "http://wx.bocweb.cn/wangjiaqi/wls_h5/", //分享链接
+	img: "http://wx.bocweb.cn/wangjiaqi/wls_h5/img/share.jpg" //分享图片
+});
+</script>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)中梁好户型，自己会说话！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+	
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+		
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-title"><img src="img/p1_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p1_2.png" alt=""></div>
+		</div>
+		<!-- page02 -->
+		<div class="page welcome2 hide" id="welcome2">
+			<div class="page-title"><img src="img/p2_2.png" alt=""></div>
+			<div class="page-box"><img src="img/p2_3.png" alt=""></div>
+			<div class="page-img"><img src="img/p2_4.png" alt=""></div>
+			<!-- swiper -->
+			<div class="page-items-box" id="page-items-box">
+				<div class="swiper-container" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide items-1">
+							<img src="img/p2_1.png" alt="">
+							<div class="page-icon1 picon" onclick="play(1)"><img src="img/p2_5.png" alt=""></div>
+						</div>
+						<div class="swiper-slide items-2">
+							<img src="img/p3_1.png" alt="">
+							<div class="page-icon1 picon" onclick="play(2)"><img src="img/p2_5.png" alt=""></div>
+							<div class="page-icon2 picon" onclick="play(3)"><img src="img/p2_5.png" alt=""></div>
+							<div class="page-icon3 picon" onclick="play(4)"><img src="img/p2_5.png" alt=""></div>
+						</div>
+						<div class="swiper-slide items-3">
+							<img src="img/p4_1.png" alt="">
+							<div class="page-icon1 picon" onclick="play(5)"><img src="img/p2_5.png" alt=""></div>
+							<div class="page-icon2 picon" onclick="play(6)"><img src="img/p2_5.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+				<div class="box-left"><img src="img/p3_2.png" alt=""></div>
+				<div class="box-right"><img src="img/p3_3.png" alt=""></div>
+			</div>
+		</div>
+		<!-- page 11-->
+		<div class="page room1 hide" id="room1">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p8_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p8_2.png" alt=""></div>
+			<input type="hidden" id="text1" value="我家里有一个属于我自己的儿童乐园，妈妈说这里是我们家的私人会所，非常大，我可以经常带着小朋友们来玩乐高，对了，我们家里还有电影院，星期天，爸爸妈妈和弟弟会陪我一起在这儿看动画片，我最喜欢这个地方了。">
+			<div class="page-rtxt" id="intext1"></div>
+			<div class="page-rback" onclick="pause(1)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		<!-- page 21-->
+		<div class="page room2 hide" id="room2">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p7_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p5_6.png" alt=""></div>
+			<input type="hidden" id="text2" value="壹号院的厨房，设计的很好，做菜、烧饭都很方便，不用走来走去，平时我就是喜欢做菜，再加上家里有这么好的厨房，我都觉得我的菜更香了。">
+			<div class="page-rtxt" id="intext2"></div>
+			<div class="page-rback" onclick="pause(2)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		<!-- page 22-->
+		<div class="page room3 hide" id="room3">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p6_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p5_6.png" alt=""></div>
+			<input type="hidden" id="text3" value="美好的上午，在宽敞的客餐厅中，泡一杯咖啡，看看电视，放松放松心情。有时候，好朋友过来聊聊天，一点都不拥挤，生活过起来舒服兮舒服。">
+			<div class="page-rtxt" id="intext3"></div>
+			<div class="page-rback" onclick="pause(3)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		<!-- page 23-->
+		<div class="page room4 hide" id="room4">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p5_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p5_6.png" alt=""></div>
+			<input type="hidden" id="text4" value="这房子要想住的舒服，还得带个院子，早晨在自家差不多40平方的阳光花园里，活动活动身体，理理花草，整个人会感觉心情特别舒服、精神也特别好，一天下来，都不会觉得累。">
+			<div class="page-rtxt" id="intext4"></div>
+			<div class="page-rback" onclick="pause(4)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		<!-- page 31-->
+		<div class="page room5 hide" id="room5">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p10_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p10_2.png" alt=""></div>
+			<input type="hidden" id="text5" value="家里有个属于我自己书房，下班以后，可以在书房里，安安静静的看看书，有时候，在书房里加班，效率也高很多。最重要的是，平时朋友来，谈事情，书房就是个很好的地方。">
+			<div class="page-rtxt" id="intext5" ></div>
+			<div class="page-rback" onclick="pause(5)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		<!-- page 32-->
+		<div class="page room6 hide" id="room6">
+			<div class="page-rimg1"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-rimg2"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-rimg3"><img src="img/p5_7.png" alt=""></div>
+			<div class="page-rtitle"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-rbg"><img src="img/p9_1.png" alt=""></div>
+			<div class="page-rbox"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-rpeople"><img src="img/p5_6.png" alt=""></div>
+			<input type="hidden" id="text6" value="我们二楼房间非常大，有30多平方，是个套房，独立的卫生间，还有专门换衣服的空间，住起来非常舒服。我最喜欢的就是这个专门换衣的空间，大兮大，不用担心衣服和鞋子放不下了。">
+			<div class="page-rtxt" id="intext6"></div>
+			<div class="page-rback" onclick="pause(6)"><img src="img/p5_8.png" alt=""></div>
+		</div>
+		
+	</div>
+	<!-- 录音 -->
+	<audio src="media/m11.mp3" class="n-audio" id="audio1"></audio>
+	<audio src="media/m21.mp3" class="n-audio" id="audio2"></audio>
+	<audio src="media/m22.mp3" class="n-audio" id="audio3"></audio>
+	<audio src="media/m23.mp3" class="n-audio" id="audio4"></audio>
+	<audio src="media/m31.mp3" class="n-audio" id="audio5"></audio>
+	<audio src="media/m32.mp3" class="n-audio" id="audio6"></audio>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/swiper-3.4.1.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "中梁好户型，自己会说话！", //分享标题
+				desc: "点击语音符号听听他们怎么说", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/yjzlhouse_h5_1124/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/yjzlhouse_h5_1124/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

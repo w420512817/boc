@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+body,div,html,img,p,span{margin:0;padding:0}
+html{width:100%;height:100%;position:relative;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0 auto}
+body{color:#333;font:16px "Helvetica Neue",Helvetica,STHeiTi,sans-serif;margin:0 auto;width:100%;height:100%;position:relative;-webkit-tap-highlight-color:transparent}
+body,html{height:100%;}
+li,ol,ul{list-style:none;margin:0;padding:0}
+img{border:none}
+a{text-decoration:none}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+textarea{-webkit-appearance:none;outline:0;margin:0;padding:0;border:none;border-radius:0;background:0 0;resize: none;}
+input,select,textarea{outline: none;border:none;padding:0;margin: 0;font-size: 1rem;}
+input[type='text']{background: transparent;}
+::-webkit-input-placeholder {color:#333;}
+::-webkit-scrollbar{width:.3em;height:.3em}
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);border-radius:10px;background-color:#fff}
+::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#266680}
+img{display:block;width:100%;}
+.loading{position:absolute;width:100%;height:100%;z-index:888;top:0;left:0;bottom:0;color:#ccc;text-align:center;overflow:hidden;background-color:#eee;z-index:5}
+.loaded{display:none}
+.spinner{margin:160px auto 0;width:150px;text-align:center}
+.spinner>div{width:20px;height:20px;background-color:#ccc;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out}
+.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}
+.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}
+.load-progress{display:inline-block;margin-left:.2em}
+.copyright{position:absolute;left:35%;bottom:3%;width:30%}
+@-webkit-keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+@keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+
+/**横屏竖屏提示start**/
+.orienLayer{position:absolute;z-index:501;width:100%;height:100%;background:#000;top:0;left:0}
+.orienLayer .txt{position:absolute;left:0;top:15%;color:#fff;width:100%;height:30px;text-align:center;line-height:30px}
+.orienLayer .icons{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');position:absolute;width:67px;height:109px;left:50%;top:20%;margin:0 -33px 0;transform:rotate(90deg);-webkit-transform:rotate(90deg);-webkit-background-size:67px;background-size:67px}
+@media all and (orientation:landscape){
+  /*横屏*/
+  .orienLayer{display:block}
+}
+@media all and (orientation:portrait){
+  /*竖屏*/
+  .orienLayer{display:none}
+}
+/* music */
+.music{position:fixed;right:2%;top:0;display:block;z-index:99;width:30px;background:url(../img/music2.png) no-repeat center center;background-size:contain;height:50px;display:block}
+.music.on{-webkit-animation:reverseRotataZ 1.2s linear infinite}
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+@keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+
+.resize{width:12%;position:absolute;bottom:2%;left:45%;z-index:99;-webkit-animation:resize 1s linear infinite;animation:resize 1s linear infinite}
+@-webkit-keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+@keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+
+.container,.page{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.hide{display:none}
+.hidden{visibility:hidden}
+.page img{display:block;width:100%;visibility:hidden;}
+.page.animate img{visibility:visible;}
+.page.animate{animation:fadeIn 1s ease both}
+
+/* 通用 */
+.page [class^='page-']{position: absolute;top: 0;left: 0;width: 100%;}
+/* .logo{position: absolute;top: 5%;left: 5%;width: 10%;} */
+.animate .logo{-webkit-animation: fadeInDown 1s ease both;animation: fadeInDown 1s ease both;}
+/* page01 */
+.welcome{background:url(../img/bg1.jpg) no-repeat center center/100% 100%;}
+/* pagel */
+.pagel{position: absolute;overflow-y: scroll;width: 100%;top: 0;left: 0;}
+form{position: absolute;top: 0;left: 0;height: 100%;width: 100%;}
+form input{position: absolute;height: .8%;text-align: center;}
+input[type="radio"],input[type="checkbox"]{width: 5%}
+/* 基本资料 */
+.form-name{top: 18.1%;left: 28%;width: 34%;}
+.form-sex{top: 19.7%;left: 30%;}
+.form-sex2{top: 19.7%;left: 46%;}
+.form-housenum1{top: 21.2%;left: 23%;width: 8%;}
+.form-housenum2{top: 21.2%;left: 40%;width: 11%;}
+.form-housenum3{top: 21.2%;left: 58%;width: 8%;}
+.form-housenum4{top: 21.2%;left: 74%;width: 8%;}
+/* 年龄 */
+.form-age-a{top: 24.5%;left: 15%;}
+.form-age-b{top: 24.5%;left: 55%;}
+.form-age-c{top: 25.6%;left: 15%;}
+.form-age-d{top: 25.6%;left: 55%;}
+.form-age-e{top: 26.7%;left: 15%;}
+.form-age-f{top: 26.7%;left: 55%;}
+/* 2职业 */
+.form-job-a{top: 30.1%;left: 15%;}
+.form-job-b{top: 31.15%;left: 15%;}
+.form-job-c{top: 32.2%;left: 15%;}
+.form-job-d{top: 33.3%;left: 15%;}
+.form-job-e{top: 34.5%;left: 15%;}
+.form-job-f{top: 35.5%;left: 15%;}
+.form-job-g{top: 36.7%;left: 15%;}
+.form-job-h{top: 37.8%;left: 15%;}
+.form-job-i{top: 38.9%;left: 15%;}
+.form-job-j{top: 40%;left: 15%;}
+.form-job-k{top: 41.1%;left: 15%;}
+.form-job-k2{top: 41%;left: 40%;width: 26%;}
+/* 3您的家庭情况 */
+.form-people-a{top: 44.1%;left: 15%;}
+.form-people-b{top: 44.1%;left: 55%;}
+.form-people-c{top: 45.2%;left: 15%;}
+.form-people-d{top: 45.2%;left: 55%;}
+.form-people-e{top: 46.3%;left: 15%;}
+/* 4您对那种类型的活动较为感兴趣 */
+.form-activity-aa{top: 50.3%;left: 19%;}
+.form-activity-ab{top: 50.3%;left: 54%;}
+.form-activity-ba{top: 52.45%;left: 15%;}
+.form-activity-bb{top: 52.45%;left: 37%;}
+.form-activity-bb2{top: 52.3%;left: 74%;width: 14%;}
+.form-activity-bc{top: 53.25%;left: 15%;}
+.form-activity-bd{top: 53.25%;left: 37%;}
+.form-activity-be{top: 53.25%;left: 61.5%;}
+.form-activity-bf{top: 54%;left: 15%;}
+.form-activity-bg{top: 54%;left: 37%;}
+.form-activity-bh{top: 54%;left: 61.5%;}
+.form-activity-bi{top: 54.8%;left: 15%;}
+.form-activity-bi2{top: 54.7%;left: 39%;width: 23%;}
+.form-activity-ca{top: 56.7%;left: 15%;}
+.form-activity-cb{top: 56.7%;left: 39%;}
+.form-activity-cc{top: 56.7%;left: 63.5%;}
+.form-activity-cd{top: 57.5%;left: 15%;}
+.form-activity-ce{top: 57.5%;left: 39%;}
+.form-activity-cf{top: 58.3%;left: 15%;}
+.form-activity-cf2{top: 58.2%;left: 39%;width: 22%;}
+.form-activity-da{top: 60.3%;left: 15%;}
+.form-activity-db{top: 60.3%;left: 39.5%;}
+.form-activity-dc{top: 60.3%;left: 64%;}
+.form-activity-dd{top: 61.1%;left: 15%;}
+.form-activity-de{top: 61.1%;left: 39.5%;}
+.form-activity-df{top: 61.1%;left: 64%;}
+.form-activity-dg{top: 61.9%;left: 15%;}
+.form-activity-dh{top: 61.9%;left: 39.5%;}
+.form-activity-e{top: 63%;left: 44%;width: 17%;}
+/* 5您孩子的年龄 */
+.form-childrenage-a{top: 66.4%;left: 15%;}
+.form-childrenage-b{top: 67.5%;left: 15%;}
+.form-childrenage-b2{top: 67.5%;left: 56%;width: 5%;}
+.form-childrenage-c{top: 69.1%;left: 15%;}
+.form-childrenage-c2{top: 69.9%;left: 39%;width: 5%;}
+.form-childrenage-c3{top: 69.9%;left: 53%;width: 5%;}
+.form-childrenage-d{top: 71%;left: 15%;}
+.form-childrenage-d2{top: 71%;left: 70%;width: 5%;}
+.form-childrenage-d3{top: 71.7%;left: 21%;width: 5%;}
+.form-childrenage-d4{top: 71.7%;left: 33%;width: 5%;}
+/* 6您孩子的特长爱好是 */
+.form-childrehobby-aa{top: 75.8%;left: 15%;}
+.form-childrehobby-ab{top: 75.8%;left: 39.5%;}
+.form-childrehobby-ac{top: 75.8%;left: 64%;}
+.form-childrehobby-ad{top: 76.6%;left: 15%;}
+.form-childrehobby-ae{top: 76.6%;left: 39.5%;}
+.form-childrehobby-af{top: 76.6%;left: 64%;}
+.form-childrehobby-ag{top: 77.4%;left: 15%;}
+.form-childrehobby-ah{top: 77.4%;left: 39.5%;}
+.form-childrehobby-ai{top: 78.25%;left: 15%;}
+.form-childrehobby-ai2{top: 78.1%;left: 39%;width: 19%;}
+.form-childrehobby-ba{top: 80.3%;left: 15%;}
+.form-childrehobby-bb{top: 80.3%;left: 39.5%;}
+.form-childrehobby-bc{top: 80.3%;left: 64.5%;}
+.form-childrehobby-bd{top: 81.1%;left: 15%;}
+.form-childrehobby-be{top: 81.1%;left: 39.5%;}
+.form-childrehobby-bf{top: 81.1%;left: 64.5%;}
+.form-childrehobby-bg{top: 81.9%;left: 15%;}
+.form-childrehobby-bh{top: 81.9%;left: 39.5%;}
+.form-childrehobby-bi{top: 81.9%;left: 64.5%;}
+.form-childrehobby-bj{top: 82.8%;left: 15%;}
+.form-childrehobby-ca{top: 84.8%;left: 15%;}
+.form-childrehobby-cb{top: 84.8%;left: 36%;}
+.form-childrehobby-cc{top: 84.8%;left: 57%;}
+.form-childrehobby-cd{top: 85.6%;left: 15%;}
+.form-childrehobby-ce{top: 85.6%;left: 36%;}
+.form-childrehobby-ce2{top: 85.5%;left: 60%;width: 15%;}
+.form-childrehobby-da{top: 88%;left: 15%;}
+.form-childrehobby-db{top: 88%;left: 37.5%;}
+.form-childrehobby-e2{top: 89.3%;left: 44%;width: 22%}
+/* 提交 */
+.form-submit{position: absolute;top:94%;left: 24%;width: 51%;height: 1%;}
+
+.share-box{position: absolute;top: 0;left:0;width: 100%;z-index: 999;}
+.share-box img{width: 100%;}
+
+.dialogue-tips{background:rgba(0,0,0,.6);width:50%;position:fixed;left:20%;top:40%;margin-top:-25px;z-index:999;border-radius:20px;color:#fff;text-align:center;padding:5%;line-height:1.5}
+
+@-webkit-keyframes zoomIna {
+	0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes zoomIna {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5);
+        -ms-transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}

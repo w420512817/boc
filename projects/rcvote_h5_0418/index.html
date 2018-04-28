@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)匠心致敬东方美</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+		
+		<div class="logo"><img src="img/p1_1.png" alt=""></div>
+		<!-- page01 -->
+		<div class="page page01 hide" id="page01" nextHash="page02" >
+			<div class="page-title"><img src="img/p1_2.png" alt=""></div>
+			<div class="page-text"><img src="img/p1_3.png" alt=""></div>
+			<div class="page-zhang"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-img2"><img src="img/p1_6.png" alt=""></div>
+			<div class="page-img3"><img src="img/p1_7.png" alt=""></div>
+			<div class="page-img4"><img src="img/p1_8.png" alt=""></div>
+			<div class="page-img1"><img src="img/p1_5.png" alt=""></div>
+		</div>
+		<!-- page02 -->
+		<div class="page page02 hide" id="page02" nextHash="page03" prevHash="page01">
+			<div class="page-zhang"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-title"><img src="img/p2_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p2_2.png" alt=""></div>
+			<div class="page-img1"><img src="img/p2_3.png" alt=""></div>
+			<div class="page-img3"><img src="img/p2_5.png" alt=""></div>
+			<div class="page-img2"><img src="img/p2_4.png" alt=""></div>
+			<div class="page-img4"><img src="img/p2_6.png" alt=""></div>
+		</div>
+		<!-- page03 -->
+		<div class="page page03 hide" id="page03" nextHash="page04" prevHash="page02">
+			<div class="page-zhang"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-title"><img src="img/p3_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p3_2.png" alt=""></div>
+			<div class="page-img1"><img src="img/p3_3.png" alt=""></div>
+			<div class="page-img2">
+				<img src="img/p3_4.png" alt="">
+				<div class="page-img3"><img src="img/p3_5.png" alt=""></div>
+			</div>
+			<div class="page-img4"><img src="img/p3_6.png" alt=""></div>
+		</div>
+		<!-- page04 -->
+		<div class="page page04 hide" id="page04" nextHash="page05" prevHash="page03">
+			<div class="page-zhang"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-title"><img src="img/p4_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p4_2.png" alt=""></div>
+			<div class="page-img1"><img src="img/p4_3.png" alt=""></div>
+			<div class="page-img2"><img src="img/p4_4.png" alt=""></div>
+		</div>
+		<!-- page05 -->
+		<div class="page page05 hide" id="page05" prevHash="page04">
+			<div class="page-zhang"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-title"><img src="img/p5_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-btn"><img src="img/p5_3.png" alt=""></div>
+			<div class="page-text2"><img src="img/p5_4.png" alt=""></div>
+			<div class="page-text3"><img src="img/p5_5.png" alt=""></div>
+			<div class="page-img1"><img src="img/p5_6.png" alt=""></div>
+			<div class="page-img2"><img src="img/p5_7.png" alt=""></div>
+		</div>
+		<!-- page06	关注 -->
+		<div class="page page06 hide" id="page06">
+			<div class="page-img1"><img src="img/p6_1.png" alt=""></div>
+			<div class="page-text"><img src="img/p6_2.png" alt=""></div>
+			<div class="page-txt"><img src="img/p6_3.png" alt=""></div>
+		</div>
+		<!-- page07 表单 -->
+		<div class="page page07 hide" id="page07">
+			<form action="#">
+				<textarea class="form-text" name="info-text" id="info-text" rows="3"></textarea>
+				<input type="text" class="form-name" id="info-name" name="info-name" >
+				<input type="text" class="form-phone" id="info-phone" name="info-phone" >
+			</form>
+			<div class="page-txt"><img src="img/p6_3.png" alt=""></div>
+			<div class="page-btn" id="form-submit"><img src="img/p7_3.png" alt=""></div>
+		</div>
+		<!-- page08 分享-->
+		<div class="page page08 hide" id="page08">
+			<div class="page-box">
+				<img src="img/p8_1.png" alt="">
+				<!-- 微信头像 -->
+				<div class="page-img" style="background-image: url(img/1.jpg)"></div>
+				<textarea class="page-formtext" readonly="readonly">文字文字文字文字文字</textarea>
+				<p class="page-name">微信名</p>
+				<div class="page-zan"><img src="img/p8_3.png" alt=""></div>
+				<p class="page-num">300</p>
+			</div>
+			<div class="page-btn1"><img src="img/p8_4.png" alt=""></div>
+			<div class="page-btn2"><img src="img/p8_5.png" alt=""></div>
+			<div class="page-text"><img src="img/p8_6.png" alt=""></div>
+			<div class="page-txt"><img src="img/p6_3.png" alt=""></div>
+			<div class="page-list hide">
+				<div class="page-bg"><img src="img/bg9.jpg" alt=""></div>
+				<div class="page-title"><img src="img/p9_1.png" alt=""></div>
+				<div class="page-ul">
+					<ul>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+						<li>
+							<div class="wx-img" style="background-image:url(img/1.jpg)"></div>
+							<p class="wx-name">微信名</p>
+							<p class="wx-num"><img src="img/p8_3.png" alt="">999</p>
+						</li>
+					</ul>
+				</div>
+				<div class="page-back"><img src="img/back.png" alt=""></div>
+			</div>
+		</div>
+		<div class="resize">
+			<img src="img/next.png" width="100%">
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('page01');
+			// loadPage('page05');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "在越州府，以花束和书享邂逅禅意人生", //分享标题
+				desc: "期待与你相遇！", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/rcvote_h5_0418/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/rcvote_h5_0418/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

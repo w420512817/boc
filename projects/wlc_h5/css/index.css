@@ -1,0 +1,111 @@
+body{background-color:#F1F1F1;}
+#wrap{position:relative;width:640px;margin:0 auto;height:100%;overflow:hidden;}
+#mask{position:absolute;width:100%;margin:0 auto;height:100%;z-index:9999;display:none;left:0;top:0;}
+.animate_up,.animate_down{position:absolute;height:100%;width:100%;display:none;}
+.animate_up1,.animate_down1{position:absolute;height:100%;width:100%;}
+.up{height:50.5%;overflow:hidden;}
+.up.ease{-webkit-transition:height 0.5s ease;}
+.up-box{height:1030px;}
+.up_tip1,.down_tip1{position:absolute;width:5%;margin-top:-27px;}
+.up_tip1{top:53%;right:13%;-webkit-animation:arrowUp 1.0s infinite ease-in both;}
+.down_tip1{top:50%;right:13%;-webkit-animation:arrowDown 1.0s infinite ease-in both;}
+.arrow_tip .left_tip2,.arrow_tip .right_tip2{position:absolute;width:63px;height:54px;top:83%;margin-top:-27px;}
+.arrow_tip .left_tip2{left:40%;-webkit-animation:fadeIn 1s ease 5s backwards,arrowLeft1 1.0s infinite ease-in forwards;}
+.arrow_tip .right_tip2{right:40%;-webkit-animation:fadeIn 1s ease 5s backwards,arrowRight1 1.0s infinite ease-in forwards;}
+.bottom-tip{width:100%;color:#000;position:absolute;bottom:1px;left:0;font-size:22px;text-align:center;z-index:999}
+.bottom-tip::after{content:"右滑查看更多精彩内容";color:#fff;}
+.img0{
+	width: 8%;
+    height: auto;
+    top: 25%;
+    right: 5%;
+}
+/*page1*/
+.page1{background:rgba(0,0,0,0) url(../img/bg1.jpg) no-repeat 50% 50%;background-size:100% 100%;}
+.img1{-webkit-animation:fadeFromTop 1s ease both;}
+.page1 .img2{-webkit-animation:fadeFromTop 1s ease .5s both;}
+.page1 .img3{-webkit-animation:fadeFromBottom 1s ease .5s both;}
+.page1 .img5{-webkit-animation:fadeFromRight 1s ease 1s both;}
+.page1 .img6{-webkit-animation:fadeFromLeft 1s ease 1s both;}
+.page1 .img7{-webkit-animation:fadeFromBottom 1s ease 1.5s both;}
+
+/*page2*/
+.page2 .fadeOut{-webkit-animation:fadeOut 1s ease both;}
+.page2 .up-box{background:url(../img/3-1-01.png) no-repeat;background-size:100% 100%;}
+.page2 .up .img2{-webkit-animation:fadeFromLeft 2s ease both;}
+.page2 .up .img3{-webkit-animation:fadeFromTop 2s ease both;}
+.page2 .up .img4{-webkit-animation:fadeFromBottom 2s ease both;}
+.page2 .up .img5{-webkit-animation:fadeFromRight 2s ease both;}
+.page2 .up .img6{-webkit-animation:fadeFromTop 2s ease both;}
+.page2 .up .img7{-webkit-animation:fadeFromLeft 2s ease both}
+.page2 .up .img8{-webkit-animation:fadeFromLeft 2s ease both;}
+.page2 .up .img10{-webkit-animation:fadeFromTop 2s ease both;}
+.page2 .down-box{background:url(../img/3-2-01.png) no-repeat;background-size:100% 100%;}
+.page2 .down .img1{-webkit-animation:fadeFromLeft 2s ease both;}
+.page2 .down .img2{-webkit-animation:fadeFromLeft 2s ease both;}
+.page2 .down .img3{-webkit-animation:fadeFromTop 2s ease both;}
+.page2 .down .img4{-webkit-animation:fadeFromLeft 2s ease both;}
+.page2 .down .img5{-webkit-animation:fadeFromRight 2s ease both;}
+.page2 .down .img7{-webkit-animation:fadeFromTop 2s ease both;}
+
+/*page3*/
+.page3 .up-box{background:url(../img/2-1-01.png) no-repeat;background-size:100% 100%;}
+.page3 .up .img1{-webkit-animation:fadeFromTop 2s ease both;}
+.page3 .up .img2{-webkit-animation:fadeFromRight 2s ease both;}
+.page3 .up .img3{-webkit-animation:fadeFromLeft 2s ease both;}
+.page3 .up .img4{-webkit-animation:fadeFromTop 2s ease both;}
+.page3 .up .img5{-webkit-animation:fadeFromLeft 2s ease both;}
+.page3 .up .img6{-webkit-animation:fadeFromLeft 2s ease 1s both;}
+.page3 .up .img7{-webkit-animation:fadeFromTop 2s ease 2s both;}
+.page3 .down-box{background:url(../img/2-2-01.png) no-repeat;background-size:100% 100%;}
+.page3 .down .img1{-webkit-animation:fadeFromTop 2s ease both;}
+.page3 .down .img2{-webkit-animation:fadeFromBottom 2s ease both;}
+.page3 .down .img3{-webkit-animation:fadeFromRight 2s ease both;}
+.page3 .down .img4{-webkit-animation:fadeFromTop 2s ease both;}
+.page3 .down .img5{-webkit-animation:fadeFromLeft 2s ease both;}
+.page3 .down .img6{-webkit-animation:fadeFromRight 2s ease 1s both;}
+.page3 .down .img7{-webkit-animation:fadeFromTop 2s ease 2s both;}
+
+/*page4*/
+.page4 .up-box{background:url(../img/4-1-01.png) no-repeat;background-size:100% 100%;}
+.page4 .up .img1{-webkit-animation:fadeFromTop 2s ease both;}
+.page4 .up .img2{-webkit-animation:fadeFromLeft 2s ease both;}
+.page4 .up .img3{-webkit-animation:fadeFromRight 2s ease  both;}
+.page4 .up .img4{-webkit-animation:fadeFromRight 2s ease   both;}
+.page4 .up .img5{-webkit-animation:fadeFromTop 2s ease alternate both;}
+.page4 .up .img6{-webkit-animation:fadeFromRight 2s ease 1s both;}
+.page4 .up .img7{-webkit-animation:fadeFromLeft 2s ease 2s both;}
+
+.page4 .down-box{background:url(../img/4-2-01.png) no-repeat;background-size:100% 100%;}
+.page4 .down .img1{-webkit-animation:fadeFromRight 2s ease both;}
+.page4 .down .img2{-webkit-animation:fadeFromRight 2s ease both;}
+.page4 .down .img3{-webkit-animation:fadeFromTop 2s ease both;}
+.page4 .down .img4{-webkit-animation:fadeFromLeft 2s ease both;}
+.page4 .down .img5{-webkit-animation:fadeFromRight 2s ease both;}
+.page4 .down .img6{-webkit-animation:fadeFromTop 2s ease both;}
+.page4 .down .img7{-webkit-animation:fadeFromBottom 2s ease both;}
+.page4 .down .img8{-webkit-animation:fadeFromLeft 2s ease 1s both;}
+.page4 .down .img9{-webkit-animation:fadeFromTop 2s ease 2s both;}
+/*page5*/
+.page5{background:rgba(0,0,0,0) url(../img/5.jpg) no-repeat 50% 50%;background-size:100% 100%;}
+
+.page5 .img5_1{-webkit-animation:fadeFromBottom 1s .5s ease both;}
+.page5 .img5_2{-webkit-animation:fadeFromTop 1s 1s ease both;}
+.page5 .img5_3{-webkit-animation:fadeFromLeft 1s ease 1.5s both;}
+.page5 .img5_4{-webkit-animation:fadeFromRight 1s ease 1.5s both;}
+.page5 .img5_5{-webkit-animation:fadeFromLeft 1s ease 1.5s both;}
+/* page6 */
+.page6{background:rgba(0,0,0,0) url(../img/5.jpg) no-repeat 50% 50%;background-size:100% 100%;}
+.page6 .img6_1{-webkit-animation:fadeFromBottom 1s ease .5s both;}
+.page6 .img6_2{-webkit-animation:fadeFromLeft 1s ease 1s both;}
+.page6 .img6_3{-webkit-animation:fadeFromRight 1s ease 1s both;}
+.page6 .img6_4{-webkit-animation:fadeIn 1s ease 1.5s both;}
+/* .page6 .img6_5{-webkit-animation:fadeFromLeft 1s ease 1.5s both;} */
+.page6 .img6_6{-webkit-animation:arrowLeft1 1s 2s infinite ease-in both;}
+.page6 .img6_7{-webkit-animation:arrowRight1 1s 2s infinite ease-in both;}
+.page6 .img6_8{-webkit-animation:fadeIn 1s ease 2s both;}
+
+
+.img6_6{position: absolute;top: 55%;left: 5%;width: 4%;height: auto;}
+.img6_7{position: absolute;top: 55%;right: 5%;width: 4%;height: auto;}
+.img6_8{position: absolute;bottom: 19%;right: 46.5%;width: 7%;height: auto;}

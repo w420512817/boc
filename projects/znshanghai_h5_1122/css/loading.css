@@ -1,0 +1,110 @@
+/*加载效果css*/
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 888;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: #ccc;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+.loaded {
+  display: none;
+}
+.spinner {
+  margin: 160px auto 0;
+  width: 150px;
+  text-align: center;
+}
+.spinner > div {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.load-img{position: absolute;top: 40%;left: 20%;width: 60%;}
+.loading p{position: absolute;top: 50%;left: 32.5%;width: 35%;}
+.load-progress {
+  display: inline-block;
+  margin-left: 0.2em;
+}
+.copyright {
+  position: absolute;
+  left: 30%;
+  bottom: 3%;
+  width: 40%;
+}
+@-moz-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-o-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

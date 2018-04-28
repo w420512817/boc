@@ -1,0 +1,345 @@
+@charset "UTF-8";
+  
+body,div,html,img,p,span{margin:0;padding:0}
+html{width:100%;height:100%;position:relative;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0 auto}
+body{color:#333;font:16px "Helvetica Neue",Helvetica,STHeiTi,sans-serif;margin:0 auto;width:100%;height:100%;position:relative;-webkit-tap-highlight-color:transparent}
+body,html{height:100%}
+li,ol,ul{list-style:none;margin:0;padding:0}
+img{border:none;display:block;width:100%;}
+a{text-decoration:none}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+textarea{-webkit-appearance:none;outline:0;margin:0;padding:0;border:none;border-radius:0;background:0 0;resize: none;}
+input,select,textarea{outline: none;border:none;padding:0;margin: 0;}
+::-webkit-input-placeholder {color:#333;}
+::-webkit-scrollbar{width:.3em;height:.3em}
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);border-radius:10px;background-color:#fff}
+::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#009c7a}
+/*加载页*/
+.loading{position:absolute;width:100%;height:100%;z-index:888;top:0;left:0;bottom:0;color:#ccc;text-align:center;overflow:hidden;background-color:#eee;}
+.loaded{display:none}
+.spinner{margin:160px auto 0;width:150px;text-align:center}
+.spinner>div{width:20px;height:20px;background-color:#ccc;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out}
+.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}
+.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}
+.load-progress{display:inline-block;margin-left:.2em}
+.copyright{position:absolute;left:35%;bottom:3%;width:30%}
+@-webkit-keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+@keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+
+/**横屏竖屏提示start**/
+.orienLayer{position:absolute;z-index:501;width:100%;height:100%;background:#000;top:0;left:0}
+.orienLayer .txt{position:absolute;left:0;top:15%;color:#fff;width:100%;height:30px;text-align:center;line-height:30px}
+.orienLayer .icons{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');position:absolute;width:67px;height:109px;left:50%;top:20%;margin:0 -33px 0;transform:rotate(90deg);-webkit-transform:rotate(90deg);-webkit-background-size:67px;background-size:67px}
+@media all and (orientation:landscape){
+  /*横屏*/
+  .orienLayer{display:block}
+}
+@media all and (orientation:portrait){
+  /*竖屏*/
+  .orienLayer{display:none}
+}
+/* music */
+.music{position:fixed;right:2%;top:0;display:block;z-index:99;width:30px;background:url(../img/music2.png) no-repeat center center;background-size:contain;height:50px;display:block}
+.music.on{-webkit-animation:reverseRotataZ 1.2s linear infinite}
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+@keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+
+.resize{width:6%;position:absolute;bottom:2%;left:47%;z-index:99;-webkit-animation:resize 1s linear infinite;animation:resize 1s linear infinite}
+@-webkit-keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+@keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+
+.container,.page{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.hide{display:none}
+.hidden{visibility:hidden}
+.page img{display:block;width:100%;height: 100%;visibility:hidden;}
+.page.animate img{visibility:visible;}
+.page.animate{animation:fadeIn 1s ease both}
+
+/* 通用 */
+.page [class^='page-']{position: absolute;top: 0;left: 0;width: 100%;height: auto;}
+/* .logo{position: absolute;top: 5%;left: 5%;width: 10%;} */
+/* .animate .logo{-webkit-animation: fadeInDown 1s ease both;animation: fadeInDown 1s ease both;} */
+/* page01 */
+.welcome{overflow: scroll;-webkit-overflow-scrolling: touch;}
+.welcome .page-bg1,.welcome .page-bg2,.welcome .page-bg3{position: relative;}
+.welcome .page-btn,.welcome .page-btn2{top: 72%;left: 30%;width: 40%;}
+/* .welcome .page-btn2{top: 20%;left: 30%;width: 40%;} */
+/* page2 */
+.form{overflow: scroll;-webkit-overflow-scrolling: touch;}
+.form form{position: absolute;top: 0;left: 0;width: 100%;height: auto;}
+.form .page-bg{position: relative;top: 0;left: 0;width: 100%;height: auto;}
+.form form select{position: absolute;text-align: center;}
+.form form input{position: absolute;text-align: center;height: 1.5rem;line-height: 1.5;font-size: .8rem;}
+.form input[type="radio"],input[type="checkbox"]{width: 5%}
+.form input[type="text"]{background: transparent;width: 15%;}
+.form .form-city1{top: 1.8%;left: 10%;width: 20%;}
+.form .form-city2{top: 1.8%;left: 35%;width: 20%;}
+.form .form-sex1{top: 3.3%;left: 10%;}
+.form .form-sex2{top: 3.3%;left: 37.5%;}
+.form .form-age1{top: 4.9%;left: 10%;}
+.form .form-age2{top: 4.9%;left: 37.5%;}
+.form .form-age3{top: 4.9%;left: 67.5%;}
+.form .form-age4{top: 5.4%;left: 10%;}
+.form .form-age5{top: 5.4%;left: 37.5%;}
+.form .form-people1{top: 7.1%;left: 10%;}
+.form .form-people2{top: 7.1%;left: 37.5%;}
+.form .form-people3{top: 7.1%;left: 67%;}
+.form .form-people4{top: 7.7%;left: 10%;}
+.form .form-people5{top: 7.7%;left: 37.5%;}
+.form .form-people6{top: 7.7%;left: 67%;}
+.form .form-people7{top: 7.6%;left: 79%;}
+.form .form-area1{top: 9.4%;left: 10%;}
+.form .form-area2{top: 9.4%;left: 37.5%;}
+.form .form-area3{top: 9.4%;left: 67%;}
+.form .form-area4{top: 9.9%;left: 10%;}
+.form .form-area5{top: 9.9%;left: 37.5%;}
+.form .form-area6{top: 9.9%;left: 67%;}
+.form .form-educ1{top: 11.7%;left: 10%;}
+.form .form-educ2{top: 11.7%;left: 37.5%;}
+.form .form-educ3{top: 11.7%;left: 67%;}
+.form .form-owner1{top: 13.5%;left: 10%;}
+.form .form-owner2{top: 13.5%;left: 37.5%;}
+.form .form-time1{top: 15.3%;left: 10%;}
+.form .form-time2{top: 15.3%;left: 37.5%;}
+.form .form-time3{top: 15.3%;left: 67%;}
+.form .form-time4{top: 15.8%;left: 10%;}
+.form .form-fix1{top: 17.6%;left: 10%;}
+.form .form-fix2{top: 17.6%;left: 37.5%;}
+.form .form-fix3{top: 17.6%;left: 67%;}
+.form .form-room1{top: 19.4%;left: 10%;}
+.form .form-room2{top: 19.4%;left: 37.5%;}
+.form .form-room3{top: 19.4%;left: 67%;}
+.form .form-room4{top: 20%;left: 10%;}
+.form .form-room5{top: 20%;left: 37.5%;}
+.form .form-room6{top: 20%;left: 67%;}
+.form .form-room7{top: 20.6%;left: 10%;}
+.form .form-room8{top: 20.5%;left: 22%;}
+.form .form-fixtime1{top: 22.4%;left: 10%;}
+.form .form-fixtime2{top: 22.4%;left: 37.5%;}
+.form .form-fixtime3{top: 22.4%;left: 67%;}
+.form .form-fixtime4{top: 23%;left: 10%;}
+.form .form-fixmoney1{top: 24.9%;left: 10%;}
+.form .form-fixmoney2{top: 24.9%;left: 37.5%;}
+.form .form-fixmoney3{top: 24.9%;left: 67%;}
+.form .form-fixmoney4{top: 25.5%;left: 10%;}
+.form .form-style1{top: 27.3%;left: 10%;}
+.form .form-style2{top: 27.3%;left: 37.5%;}
+.form .form-style3{top: 27.3%;left: 67%;}
+.form .form-style4{top: 28.9%;left: 10%;}
+.form .form-style5{top: 28.9%;left: 37.5%;}
+.form .form-style6{top: 28.9%;left: 67%;}
+.form .form-important1{top: 32.1%;left: 10%;}
+.form .form-important2{top: 32.1%;left: 37.5%;}
+.form .form-important3{top: 32.1%;left: 67%;}
+.form .form-important4{top: 32.7%;left: 10%;}
+.form .form-important5{top: 32.7%;left: 37.5%;}
+.form .form-important6{top: 32.7%;left: 67%;}
+.form .form-important7{top: 32.7%;left: 79%;}
+.form .form-toilet1{top: 35%;left: 10%;}
+.form .form-toilet2{top: 35%;left: 37.5%;}
+.form .form-toilet3{top: 35%;left: 67%;}
+.form .form-toilet4{top: 35.6%;left: 10%;}
+.form .form-toilet5{top: 35.6%;left: 37.5%;}
+.form .form-toilet6{top: 35.6%;left: 67%;}
+.form .form-toilet7{top: 36.2%;left: 10%;}
+.form .form-toilet8{top: 36.2%;left: 22%;}
+.form .form-kitchen1{top: 38.6%;left: 10%;}
+.form .form-kitchen2{top: 38.6%;left: 37.5%;}
+.form .form-kitchen3{top: 38.6%;left: 67%;}
+.form .form-kitchen4{top: 39.1%;left: 10%;}
+.form .form-kitchen5{top: 39.1%;left: 37.5%;}
+.form .form-kitchen6{top: 39.1%;left: 67%;}
+.form .form-kitchen7{top: 39.7%;left: 10%;}
+.form .form-kitchen8{top: 39.7%;left: 22%;}
+.form .form-veranda1{top: 42.1%;left: 10%;}
+.form .form-veranda2{top: 42.1%;left: 37.5%;}
+.form .form-veranda3{top: 42.1%;left: 67%;}
+.form .form-veranda4{top: 42.6%;left: 10%;}
+.form .form-veranda5{top: 42.6%;left: 22%;}
+.form .form-basement1{top: 45%;left: 10%;}
+.form .form-basement2{top: 45%;left: 37.5%;}
+.form .form-basement3{top: 45%;left: 67%;}
+.form .form-basement4{top: 45.6%;left: 10%;}
+.form .form-basement5{top: 45.6%;left: 22%;}
+.form .form-rooftop1{top: 48%;left: 10%;}
+.form .form-rooftop2{top: 48%;left: 39.5%;}
+.form .form-rooftop3{top: 48%;left: 67%;}
+.form .form-rooftop4{top: 48.6%;left: 10%;}
+.form .form-rooftop5{top: 48.6%;left: 39.5%;}
+.form .form-rooftop6{top: 48.6%;left: 51%;}
+.form .form-child1{top: 50.9%;left: 10%;}
+.form .form-child2{top: 50.9%;left: 37%;}
+.form .form-child3{top: 50.9%;left: 67%;}
+.form .form-child4{top: 51.5%;left: 10%;}
+.form .form-child5{top: 51.5%;left: 49%;}
+.form .form-child6{top: 52.1%;left: 10%;}
+.form .form-child7{top: 52.1%;left: 49%;}
+.form .form-child8{top: 52.7%;left: 10%;}
+.form .form-child9{top: 52.7%;left: 22%;}
+.form .form-old1{top: 55.1%;left: 10%;}
+.form .form-old2{top: 55.1%;left: 37%;}
+.form .form-old3{top: 55.1%;left: 67%;}
+.form .form-old4{top: 55.7%;left: 10%;}
+.form .form-old5{top: 55.7%;left: 59.5%;}
+.form .form-old6{top: 56.3%;left: 10%;}
+.form .form-old7{top: 56.3%;left: 37%;}
+.form .form-old8{top: 56.9%;left: 10%;}
+.form .form-old9{top: 56.9%;left: 37%;}
+.form .form-old10{top: 56.9%;left: 67%;}
+.form .form-old11{top: 57.5%;left: 10%;}
+.form .form-old12{top: 57.5%;left: 37%;}
+.form .form-old13{top: 57.5%;left: 67%;}
+.form .form-old14{top: 57.5%;left: 79%;}
+.form .form-storage1{top: 59.9%;left: 10%;}
+.form .form-storage2{top: 59.9%;left: 49%;}
+.form .form-storage3{top: 60.5%;left: 10%;}
+.form .form-storage4{top: 60.5%;left: 49%;}
+.form .form-storage5{top: 61.1%;left: 10%;}
+.form .form-storage6{top: 61.1%;left: 37%;}
+.form .form-storage7{top: 61.1%;left: 67%;}
+.form .form-storage8{top: 61.1%;left: 79%;}
+.form .form-water1{top: 63.6%;left: 10%;}
+.form .form-water2{top: 63.6%;left: 37%;}
+.form .form-water3{top: 63.6%;left: 67%;}
+.form .form-water4{top: 64.1%;left: 10%;}
+.form .form-water5{top: 64.1%;left: 37%;}
+.form .form-water6{top: 64.1%;left: 67%;}
+.form .form-water7{top: 64.7%;left: 10%;}
+.form .form-water8{top: 64.7%;left: 37%;}
+.form .form-water9{top: 64.7%;left: 67%;}
+.form .form-water10{top: 65.3%;left: 10%;}
+.form .form-water11{top: 65.3%;left: 37%;}
+.form .form-water12{top: 65.3%;left: 49%;}
+.form .form-air1{top: 67.9%;left: 10%;}
+.form .form-air2{top: 67.9%;left: 37%;}
+.form .form-air3{top: 68.4%;left: 10%;}
+.form .form-air4{top: 68.4%;left: 37%;}
+.form .form-air5{top: 68.4%;left: 66.5%;}
+.form .form-air6{top: 68.4%;left: 78%;}
+.form .form-home1{top: 70.9%;left: 10%;}
+.form .form-home2{top: 70.9%;left: 37%;}
+.form .form-home3{top: 70.9%;left: 66.5%;}
+.form .form-home4{top: 71.4%;left: 10%;}
+.form .form-home5{top: 71.4%;left: 37%;}
+.form .form-home6{top: 71.4%;left: 49%;}
+.form .form-haswater1{top: 73.9%;left: 10%;}
+.form .form-haswater2{top: 73.9%;left: 37%;}
+.form .form-haswater3{top: 73.9%;left: 66.5%;}
+.form .form-haswater4{top: 74.5%;left: 10%;}
+.form .form-haswater5{top: 74.5%;left: 37%;}
+.form .form-haswater6{top: 74.5%;left: 66.5%;}
+.form .form-haswater7{top: 75.1%;left: 10%;}
+.form .form-haswater8{top: 75.1%;left: 37%;}
+.form .form-haswater9{top: 75.1%;left: 66.5%;}
+.form .form-haswater10{top: 75.7%;left: 10%;}
+.form .form-haswater11{top: 75.7%;left: 37%;}
+.form .form-haswater12{top: 75.7%;left: 66.5%;}
+.form .form-haswater13{top: 75.7%;left: 78%;}
+.form .form-hasair1{top: 78.2%;left: 10%;}
+.form .form-hasair2{top: 78.2%;left: 37%;}
+.form .form-hasair3{top: 78.8%;left: 10%;}
+.form .form-hasair4{top: 78.8%;left: 37%;}
+.form .form-hasair5{top: 78.8%;left: 66.5%;}
+.form .form-hasair6{top: 78.8%;left: 78%;}
+.form .form-hashome1{top: 81.3%;left: 10%;}
+.form .form-hashome2{top: 81.3%;left: 37%;}
+.form .form-hashome3{top: 81.3%;left: 66.5%;}
+.form .form-hashome4{top: 81.8%;left: 10%;}
+.form .form-hashome5{top: 81.8%;left: 22%;}
+.form .form-know1{top: 83.8%;left: 10%;}
+.form .form-know2{top: 83.8%;left: 37%;}
+.form .form-housefix1{top: 90%;left: 10%;}
+.form .form-housefix2{top: 90%;left: 47%;}
+.form .form-housefix3{top: 90.5%;left: 10%;}
+.form .form-housefix4{top: 90.5%;left: 47%;}
+.form .form-housefix5{top: 91%;left: 10%;}
+.form .form-housefix6{top: 91%;left: 47%;}
+.form .form-houserenew1{top: 92.4%;left: 10%;}
+.form .form-houserenew2{top: 92.4%;left: 37%;}
+.form .form-houserenew3{top: 92.4%;left: 66.5%;}
+.form .form-houserenew4{top: 92.9%;left: 10%;}
+.form .form-houserenew5{top: 92.9%;left: 37%;}
+.form .form-houserenew6{top: 92.9%;left: 66.5%;}
+.form .form-increment1{top: 94.3%;left: 10%;}
+.form .form-increment2{top: 94.3%;left: 50.5%;}
+.form .form-increment3{top: 94.8%;left: 10%;}
+.form .form-increment4{top: 94.8%;left: 50.5%;}
+.form .form-increment5{top: 95.3%;left: 10%;}
+.form .form-increment6{top: 95.3%;left: 50.5%;}
+.form .form-increment7{top: 95.9%;left: 10%;}
+.form .form-increment8{top: 95.9%;left: 50.5%;}
+.form .form-increment9{top: 96.4%;left: 10%;}
+.form .form-increment10{top: 96.4%;left: 50.5%;}
+.form .form-increment11{top: 96.9%;left: 10%;}
+
+
+
+
+
+
+.form .page-btn{top: 98%;left: 30%;width: 40%;}
+/* page3 */
+.game{background:url(../img/bg3.jpg) no-repeat center center/100% 100%;}
+.game .page-circle{top: 25%;left: 10%;width: 80%;}
+.game .page-btn{top: 39%;left: 40%;width: 20%;}
+@media only screen and (min-height: 690px){
+    .game .page-btn{top: 37%;}
+}
+.game .page-error,.game .page-success{height: 100%;background-color: rgba(0,0,0,.6);}
+.page-error .page-bg,.page-success .page-bg{position: relative;top: 50%;left: 0;width: 100%;height: auto;transform: translateY(-50%);-webkit-animation: zoomIn .8s ease both;animation: zoomIn .8s ease both;transform-origin: center top;}
+.page-bg .page-close{position: absolute;top: 6%;left: 80%;width: 7%;height: auto;}
+.page-success form{position: absolute;top: 38%;left: 20%;width: 60%;height: auto;}
+/* .page-success form input{margin-bottom: 5%;width: 100%;height: 2rem;border-image: linear-gradient(to right, #00a199 , #0e9642) 1;border-style: solid;border-radius: 50%;} */
+.page-success form input{margin-bottom: 18%;width: 100%;height: 2rem;background: url(../img/p3_8.png) no-repeat center center/100% 100%;text-align: center;font-size: 1rem;}
+.page-success .page-submit{top: 80%;left: 37.5%;width: 25%;}
+
+
+
+
+.share-box{position: absolute;top: 0;left:0;width: 100%;height: 100%;background-color:rgba(0,0,0,.8);z-index: 999;}
+.share-box img{position: absolute;top: 2%;right: 3%;width: 15%;height: auto;}
+
+.dialogue-tips{background:rgba(0,0,0,.6);width:50%;position:fixed;left:20%;top:40%;margin-top:-25px;z-index:999;border-radius:20px;color:#fff;text-align:center;padding:5%;line-height:1.5}
+
+@-webkit-keyframes zoomIna {
+	0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes zoomIna {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5);
+        -ms-transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}

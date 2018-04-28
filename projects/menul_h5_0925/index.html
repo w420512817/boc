@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)菜单界面制作</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div> -->
+		<!-- <audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-img1"><img src="img/p1.png" alt=""></div>
+			<div class="page-img2"><img src="img/p2.png" alt=""></div>
+			<div class="page-icon1"><img src="img/p7.png" alt=""></div>
+			<div class="page-icon2"><img src="img/p6.png" alt=""></div>
+			<div class="page-icon3"><img src="img/p5.png" alt=""></div>
+			<div class="page-icon4"><img src="img/p4.png" alt=""></div>
+			<div class="page-icon5"><img src="img/p3.png" alt=""></div>
+		</div>
+		<!-- page02 -->
+		<div class="page welcome2 hide" id="welcome2">
+		</div>
+
+	</div>
+	<!-- pl-0 -->
+	<div class="pagel pl-0 hide">
+		<img src="img/bg0.jpg" alt="">
+		<div class="back"><img src="img/back.png" alt=""></div>
+	</div>
+	<!-- pl-1 -->
+	<div class="pagel pl-1 hide">
+		<img src="img/bg2.jpg" alt="">
+		<div class="back"><img src="img/back.png" alt=""></div>
+	</div>
+	<!-- pl-2 -->
+	<div class="pagel pl-2 hide">
+		<img src="img/bg3_1.jpg" alt="">
+		<img src="img/bg3_2.jpg" alt="">
+		<img src="img/bg3_3.jpg" alt="">
+		<img src="img/bg3_4.jpg" alt="">
+		<img src="img/bg3_5.jpg" alt="">
+		<div class="back"><img src="img/back.png" alt=""></div>
+	</div>
+	<!-- pl-3 -->
+	<div class="pagel pl-3 hide">
+		<img src="img/bg1.jpg" alt="">
+		<div class="back"><img src="img/back.png" alt=""></div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/menul_h5_0925/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/menul_h5_0925/",
+				desc: "",
+				title: ""
+			});
+		})();
+	</script>
+</body>
+
+</html>

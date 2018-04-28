@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<meta charset="utf-8" />
+	<title>（测试）信达中心</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#fff;">
+
+	<section class="load">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div> -->
+		<!-- <audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page8 下午茶预约 三级 -->
+		<div class="page appointment-tea hide " id="appointment-tea">
+			<div class="tea-bg"><img src="img/p08_01.png" alt=""></div>
+			<div class="tea-title"><img src="img/p08_02.png" alt=""></div>
+			<form action="#">
+				<div class="form-input form-tea-name"><input type="text" placeholder="请输入预约者的姓名" name="form-tea-name"></div>
+				<div class="form-input form-tea-num"><input type="text" placeholder="请输入人数" name="form-tea-num"></div>
+				<div class="form-input form-tea-time">
+					<span class="form-input-date">选择时间</span>
+					<input type="date" name="form-tea-time">
+				</div>
+				<div class="form-select form-tea-area">
+					<select name="form-tea-area">
+						<option value="">选择场地</option>
+						<option value="1">二楼室内</option>
+						<option value="2">三楼室外</option>
+					</select>
+				</div>
+				<div class="btn-confirm"><img src="img/p03_03.png" alt=""></div>
+			</form>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page17 下午茶预约 套餐 四级-->
+		<div class="page appointment-tea-package hide" id="appointment-tea-package">
+			<form action="#">
+				<div class="package-list">
+					<ul>
+						<li class="active ">
+							<div class="list-text">
+								<h3>爱在黎明破晓</h3>
+								<p>
+								<i class="list-icon"></i>
+								A套餐 - 268元
+								<input type="radio" checked="checked">
+								</p>
+							</div>
+							<div class="list-img"><img src="img/p08_03.png" alt=""></div>
+						</li>
+						<li>
+							<div class="list-text">
+								<h3>菊次郎的夏天</h3>
+								<p>
+									<i class="list-icon"></i>
+									B套餐 - 268元
+									<input type="radio">
+								</p>
+							</div>
+							<div class="list-img"><img src="img/p08_03.png" alt=""></div>
+						</li>
+						<li>
+							<div class="list-text">
+								<h3>海边的曼切斯特</h3>
+								<p>
+									<i class="list-icon"></i>
+									C套餐 - 268元
+									<input type="radio">
+								</p>
+							</div>
+							<div class="list-img"><img src="img/p08_03.png" alt=""></div>
+						</li>
+					</ul>
+					<div class="package-tip"><img src="img/p08_06.png" alt=""></div>
+				</div>
+				<div class="btn-confirm"><img src="img/p03_03.png" alt=""></div>
+			</form>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page18 下午茶预约 支付 五级-->
+		<div class="page appointment-tea-pay hide" id="appointment-tea-pay">
+			<div class="tea-pay-bg"><img src="img/p08_07.png" alt=""></div>
+			<div class="tea-pay-title"><img src="img/p08_02.png" alt=""></div>
+			<div class="tea-pay-btn1"><img src="img/p08_08.png" alt=""></div>
+			<div class="tea-pay-text1"><img src="img/p08_09.png" alt=""></div>
+			<div class="tea-pay-btn2"><img src="img/p08_10.png" alt=""></div>
+			<div class="tea-pay-text2"><img src="img/p08_11.png" alt=""></div>
+			
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page19 下午茶预约 预约码支付 六级-->
+		<div class="page appointment-tea-yympay hide" id="appointment-tea-yympay">
+			<div class="yympay-bg"><img src="img/p08_12.png" alt=""></div>
+			<div class="yympay-title"><img src="img/p08_02.png" alt=""></div>
+			<form action="#">
+				<div class="form-input form-tea-yym"><input type="text" placeholder="请输入预约码" name="form-tea-yym"></div>
+				<div class="btn-confirm"><img src="img/p03_03.png" alt=""></div>
+			</form>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page20 下午茶预约 预约码支付完成 七级-->
+		<div class="page appointment-tea-finish hide" id="appointment-tea-finish">
+			<div class="tea-finish-bg"><img src="img/p08_18.png" alt=""></div>
+			<div class="tea-finish-text"><img src="img/p08_21.png" alt=""></div>
+			<!-- <div class="tea-finish-box">
+				<img src="img/p08_19.png" alt="">
+				<p class="box-text">No.00265</p>
+				<div class="box-img"><img src="img/p08_20.png" alt=""></div>
+			</div> -->
+			<div class="tea-finish-ewm"><img src="img/p08_20.png" alt=""></div>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page21 下午茶预约 线上支付 六级-->
+		<div class="page appointment-tea-onlinepay hide" id="appointment-tea-onlinepay">
+			<div class="onlinepay-bg"><img src="img/p08_13.png" alt=""></div>
+			<div class="onlinepay-title"><img src="img/p08_14.png" alt=""></div>
+			<div class="onlinepay-text"><img src="img/p08_15.png" alt=""></div>
+			<div class="onlinepay-btn"><img src="img/p08_16.png" alt=""></div>
+			<div class="onlinepay-tip"><img src="img/p08_17.png" alt=""></div>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		</div>
+		
+		
+		<script src="js/zepto.min.js"></script>
+		<!-- <script src="js/jquery-2.2.0.min.js"></script> -->
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="js/wxsdk.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			loading(loadRES, function () {
+				loadPage('appointment-tea');
+				// loadPage('appointment-tea-finish');
+			});
+			//page8 一键预约 下午茶预约
+			$('#appointment-tea').on('click', '.welcome-logo-bottom img:nth-child(2)', function () {window.location.href="appointment.html";})
+			.on('click', '.btn-confirm', function () {
+				var _check = true;
+				if ($(this).siblings('.form-tea-area').find('select').val() == '') {
+						dialogueTips('请选择场地……');
+						_check = false;
+					}
+				if ($(this).siblings('.form-tea-time').find('input').val() == '') {
+						dialogueTips('请选择时间……');
+						_check = false;
+					}
+				if ($(this).siblings('.form-tea-num').find('input').val() == '') {
+					dialogueTips('请输入人数……');
+					_check = false;
+				}
+				if ($(this).siblings('.form-tea-name').find('input').val() == '') {
+					dialogueTips('请输入姓名……');
+					_check = false;
+				}
+				if (_check) {
+					loadPage('appointment-tea-package');
+				}
+			});
+			//page17 一键预约 下午茶预约套餐
+			$('#appointment-tea-package')
+			.on('click', '.welcome-logo-bottom img:nth-child(2)', function () {loadPage('appointment-tea');})
+			.on('click','.package-list li',function(){
+				if($(this).siblings().hasClass('active')){
+					$(this).siblings().removeClass('active');
+					$(this).siblings().find('input').removeAttr('checked');
+					$(this).addClass('active');
+					$(this).find('input').attr('checked', 'checked');
+				}
+			}).on('click','.btn-confirm',function(){loadPage('appointment-tea-pay')})
+			//page18 一键预约 下午茶预约支付
+			$('#appointment-tea-pay')
+			.on('click', '.welcome-logo-bottom img:nth-child(2)', function () {loadPage('appointment-tea-package');})
+			.on('click','.tea-pay-btn1',function(){loadPage('appointment-tea-yympay');})
+			.on('click','.tea-pay-btn2',function(){loadPage('appointment-tea-onlinepay')})
+			//page19 一键预约 下午茶预约 预约码支付
+			$('#appointment-tea-yympay')
+			.on('click', '.welcome-logo-bottom img:nth-child(2)', function () {loadPage('appointment-tea-pay');})
+			.on('click','.btn-confirm',function(){
+				var _check = true;
+				if ($(this).siblings('.form-tea-yym').find('input').val() == '') {
+					dialogueTips('请输入预约码……');
+					_check = false;
+				}
+				if (_check) {
+					loadPage('appointment-tea-finish')
+				}
+			});
+			//page20 一键预约 下午茶预约 预约码支付完成
+			$('#appointment-tea-finish')
+			.on('click', '.welcome-logo-bottom img:nth-child(2)', function () {window.location.href="appointment.html";});
+			//page21 一键预约 下午茶预约 线上支付
+			$('#appointment-tea-onlinepay')
+			.on('click', '.welcome-logo-bottom img:nth-child(2)', function () {loadPage('appointment-tea-pay')})
+			.on('click','.onlinepay-btn',function(){alert('立即支付')});
+		</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/",
+				desc: "",
+				title: "信达中心"
+			});
+		})();
+	</script>
+</body>
+
+</html>

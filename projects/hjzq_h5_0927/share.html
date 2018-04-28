@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)有些话，藏在心底很久了！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- <link rel="stylesheet" href="css/swiper-3.4.1.min.css"> -->
+	<!-- <script src="js/swiper-3.4.1.min.js"></script> -->
+</head>
+
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="load-img1"><img src="img/p0_1.png" alt=""></div>
+			<div class="load-img2"><img src="img/p0_2.png" alt=""></div>
+			<div class="load-circle"><img src="img/p0_3.png" alt=""></div>
+			<p><span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="media/music.mp3" id="audio_player" loop=""></audio>
+
+		<!-- page08 -->
+		<div class="page welcome2 hide" id="welcome2">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-text1"><img src="img/p4_1.png" alt=""></div>
+			<div class="page-text2"><img src="img/p4_3.png" alt=""></div>
+			<div class="page-img"><img src="img/p3_9.png" alt=""></div>
+			<div class="page-btn"><img src="img/p4_2.png" alt=""></div>
+		</div>
+		<!-- page09 -->
+		<div class="page move2 hide" id="move2">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-img1"><img src="img/p3_9.png" alt=""></div>
+			<div class="page-img2"><img src="img/p3_13.png" alt=""></div>
+		</div>
+		<!-- page10 -->
+		<div class="page open hide" id="open">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-title"><img src="img/p3_10.png" alt=""></div>
+			<div class="page-img2"><img src="img/p3_5.png" alt=""></div>
+			<div class="page-img4"><img src="img/bg2.jpg" alt=""></div>
+			<div class="page-img3"><img src="img/p3_6.png" alt=""></div>
+			<div class="page-img1"><img src="img/p3_7.png" alt=""></div>
+			<div class="page-icon"><img src="img/p3_8.png" alt=""></div>
+			<div class="page-btn1"><img src="img/p4_4.png" alt=""></div>
+			<div class="page-btn2"><img src="img/p4_5.png" alt=""></div>
+		</div>
+		<div class="resize hide">
+			<img src="img/next.png">
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('welcome2');
+			// loadPage('open');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/hjzq_h5_0927/img/share1.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/hjzq_h5_0927/share.html",
+				desc: "对重要的他/她，说说藏在心底的话吧~",
+				title: "有些话，藏在心底很久了！"
+			});
+		})();
+	</script>
+</body>
+
+</html>

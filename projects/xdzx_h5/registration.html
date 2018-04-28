@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>（测试）信达中心</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#fff;">
+
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div> -->
+		<!-- <audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page3 到访记录 二级-->
+		<div class="page registration hide" id="registration">
+			<div class="welcome-bg"><img src="img/p01_01.png" alt=""></div>
+			<div>
+				<form action="#">
+					<div class="registration-title"><img src="img/p03_01.png" alt=""></div>
+					<div class="registration-line"></div>
+					<div class="form-input form-registration-name"><input type="text" placeholder="请输入您的姓名" name="form-registration-name"></div>
+					<div class="form-select form-registration-qd">
+						<select name="form-registration-qd">
+						<option value="">请选择您的来访渠道</option>
+						<option value="1">朋友介绍</option>
+						<option value="2">工地围挡</option>
+						<option value="3">其他户外</option>
+						<option value="4">网络媒体</option>
+						<option value="5">渠道约访</option>
+						<option value="6">中介分销</option>
+					</select>
+					</div>
+					<div class="form-input form-registration-phone"><input type="text" placeholder="请输入您的手机" name="form-registration-phone"></div>
+					<div class="form-registration-yzm">
+						<div class="form-input"><input type="text" placeholder="请输入验证码" name="form-registration-yzm"></div>
+						<a href="#" class="form-yzm-btn">获取验证码</a>
+					</div>
+					<div class="btn-confirm"><img src="img/p03_03.png" alt=""></div>
+				</form>
+			</div>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+		<!-- page4 到访记录确认 三级	 -->
+		<div class="page registration-finish hide" id="registration-finish">
+			<div class="registration-finish-bg"><img src="img/p04_01.png" alt=""></div>
+			<div class="registration-finish-title"><img src="img/p04_02.png" alt=""></div>
+			<div class="registration-finish-text"><img src="img/p04_03.png" alt=""></div>
+			<div class="btn-loading"><img src="img/p04_05.png" alt=""></div>
+			<div class="bottom-title"><img src="img/p04_04.png" alt=""></div>
+		</div>
+
+	</div>
+
+
+	<script src="js/zepto.min.js"></script>
+	<!-- <script src="js/jquery-2.2.0.min.js"></script> -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('registration');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/",
+				desc: "",
+				title: "信达中心"
+			});
+		})();
+	</script>
+</body>
+
+</html>

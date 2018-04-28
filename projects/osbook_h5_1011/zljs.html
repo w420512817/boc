@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>一封家书</title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/wxsdk.js"></script>
+    <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="shade">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+        <div class="number"></div>
+        <div class="copyright">
+            <img src="img/boc.png" alt="bocweb" width="100%">
+        </div>
+    </div>
+    <div class="flipbook-viewport" style="display:none;">
+        <div class="music on" onclick="playClicked(this)"></div>
+        <audio src="music.mp3" id="audio_player" loop=""></audio>
+        <!-- <div class="previousPage"></div> -->
+        <!-- <div class="nextPage"></div> -->
+        <!-- <div class="return"></div> -->
+        <!-- <img class="btnImg" src="./img/btn.gif" style="display: none"/> -->
+        <!-- <div class="pageName">爱仕达第三方</div> -->
+        <div class="resize"><img src="img/next.png" width="100%"></div>
+        <div class="container">
+            <div class="flipbook">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    (function () {
+        window.wxShare && window.wxShare({
+            title: "一封家书", //分享标题
+            desc: "", //分享描述
+            linkurl: "http://wx.bocweb.cn/wangjiaqi/osbook_h5_1011/zljs.html", //分享链接
+            img: "http://wx.bocweb.cn/wangjiaqi/osbook_h5_1011/img/share.jpg" //分享图片
+        });
+    })();
+</script>
+
+</html>

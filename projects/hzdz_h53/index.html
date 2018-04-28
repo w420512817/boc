@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="author" content="http://www.bocweb.cn/" />
+	<title>（测试）碧桂园翡翠湾点赞湖州H5</title>
+
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/cropper.min.css">
+</head>
+
+<body style="background-color:#000;">
+
+	<section class="load">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+		<!-- page1 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-logol"><img src="img/p3.png" /></div>
+			<div class="page-logor"><img src="img/p2.png" /></div>
+			<div class="page-yr">
+				<img src="img/p7_02.png" />
+				<img src="img/p7_01.png" />
+			</div>
+			<div class="page-yl">
+				<img src="img/p7_04.png" />
+				<img src="img/p7_03.png" />
+			</div>
+			<div class="page-text1"><img src="img/p4.png" /></div>
+			<div class="page-text2"><img src="img/p5.png" /></div>
+			<div class="page-text3"><img src="img/p6.png" /></div>
+			<div class="page-text4"><img src="img/p1.png" /></div>
+			<div class="page-hand link-load" nextHash="welcome2">
+				<img src="img/p7_06.png" />
+				<img src="img/p7_07.png" />
+				<img src="img/p7_08.png" />
+				<img src="img/p7_05.png" />
+			</div>
+		</div>
+		<!-- page1.5 -->
+		<div class="page welcome2 hide" id="welcome2">
+			<div class="page-text link-load" nextHash="index"><img src="img/p8_0.png"/></div>
+		</div>
+		<!-- page2 -->
+		<div class="page index hide" id="index">
+			<div class="page-img"><img src="img/p8.png" /></div>
+			<div class="page-btn1"><img src="img/p8_01.png" /></div>
+			<div class="page-btn2 link-load" nextHash="upload"><img src="img/p8_02.png" /></div>
+		</div>
+
+		<!-- page3 上传照片 -->
+		<div class="page upload hide " id="upload">
+			<div class="page-photo">
+				<img src="img/p10_03.png" alt="">
+				<img src="img/p10_02.png" alt="">
+				<div class="js-container">
+					<img class="js-image" src="" alt="">
+				</div>
+				<input type="file" id="J_upload" class="js-uploadfile" />
+			</div>
+			<div class="js-result"></div>
+			<div class="page-btn1 ">
+				<img src="img/p12_01.png" />
+				<!-- <input type="file" id="J_upload" class="js-uploadfile" /> -->
+			</div>
+			<div class="page-btn2 js-ok" ><img src="img/p12_04.png" /></div>
+
+			<!-- <div class="upload-mod">
+			<p class="bg"><img src="img/img10-blank.png" /></p>
+			<p class="animate"><img src="img/img10.png" /></p>
+			<input type="file" id="J_upload" />
+		</div>
+		<p class="img01">请上传照片</p> -->
+		</div>
+
+		<!-- page4 调整大小 -->
+		<div class="page adjustment hide" id="adjustment">
+			<div class="page-img">
+				<canvas id="posterCanvas" width="503" height="897"></canvas>
+				<!-- <div class="js-result"></div> -->
+				<!-- <img src="img/p11.png" alt="">
+				<div class="page-file">
+					<canvas id="posterCanvas" width="389" height="410"></canvas>
+				</div> -->
+			</div>
+			<!-- <div class="page-toobar">
+				<img src="img/p11_01.png" alt="">
+				<input type="range" min="1" max="3.0" step="0.01" value="1.0">
+			</div> -->
+			<div class="page-btn1 "><img src="img/p12_02.png" alt=""></div>
+			<div class="page-btn2 page-ok" id="J_ok"><img src="img/p12_05.png" alt=""></div>
+			<!-- <div class="poster-stage">
+				<canvas id="posterCanvas" width="583" height="870"></canvas>
+			</div>
+			<div class="toolbar">
+				<div class="zoom-block"><input type="range" min="1" max="3.0" step="0.01" value="1.0"></div>
+				<div class="ok-btn" id="J_ok"><img src="img/submit-btn.png" /></div>
+			</div> -->
+		</div>
+
+		<!--page5 预览 -->
+		<div class="page preview hide" id="preview">
+			<div class="page-img"><img src="" alt=""></div>
+			<div class="page-btn1 link-load" nextHash="upload"><img src="img/p12_01.png" alt=""></div>
+			<div class="page-btn2 link-load" nextHash="adjustment"><img src="img/p12_02.png" alt=""></div>
+			<div class="page-btn3 link-load" nextHash="end"><img src="img/p12_03.png" alt=""></div>
+
+			<!-- <div class="preview-mod"><img src="" /></div>
+				<div class="clearfix">
+					<p class="link-load" nextHash="upload"><img src="img/img17.png" /></p>
+					<p class="link-load" nextHash="adjustment"><img src="img/img18.png" /></p>
+				</div>
+				<p class="img01 link-load" nextHash="end"><img src="img/img16.png" /></p> -->
+		</div>
+		<!-- 最后  -->
+		<div class="page end hide" id="end">
+			<div class="page-text"><img src="img/p14.png" alt=""></div>
+			<div class="page-img"><img src="" alt=""></div>
+			<div class="page-btn"><img src="img/p13.png" alt=""></div>
+
+			<!-- <p class="img02"><img src="img/img19.png" /></p>
+			<div class="preview-mod"><img src="" /></div>
+			<p class="img01"><img src="img/img20.png" /></p> -->
+		</div>
+	</div>
+
+	<!-- 规则 -->
+	<div class="dialogue dialogue-rule" id="D_rule">
+		<img class="img01" src="img/p9.png" />
+		<img class="img02" src="img/p9_01.png" />
+	</div>
+
+	<!-- 分享 -->
+	<div class="dialogue dialogue-share" id="D_share">
+		<img src="img/dialogue-share.png" class="img01" />
+	</div>
+
+
+
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<!-- <script src="js/jsn/jquery-2.1.3.min.js"></script> -->
+	<!-- <script src="js/jquery-1.10.1.min.js"></script> -->
+
+	<!-- <script src="js/jsn/iscroll-zoom.js"></script> -->
+	<!-- <script src="js/jsn/hammer.js"></script> -->
+	<!-- <script src="js/jsn/lrz.all.bundle.js"></script> -->
+	<!-- <script src="js/jsn/jquery.photoClip.js"></script> -->
+	<!-- <script>
+		$(".js-container").photoClip({
+			width: 200,
+			height: 200,
+			file: "#J_upload",
+			view: "#js-result",
+			ok: "#js-ok",
+			loadStart: function (file) {
+				console.log(file)
+				console.log("照片读取中");
+			},
+			loadComplete: function () {
+				console.log("照片读取完成");
+			},
+			clipFinish: function (dataURL) {
+				console.log(dataURL);
+				$.post('welcome.php?photo', {
+					img: dataURL
+				}, function (json) {
+
+				}, 'json');
+
+			}
+		});
+	</script> -->
+	<script src="js/cropper.js"></script>
+	<script src="js/exif.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/jquery.qrcode.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/hzdz_h53/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/hzdz_h53/",
+				desc: "为湖州点赞",
+				title: "碧桂园翡翠湾点赞湖州"
+			});
+		})();
+	</script>
+</body>
+
+</html>

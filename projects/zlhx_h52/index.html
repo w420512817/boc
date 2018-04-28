@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)中梁户型H5</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+		<!-- page1 -->
+		<div class="page index hide" id="index">
+			<div class="page-logo"><img src="img/p1.png" alt=""></div>
+			<div class="index-item1"><img src="img/p1_1.png" alt=""></div>
+			<div class="index-item2"><img src="img/p1_2.png" alt=""></div>
+			<div class="index-item3"><img src="img/p1_3.png" alt=""></div>
+			<div class="index-item4"><img src="img/p1_4.png" alt=""></div>
+		</div>
+		<!-- page2 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-top"><img src="img/p2_2.png" alt=""></div>
+			<!-- <div class="page-img"><img src="img/p2_1.png" alt=""></div> -->
+			<div class="page-bottom"><img src="img/p2_3.png" alt=""></div>
+		</div>
+		<!-- page3 -->
+		<div class="page nav hide" id="nav">
+			<div class="page-navtop"><img src="img/p3_2.png" alt=""></div>
+			<div class="page-img"><img src="img/p3_3.png" alt=""></div>
+			<div class="page-navtext"><img src="img/p3_1.png" alt=""></div>
+			<div class="nav-icon1"  onclick="play(4)"><img src="img/p3_4.png" alt=""></div>
+			<div class="nav-icon2"  onclick="play(5)"><img src="img/p3_4.png" alt=""></div>
+			<div class="nav-icon3"  onclick="play(6)"><img src="img/p3_4.png" alt=""></div>
+			<div class="nav-icon4"  onclick="play(7)"><img src="img/p3_4.png" alt=""></div>
+		</div>
+		<!-- page4 豪阔客厅-->
+		<div class="page parlour hide" id="a4">
+			<div class="page-title"><img src="img/p4_4.png" alt=""></div>
+			<div class="page-people"><img src="img/p4_6.png" alt=""></div>
+			<div class="page-box"><img src="img/p4_2.png" alt=""></div>
+			<input type="hidden" id="text4" value="好的户型，带来美好的生活。164m²的四房两厅三卫，户型南北通透、功能齐全。保证每个家庭成员都有自己的私人空间。">
+			<div class="page-txt"   id="intext4"></div>
+			<div class="page-back" onclick="pause(4)"><img src="img/p4_1.png" alt=""></div>
+		</div>
+		<!-- page5 宽景阳台-->
+		<div class="page balcony hide" id="a5">
+			<div class="page-title"><img src="img/p5_1.png" alt=""></div>
+			<div class="page-people"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-box"><img src="img/p4_2.png" alt=""></div>
+			<input type="hidden" id="text5" value="这个约5.8米的客厅南向连接阳台，非常宽敞舒适！接待亲朋好友也很有面子！晚饭后一家人坐在家里看电视聊天，或者在大阳台上欣赏窗外美景，生活多惬意啊！">
+			<div class="page-txt"   id="intext5"></div>
+			<div class="page-back" onclick="pause(5)"><img src="img/p4_1.png" alt=""></div>
+		</div>
+		<!-- page6 豪华套房-->
+		<div class="page suite hide" id="a6">
+			<div class="page-title"><img src="img/p6_1.png" alt=""></div>
+			<div class="page-people"><img src="img/p5_2.png" alt=""></div>
+			<div class="page-box"><img src="img/p4_2.png" alt=""></div>
+			<input type="hidden" id="text6" value="这个房间是难得的套房设计，配备独立卫生间，而且朝南阳光充足，无论是作为孩子的成长乐园还是父母二老的颐养空间都非常合适。">
+			<div class="page-txt"  id="intext6"></div>
+			<div class="page-back" onclick="pause(6)"><img src="img/p4_1.png" alt=""></div>
+		</div>
+		<!-- page7 主卧套房-->
+		<div class="page bedroom hide" id="a7">
+			<div class="page-title"><img src="img/p7_1.png" alt=""></div>
+			<div class="page-people"><img src="img/p4_6.png" alt=""></div>
+			<div class="page-box"><img src="img/p4_2.png" alt=""></div>
+			<input type="hidden" id="text7" value="二楼的独立楼层主卧大套房空间简直超过我想象！独立卫浴间方便私密，还有约3.2米的大阳台，夜晚吹吹江风、喝喝咖啡，生活十分惬意！">
+			<div class="page-txt"  id="intext7"></div>
+			<div class="page-back" onclick="pause(7)"><img src="img/p4_1.png" alt=""></div>
+		</div>
+
+	</div>
+	<audio src="04.m4a" class="n-audio" id="audio4"></audio>
+	<audio src="05.m4a" class="n-audio" id="audio5"></audio>
+	<audio src="06.m4a" class="n-audio" id="audio6"></audio>
+	<audio src="07.m4a" class="n-audio" id="audio7"></audio>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/zlhx_h52/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/zlhx_h52/",
+				desc: "中梁户型H5",
+				title: "中梁户型H5"
+			});
+		})();
+	</script>
+</body>
+
+</html>

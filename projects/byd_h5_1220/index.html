@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)感恩450万 MAX幸福购车季，五重豪礼年终大放送！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#000;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<!-- <div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+	</div> -->
+	<div class="pagel">
+		<div class="page1">
+			<img src="img/bg1.jpg" alt="">
+			<div class="page-form">
+				<form action="#">
+					<input type="text" placeholder="您的姓名" id="info-name">
+					<input type="text" placeholder="您的手机" id="info-phone">
+					<div class="form-sel">
+						<select name="select1" id="select1" class="form-s1" onchange="selCitiesByProv(this)">
+							<option value="">省</option>
+						</select>
+						<select name="select2" id="select2" class="form-s2">
+							<option value="">市</option>
+						</select>
+					</div>
+					<div class="form-sel">
+						<select name="select3" id="select3" class="form-s3">
+							<option value="">当地门店</option>
+						</select>
+					</div>
+				</form>
+			</div>
+			<div class="page-btn" id="form-submit"><img src="img/p1_2.png" alt=""></div>
+		</div>
+		<div class="page2"><img src="img/bg2.jpg" alt=""></div>
+		<div class="page3">
+			<img src="img/bg3.jpg" alt="">
+			<div class="page-form">
+				<form action="#">
+					<input type="text" placeholder="您的姓名" id="info-name2">
+					<input type="text" placeholder="您的手机" id="info-phone2">
+					<div class="form-sel">
+						<select name="select1" id="select4" class="form-s1" onchange="selCitiesByProv(this)">
+							<option value="">省</option>
+						</select>
+						<select name="select2" id="select5" class="form-s2">
+							<option value="">市</option>
+						</select>
+					</div>
+					<div class="form-sel">
+						<select name="select3" id="select6" class="form-s3">
+							<option value="">当地门店</option>
+						</select>
+					</div>
+				</form>
+			</div>
+			<div class="page-btn" id="form-submit2"><img src="img/p1_2.png" alt=""></div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<!-- <div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div> -->
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "感恩450万 MAX幸福购车季，五重豪礼年终大放送！", //分享标题
+				desc: "最高补贴10万元，年终抄底不容错过！", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/byd_h5_1220/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/byd_h5_1220/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

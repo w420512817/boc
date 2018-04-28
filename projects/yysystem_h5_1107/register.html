@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)绿城西溪雲庐客户预约系统</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page01 -->
+		<div class="page welcome1 hide" id="welcome1">
+			<div class="page-img1"><img src="img/p1_1.png"></div>
+			<div class="page-img2"><img src="img/p1_2.png"></div>
+			<div class="page-text"><img src="img/p1_3.png"></div>
+			<div class="page-btn1"><img src="img/p1_30.png"></div>
+			<div class="page-btn2"><img src="img/p1_31.png"></div>
+		</div>
+		<!-- page02 -->
+		<div class="page register-form hide" id="register-form">
+			<form action="#">
+				<div class="page-text"><img src="img/p1_19.png"></div>
+				<div class="form-input form-register-name"><input type="text" id="register-name" placeholder="请输入您的姓名"></div>
+				<div class="form-select form-register-sex">
+					<select name="">
+						<option value="">请输入您的性别</option>
+						<option value="1">男</option>
+						<option value="2">女</option>
+					</select>
+				</div>
+				<!-- <div class="form-select form-register-way">
+					<select name="">
+						<option value="">请输入您的获知途径</option>
+						<option value="1">朋友介绍</option>
+						<option value="2">工地围挡</option>
+						<option value="3">其他户外</option>
+						<option value="4">网络媒体</option>
+						<option value="5">渠道约访</option>
+						<option value="6">中介分销</option>
+					</select>
+				</div> -->
+				<div class="form-select form-register-product" >
+					<select name="">
+						<option value="">请输入您的意向产品类型</option>
+						<option value="1">江南合院</option>
+						<option value="2">trees villa</option>
+					</select>
+				</div>
+				<div class="form-input form-register-phone"><input type="text" id="register-phone" placeholder="请输入您的手机"></div>
+				<div class="form-register-yzm">
+					<div class="form-input"><input type="text" placeholder="请输入验证码"></div>
+					<a href="#" class="form-yzm-btn">获取验证码</a>
+				</div>
+				<div class="page-submit" id="register-submit"><img src="img/p1_4.png"></div>
+			</form>
+		</div>
+		<div class="page register-end hide" id="register-end">
+			<div class="page-img1"><img src="img/p1_7.png"></div>
+			<div class="page-img2"><img src="img/p1_2.png"></div>
+			<div class="page-text"><img src="img/p1_8.png"></div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('welcome1');
+			// loadPage('register-form');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "", //分享标题
+				desc: "", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/yysystem_h5_1107/register.html", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/yysystem_h5_1107/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

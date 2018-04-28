@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)有奖调研丨99%的人希望他们的家长成这样，1%的你怎么说？</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+		<!-- page1 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-bg1">
+				<img src="img/bg4.jpg" alt="">
+				<div class="page-btn"><img src="img/p1_1.png" alt=""></div>
+			</div>
+			<div class="page-bg2">
+				<img src="img/bg5.jpg" alt="">
+			</div>
+			<div class="page-bg3">
+				<img src="img/bg6.jpg" alt="">
+				<div class="page-btn2"><img src="img/p1_1.png" alt=""></div>
+			</div>
+		</div>
+		<!-- page2 -->
+		<div class="page form hide" id="form">
+			<form action="#" id="form1">
+				<div class="page-bg"><img src="img/bg2.jpg" alt=""></div>
+				
+				<!-- 所在城市 -->
+				<!-- <select class="form-city1" name="form-city1" id="">
+					<option value="">选择省</option>
+					<option value="1">浙江省</option>
+				</select>
+				<select class="form-city2" name="form-city1" id="">
+					<option value="">选择市</option>
+					<option value="2">杭州市</option>
+				</select> -->
+				<!-- 性别 -->
+				<input class="form-sex1" name="form-sex" type="radio" data-value="男">
+				<input class="form-sex2" name="form-sex" type="radio" data-value="女">
+				<!-- 年龄 -->
+				<input class="form-age1" name="form-age" type="radio" data-value="25以下">
+				<input class="form-age2" name="form-age" type="radio" data-value="25-35">
+				<input class="form-age3" name="form-age" type="radio" data-value="36-45">
+				<input class="form-age4" name="form-age" type="radio" data-value="46-55">
+				<input class="form-age5" name="form-age" type="radio" data-value="55以上">
+				<!-- 目前居住状态 -->
+				<input class="form-people1" name="form-people" type="radio" data-value="独居">
+				<input class="form-people2" name="form-people" type="radio" data-value="二人世界">
+				<input class="form-people3" name="form-people" type="radio" data-value="三口之家">
+				<input class="form-people4" name="form-people" type="radio" data-value="二孩之家">
+				<input class="form-people5" name="form-people" type="radio" data-value="三代同堂">
+				<input class="form-people6" name="form-people" type="radio" data-value="其他">
+				<input class="form-people7" name="form-people" type="text" maxlength="6">
+				<!-- 居住面积 -->
+				<input class="form-area1" name="form-area" type="radio" data-value="90以下">
+				<input class="form-area2" name="form-area" type="radio" data-value="90-120">
+				<input class="form-area3" name="form-area" type="radio" data-value="120-150">
+				<input class="form-area4" name="form-area" type="radio" data-value="150-200">
+				<input class="form-area5" name="form-area" type="radio" data-value="200以上平层">
+				<input class="form-area6" name="form-area" type="radio" data-value="别墅洋房">
+				<!-- 教育背景 -->
+				<input class="form-educ1" name="form-educ" type="radio" data-value="本科以下">
+				<input class="form-educ2" name="form-educ" type="radio" data-value="本科">
+				<input class="form-educ3" name="form-educ" type="radio" data-value="硕士以及上">
+				<!-- 是否是业主 -->
+				<input class="form-owner1" name="form-owner" type="radio" data-value="是">
+				<input class="form-owner2" name="form-owner" type="radio" data-value="否">
+				<!-- 装修多久 -->
+				<input class="form-time1" name="form-time" type="radio" data-value="2年以下">
+				<input class="form-time2" name="form-time" type="radio" data-value="2-5年">
+				<input class="form-time3" name="form-time" type="radio" data-value="6-10年">
+				<input class="form-time4" name="form-time" type="radio" data-value="10年以上">
+				<!-- 是否有装修打算 -->
+				<input class="form-fix1" name="form-fix" type="radio" data-value="是">
+				<input class="form-fix2" name="form-fix" type="radio" data-value="否">
+				<input class="form-fix3" name="form-fix" type="radio" data-value="不确定">
+				<!-- 打算装修哪个房间 -->
+				<input class="form-room1" name="form-room" type="radio" data-value="卫生间">
+				<input class="form-room2" name="form-room" type="radio" data-value="厨房">
+				<input class="form-room3" name="form-room" type="radio" data-value="阳台">
+				<input class="form-room4" name="form-room" type="radio" data-value="儿童房">
+				<input class="form-room5" name="form-room" type="radio" data-value="老人房">
+				<input class="form-room6" name="form-room" type="radio" data-value="地下室">
+				<input class="form-room7" name="form-room" type="radio" data-value="其他">
+				<input class="form-room8" name="form-room" type="text" maxlength="6">
+				<!-- 工期多久 -->
+				<input class="form-fixtime1" name="form-fixtime" type="radio" data-value="60个工作日" >
+				<input class="form-fixtime2" name="form-fixtime" type="radio" data-value="45-60个工作日" >
+				<input class="form-fixtime3" name="form-fixtime" type="radio" data-value="30-45个工作日" >
+				<input class="form-fixtime4" name="form-fixtime" type="radio" data-value="30个工作日以下" >
+				<!-- 装修预算 -->
+				<input class="form-fixmoney1" name="form-fixmoney" type="radio" data-value="10万以下" >
+				<input class="form-fixmoney2" name="form-fixmoney" type="radio" data-value="10-15万" >
+				<input class="form-fixmoney3" name="form-fixmoney" type="radio" data-value="15-20万" >
+				<input class="form-fixmoney4" name="form-fixmoney" type="radio" data-value="20万以上" >
+				<!-- 设计风格 -->
+				<input class="form-style1" name="form-style" type="radio" data-value="新古典风格" >
+				<input class="form-style2" name="form-style" type="radio" data-value="新中式风格" >
+				<input class="form-style3" name="form-style" type="radio" data-value="美式风格" >
+				<input class="form-style4" name="form-style" type="radio" data-value="现代风格" >
+				<input class="form-style5" name="form-style" type="radio" data-value="轻奢风格" >
+				<input class="form-style6" name="form-style" type="radio" data-value="都不喜欢" >
+				<!-- 看重的方面 -->
+				<input class="form-important1" name="form-important" type="checkbox" data-value="价格实惠">
+				<input class="form-important2" name="form-important" type="checkbox" data-value="施工质量好">
+				<input class="form-important3" name="form-important" type="checkbox" data-value="品牌信誉高">
+				<input class="form-important4" name="form-important" type="checkbox" data-value="服务完善周到">
+				<input class="form-important5" name="form-important" type="checkbox" data-value="工期短">
+				<input class="form-important6" name="form-important" type="checkbox" data-value="其他">
+				<input class="form-important7" name="form-important" type="text" maxlength="6">
+				<!-- 卫生间服务项目 -->
+				<input class="form-toilet1" name="form-toilet" type="checkbox" data-value="智能恒温花洒">
+				<input class="form-toilet2" name="form-toilet" type="checkbox" data-value="智能增压自吸泵">
+				<input class="form-toilet3" name="form-toilet" type="checkbox" data-value="防霉防潮涂料">
+				<input class="form-toilet4" name="form-toilet" type="checkbox" data-value="壁式排风扇">
+				<input class="form-toilet5" name="form-toilet" type="checkbox" data-value="智能感应夜灯">
+				<input class="form-toilet6" name="form-toilet" type="checkbox" data-value="浴室防滑扶手">
+				<input class="form-toilet7" name="form-toilet" type="checkbox" data-value="其他">
+				<input class="form-toilet8" name="form-toilet" type="text" maxlength="6">
+				<!-- 厨房服务项目 -->
+				<input class="form-kitchen1" name="form-kitchen" type="checkbox" data-value="厨房收纳系统">
+				<input class="form-kitchen2" name="form-kitchen" type="checkbox" data-value="厨余垃圾处理器">
+				<input class="form-kitchen3" name="form-kitchen" type="checkbox" data-value="安全防护系列">
+				<input class="form-kitchen4" name="form-kitchen" type="checkbox" data-value="吊柜感应灯">
+				<input class="form-kitchen5" name="form-kitchen" type="checkbox" data-value="厨房新风系统">
+				<input class="form-kitchen6" name="form-kitchen" type="checkbox" data-value="厨房净水系统">
+				<input class="form-kitchen7" name="form-kitchen" type="checkbox" data-value="其他">
+				<input class="form-kitchen8" name="form-kitchen" type="text" maxlength="6">
+				<!-- 阳台服务项目 -->
+				<input class="form-veranda1" name="form-veranda" type="checkbox" data-value="阳台照明LED灯">
+				<input class="form-veranda2" name="form-veranda" type="checkbox" data-value="户外灭蚊灯">
+				<input class="form-veranda3" name="form-veranda" type="checkbox" data-value="家用监控系统">
+				<input class="form-veranda4" name="form-veranda" type="checkbox" data-value="其他">
+				<input class="form-veranda5" name="form-veranda" type="text" maxlength="6">
+				<!-- 地下室服务项目 -->
+				<input class="form-basement1" name="form-basement" type="checkbox" data-value="除湿机">
+				<input class="form-basement2" name="form-basement" type="checkbox" data-value="空气净化器">
+				<input class="form-basement3" name="form-basement" type="checkbox" data-value="全屋新风系统">
+				<input class="form-basement4" name="form-basement" type="checkbox" data-value="其他">
+				<input class="form-basement5" name="form-basement" type="text" maxlength="6">
+				<!-- 外墙屋顶服务项目 -->
+				<input class="form-rooftop1" name="form-rooftop" type="checkbox" data-value="外墙隔热保温板">
+				<input class="form-rooftop2" name="form-rooftop" type="checkbox" data-value="隔音玻璃窗户">
+				<input class="form-rooftop3" name="form-rooftop" type="checkbox" data-value="玻璃清洗">
+				<input class="form-rooftop4" name="form-rooftop" type="checkbox" data-value="智能安防">
+				<input class="form-rooftop5" name="form-rooftop" type="checkbox" data-value="其他">
+				<input class="form-rooftop6" name="form-rooftop" type="text" maxlength="6">
+				<!-- 儿童系列服务项目 -->
+				<input class="form-child1" name="form-child" type="checkbox" data-value="触电防护罩">
+				<input class="form-child2" name="form-child" type="checkbox" data-value="家具锐角防护罩">
+				<input class="form-child3" name="form-child" type="checkbox" data-value="黑板漆">
+				<input class="form-child4" name="form-child" type="checkbox" data-value="星空漆">
+				<input class="form-child5" name="form-child" type="checkbox" data-value="抽屉缓冲阻尼轨道">
+				<input class="form-child6" name="form-child" type="checkbox" data-value="家具防倾倒安全带">
+				<input class="form-child7" name="form-child" type="checkbox" data-value="防坠落高空防护栏">
+				<input class="form-child8" name="form-child" type="checkbox" data-value="其他">
+				<input class="form-child9" name="form-child" type="text" maxlength="6">
+				<!-- 适老系列 -->
+				<input class="form-old1" name="form-old" type="checkbox" data-value="门宽改造">
+				<input class="form-old2" name="form-old" type="checkbox" data-value="小夜灯">
+				<input class="form-old3" name="form-old" type="checkbox" data-value="低位开关">
+				<input class="form-old4" name="form-old" type="checkbox" data-value="下拉储物柜/透明储物柜">
+				<input class="form-old5" name="form-old" type="checkbox" data-value="墙壁圆角处理">
+				<input class="form-old6" name="form-old" type="checkbox" data-value="增加单人床">
+				<input class="form-old7" name="form-old" type="checkbox" data-value="居室扶手/浴室凳">
+				<input class="form-old8" name="form-old" type="checkbox" data-value="防滑地面">
+				<input class="form-old9" name="form-old" type="checkbox" data-value="智能报警设备">
+				<input class="form-old10" name="form-old" type="checkbox" data-value="无线监控摄像">
+				<input class="form-old11" name="form-old" type="checkbox" data-value="永位报警器">
+				<input class="form-old12" name="form-old" type="checkbox" data-value="燃气报警器">
+				<input class="form-old13" name="form-old" type="checkbox" data-value="其他">
+				<input class="form-old14" name="form-old" type="text" maxlength="6">
+				<!-- 收纳系列 -->
+				<input class="form-storage1" name="form-storage" type="checkbox" data-value="厨房抽屉内置件">
+				<input class="form-storage2" name="form-storage" type="checkbox" data-value="单门或双门镜柜">
+				<input class="form-storage3" name="form-storage" type="checkbox" data-value="强隔板或壁式隔板">
+				<input class="form-storage4" name="form-storage" type="checkbox" data-value="带抽屉的床架">
+				<input class="form-storage5" name="form-storage" type="checkbox" data-value="床用储物件">
+				<input class="form-storage6" name="form-storage" type="checkbox" data-value="户外储物长椅">
+				<input class="form-storage7" name="form-storage" type="checkbox" data-value="其他">
+				<input class="form-storage8" name="form-storage" type="text" maxlength="6">
+				<!-- 全屋水系统 -->
+				<input class="form-water1" name="form-water" type="checkbox" data-value="漏水保护器">
+				<input class="form-water2" name="form-water" type="checkbox" data-value="净水器">
+				<input class="form-water3" name="form-water" type="checkbox" data-value="超声波水槽">
+				<input class="form-water4" name="form-water" type="checkbox" data-value="智能洗碗机">
+				<input class="form-water5" name="form-water" type="checkbox" data-value="智能泳池">
+				<input class="form-water6" name="form-water" type="checkbox" data-value="物理牛奶浴缸">
+				<input class="form-water7" name="form-water" type="checkbox" data-value="电伴热">
+				<input class="form-water8" name="form-water" type="checkbox" data-value="水龙头产品">
+				<input class="form-water9" name="form-water" type="checkbox" data-value="热水器">
+				<input class="form-water10" name="form-water" type="checkbox" data-value="坐便器">
+				<input class="form-water11" name="form-water" type="checkbox" data-value="其他">
+				<input class="form-water12" name="form-water" type="text" maxlength="6">
+				<!-- 全屋空气系统 -->
+				<input class="form-air1" name="form-air" type="checkbox" data-value="空气检测仪">
+				<input class="form-air2" name="form-air" type="checkbox" data-value="吊顶式新风净化系统">
+				<input class="form-air3" name="form-air" type="checkbox" data-value="空气净化器">
+				<input class="form-air4" name="form-air" type="checkbox" data-value="中央空调">
+				<input class="form-air5" name="form-air" type="checkbox" data-value="其他">
+				<input class="form-air6" name="form-air" type="text" maxlength="6">
+				<!-- 全屋智能家居 -->
+				<input class="form-home1" name="form-home" type="checkbox" data-value="智能照明">
+				<input class="form-home2" name="form-home" type="checkbox" data-value="智能控制">
+				<input class="form-home3" name="form-home" type="checkbox" data-value="安全防护系列">
+				<input class="form-home4" name="form-home" type="checkbox" data-value="室内清洁">
+				<input class="form-home5" name="form-home" type="checkbox" data-value="其他">
+				<input class="form-home6" name="form-home" type="text" maxlength="6">
+				<!-- 已拥有全屋水系统产品 -->
+				<input class="form-haswater1" name="form-haswater" type="checkbox" data-value="漏水保护器">
+				<input class="form-haswater2" name="form-haswater" type="checkbox" data-value="净水器">
+				<input class="form-haswater3" name="form-haswater" type="checkbox" data-value="超声波水槽">
+				<input class="form-haswater4" name="form-haswater" type="checkbox" data-value="智能洗碗机">
+				<input class="form-haswater5" name="form-haswater" type="checkbox" data-value="智能泳池">
+				<input class="form-haswater6" name="form-haswater" type="checkbox" data-value="物理牛奶浴缸">
+				<input class="form-haswater7" name="form-haswater" type="checkbox" data-value="电伴热">
+				<input class="form-haswater8" name="form-haswater" type="checkbox" data-value="智能增压泵">
+				<input class="form-haswater9" name="form-haswater" type="checkbox" data-value="水龙头产品">
+				<input class="form-haswater10" name="form-haswater" type="checkbox" data-value="热水器">
+				<input class="form-haswater11" name="form-haswater" type="checkbox" data-value="坐便器">
+				<input class="form-haswater12" name="form-haswater" type="checkbox" data-value="其他">
+				<input class="form-haswater13" name="form-haswater" type="text" maxlength="6">
+				<!-- 已拥有全屋空气系统产品 -->
+				<input class="form-hasair1" name="form-hasair" type="checkbox" data-value="空气检测仪">
+				<input class="form-hasair2" name="form-hasair" type="checkbox" data-value="吊顶式新风净化系统">
+				<input class="form-hasair3" name="form-hasair" type="checkbox" data-value="空气净化器">
+				<input class="form-hasair4" name="form-hasair" type="checkbox" data-value="中央空调">
+				<input class="form-hasair5" name="form-hasair" type="checkbox" data-value="其他">
+				<input class="form-hasair6" name="form-hasair" type="text" maxlength="6">
+				<!-- 已拥有全屋智能家居产品 -->
+				<input class="form-hashome1" name="form-hashome" type="checkbox" data-value="智能照明">
+				<input class="form-hashome2" name="form-hashome" type="checkbox" data-value="智能控制">
+				<input class="form-hashome3" name="form-hashome" type="checkbox" data-value="安全防护系列">
+				<input class="form-hashome4" name="form-hashome" type="checkbox" data-value="其他">
+				<input class="form-hashome5" name="form-hashome" type="text" maxlength="6">
+				<!-- 你知道绿城房屋吗 -->
+				<input class="form-know1" name="form-know" type="radio" data-value="是">
+				<input class="form-know2" name="form-know" type="radio" data-value="否">
+				<!-- 房屋维修 -->
+				<input class="form-housefix1" name="form-housefix" type="checkbox" data-value="住宅房屋维修保养">
+				<input class="form-housefix2" name="form-housefix" type="checkbox" data-value="公共设施维修保养">
+				<input class="form-housefix3" name="form-housefix" type="checkbox" data-value="古建筑修缮保养">
+				<input class="form-housefix4" name="form-housefix" type="checkbox" data-value="商业酒店维修维保">
+				<input class="form-housefix5" name="form-housefix" type="checkbox" data-value="园林景观维修维护">
+				<input class="form-housefix6" name="form-housefix" type="checkbox" data-value="幕墙体验及维护">
+				<!-- 房屋换新 -->
+				<input class="form-houserenew1" name="form-houserenew" type="checkbox" data-value="新房装修">
+				<input class="form-houserenew2" name="form-houserenew" type="checkbox" data-value="老房换新">
+				<input class="form-houserenew3" name="form-houserenew" type="checkbox" data-value="空间改造">
+				<input class="form-houserenew4" name="form-houserenew" type="checkbox" data-value="局部翻新">
+				<input class="form-houserenew5" name="form-houserenew" type="checkbox" data-value="墙面焕新">
+				<input class="form-houserenew6" name="form-houserenew" type="checkbox" data-value="庭院升级">
+				<!-- 房屋增值 -->
+				<input class="form-increment1" name="form-increment" type="checkbox" data-value="卫生间解决方案">
+				<input class="form-increment2" name="form-increment" type="checkbox" data-value="厨房解决方案">
+				<input class="form-increment3" name="form-increment" type="checkbox" data-value="阳台解决方案">
+				<input class="form-increment4" name="form-increment" type="checkbox" data-value="地下室解决方案">
+				<input class="form-increment5" name="form-increment" type="checkbox" data-value="外墙解决方案">
+				<input class="form-increment6" name="form-increment" type="checkbox" data-value="儿童系列解决方案">
+				<input class="form-increment7" name="form-increment" type="checkbox" data-value="适老系列解决方案">
+				<input class="form-increment8" name="form-increment" type="checkbox" data-value="收纳系列解决方案">
+				<input class="form-increment9" name="form-increment" type="checkbox" data-value="全屋水系统解决方案">
+				<input class="form-increment10" name="form-increment" type="checkbox" data-value="全屋空气系统解决方案">
+				<input class="form-increment11" name="form-increment" type="checkbox" data-value="全屋智能家居解决方案">
+				
+				<div class="page-btn"><img src="img/p2_1.png" alt=""></div>
+			</form>
+		</div>
+		<!-- page3 -->
+		<div class="page game hide" id="game">
+			<div class="page-circle" id="disk"><img src="img/p3_6.png" alt=""></div>
+			<div class="page-btn" id="startbtn"><img src="img/p3_7.png" alt=""></div>
+			<!-- 中奖 -->
+			<div class="page-success hide">
+				<div class="page-bg">
+					<img src="img/p3_4.png" alt="">
+					<div class="page-close"><img src="img/p3_2.png"></div>
+					<form action="#">
+						<input class="formsucc-name" name="formsucc-name" id="formsucc-name" type="text">
+						<input class="formsucc-phone" name="formsucc-phone" id="formsucc-phone" type="text">
+						<input class="formsucc-add" name="formsucc-add" id="formsucc-add" type="text">
+					</form>
+					<div class="page-submit" id="formsucc-submit"><img src="img/p3_5.png"></div>
+				</div>
+			</div>
+			<!-- 未中奖 -->
+			<div class="page-error hide">
+				<div class="page-bg">
+					<img src="img/p3_1.png" alt="">
+					<div class="page-close"><img src="img/p3_2.png"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 提示 -->
+	<!-- <div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div> -->
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jQueryRotate.2.2.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('welcome');
+			// loadPage('form');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "有奖调研丨99%的人希望他们的家长成这样，1%的你怎么说？", //分享标题
+				desc: "填份问卷，大奖拿走不谢！", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/lcquestion_h5_0329/index.html", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/lcquestion_h5_0329/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

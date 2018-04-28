@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)今年的最后一个长假，能不能来点简单的过法?</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.wav" id="audio_player" loop=""></audio>
+
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="page-cloud"><img src="img/p1_2.png" alt=""></div>
+			<div class="page-text"><img src="img/p1_3.png" alt=""></div>
+			<div class="page-next"><img src="img/p1_1.png" alt=""></div>
+		</div>
+		<!-- page02 -->
+		<div class="page welcome2 hide" id="welcome2">
+			<form action="#">
+				<div class="page-cloud"><img src="img/p2_2.png" alt=""></div>
+				<div class="page-text"><img src="img/p2_5.png" alt=""></div>
+				<div class="page-img1"><img src="img/p2_1.png" alt=""></div>
+				<div class="page-input">
+					<img src="img/p2_4.png" alt="">
+					<input type="text" id="info-name" name="info-name" placeholder="简单的输入名字" maxlength="4">
+				</div>
+				<div class="page-btn" id="form-submit"><img src="img/p2_3.png" alt=""></div>
+			</form>
+		</div>
+		<!-- page03 -->
+		<div class="page end hide" id="end">
+			<div class="page-img">
+				<img src="img/p3_4.png" alt="">
+				<img src="img/p3_5.png" alt="">
+				<img id="random-img" src="img/p3_6_09.png" alt="">
+				<p class="uname" id="uname">abcd</p>
+				<p class="uname2" id="uname2">abcd</p>
+			</div>
+			<div class="page-img2"><img src="" alt=""></div>
+			<div class="page-btn1"><img src="img/p3_1.png" alt=""></div>
+			<div class="page-btn2"><img src="img/p3_3.png" alt=""></div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<!-- <div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div> -->
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/brtzq_h5_0929/img/share1.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/brtzq_h5_0929/",
+				desc: "就图您一乐",
+				title: "今年的最后一个长假，能不能来点简单的过法?"
+			});
+		})();
+	</script>
+</body>
+
+</html>

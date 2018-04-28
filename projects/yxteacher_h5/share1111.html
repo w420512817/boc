@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)致敬！我们人生的引路人！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#000;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+		<!-- page02 -->
+		<div class="page letter1 hide" id="letter1">
+			<form action="#">
+				<div class="page2-logo"><img src="img/p1_01.png" alt=""></div>
+				<div class="page2-text1"><img src="img/p2_01.png" alt=""></div>
+				<div class="page2-text2"><img src="img/p2_02.png" alt=""></div>
+				<div class="page2-icon"><img src="img/p2_05.png" alt=""></div>
+				<div class="page2-paper">
+					<img src="img/p2_04.png" alt="">
+					<div class="t-name" contenteditable="true">老师的名字</div>
+					<div class="t-txt" contenteditable="true"><p>你想对恩师说的话：</p></div>
+					<!-- <input type="text" name="t-name"> -->
+					<!-- <textarea name="t-txt" id="t-txt" rows="10"></textarea> -->
+				</div>
+				<div class="page2-flower"><img src="img/p2_03.png" alt=""></div>
+				<div class="page2-zhang"><img src="img/p2_06.png" alt=""></div>
+				<!-- <div class="page2-btn"><img src="img/p2_07.png" alt=""></div> -->
+			</form>
+		</div>
+		<!-- page03 -->
+		<div class="page letter2 hide" id="letter2">
+			<form action="#">
+				<div class="page2-logo"><img src="img/p1_01.png" alt=""></div>
+				<div class="page2-text1"><img src="img/p2_01.png" alt=""></div>
+				<div class="page2-text2"><img src="img/p2_02.png" alt=""></div>
+				<div class="page2-icon"><img src="img/p2_05.png" alt=""></div>
+				<div class="page2-paper">
+					<img src="img/p3_01.png" alt="">
+					<div class="t-name" contenteditable="true">老师的名字</div>
+					<div class="t-txt" contenteditable="true"><p>你想对恩师说的话：</p></div>
+					<!-- <input type="text" name="t-name"> -->
+					<!-- <textarea name="t-txt" id="t-txt" rows="10"></textarea> -->
+				</div>
+				<div class="page2-flower"><img src="img/p2_03.png" alt=""></div>
+				<div class="page2-zhang"><img src="img/p2_06.png" alt=""></div>
+				<!-- <div class="page2-btn"><img src="img/p2_07.png" alt=""></div> -->
+			</form>
+		</div>
+		<!-- page04 -->
+		<div class="page letter3 hide" id="letter3">
+			<form action="#">
+				<div class="page2-logo"><img src="img/p1_01.png" alt=""></div>
+				<div class="page2-text1"><img src="img/p2_01.png" alt=""></div>
+				<div class="page2-text2"><img src="img/p2_02.png" alt=""></div>
+				<div class="page2-icon"><img src="img/p2_05.png" alt=""></div>
+				<div class="page2-paper">
+					<img src="img/p4_01.png" alt="">
+					<div class="t-name" contenteditable="true">老师的名字</div>
+					<div class="t-txt" contenteditable="true"><p>你想对恩师说的话：</p></div>
+					<!-- <input type="text" name="t-name"> -->
+					<!-- <textarea name="t-txt" id="t-txt" rows="10"></textarea> -->
+				</div>
+				<div class="page2-flower"><img src="img/p2_03.png" alt=""></div>
+				<div class="page2-zhang"><img src="img/p2_06.png" alt=""></div>
+				<!-- <div class="page2-btn"><img src="img/p2_07.png" alt=""></div> -->
+			</form>
+		</div>
+		<div class="page-share hide"><img src="img/p0_01.png" alt=""></div>
+	</div>
+
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('letter2');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/yxteacher_h5/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/yxteacher_h5/index.html",
+				desc: "师恩如山似海，我们该如何对他们说一句感恩？",
+				title: "致敬！我们人生的引路人！"
+			});
+		})();
+	</script>
+</body>
+
+</html>

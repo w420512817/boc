@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="html">
+  
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>(测试)这是一份来自萧山的内部机密文件</title>
+	<link rel="stylesheet" type="text/css" href="css/loading.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+	<script src="js/swiper-3.4.1.min.js"></script>
+</head>
+
+<body style="background: #000;">
+	<!-- <div class="app"> -->
+	<!--加载页-->
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+	<div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio>
+	<div class="swiper-container" id="swiper1">
+		<div class="swiper-wrapper sw1" >
+			<!-- page0 -->
+			<div class="swiper-slide swiper-slide0 swiper-no-swiping" data-hash="slide0">
+				<div class="swiper0_2 ani"><img src="img/p1_2.png" width="100%"></div>
+				<div class="swiper0_3 ani"><img src="img/p1_3.png" width="100%"></div>
+				<div class="swiper0_1 ani"><img src="img/next2.png" width="100%"></div>
+			</div>
+			<!-- page1 -->
+			<div class="swiper-slide swiper-slide1 swiper-no-swiping" data-hash="slide1">
+				<div class="swiper1_1 ani"><img src="img/p0_1.png" width="100%"></div>
+				<div class="swiper1_2 ani"><img src="img/p0_2.png" width="100%"></div>
+				<div class="swiper1_3 ani">
+					<!-- <img src="img/p0_3.png" width="100%"> -->
+					<span></span>
+				</div>
+			</div>
+			<!-- page2 -->
+			<div class="swiper-slide swiper-slide2 " data-hash="slide2">
+				<div class="swiper2_1 ani"><img src="img/p2_1.png" width="100%"></div>
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper2_3 ani"><img src="img/p2_3.png" width="100%"></div>
+				<div class="swiper2_4 ani"><img src="img/p2_4.png" width="100%"></div>
+				<div class="swiper2_5 ani"><img src="img/p2_5.png" width="100%"></div>
+				<div class="swiper2_6 ani"><img src="img/p2_6.png" width="100%"></div>
+				<!-- <div class="swiper2_7 ani"><img src="img/p2_7.png" width="100%"></div> -->
+				<div class="swiper2_8 ani"><img src="img/lr.png" width="100%"></div>
+				
+				<div class="swiper-container2" id="swiper2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide1">
+							<div class="pic6 ani"><img src="img/p2_12.gif" width="100%"></div>
+						</div>
+						<div class="swiper-slide slide2">
+							<div class="pic5 ani"><img src="img/p2_11.gif" width="100%"></div>
+						</div>
+						<div class="swiper-slide slide3">
+							<div class="pic4 ani"><img src="img/p2_10.gif" width="100%"></div>
+						</div>
+						<div class="swiper-slide slide4">
+							<div class="pic3 ani"><img src="img/p2_9.gif" width="100%"></div>
+						</div>
+						<div class="swiper-slide slide5">
+							<div class="pic2 ani"><img src="img/p2_8.gif" width="100%"></div>
+						</div>
+						<div class="swiper-slide slide6">
+							<div class="pic1 ani"><img src="img/p2_7.gif" width="100%"></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- page3 -->
+			<div class="swiper-slide swiper-slide3 " data-hash="slide3">
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper3_1 ani"><img src="img/p3_1.png" width="100%"></div>
+				<div class="swiper3_2 ani"><img src="img/p3_2.png" width="100%"></div>
+				<div class="swiper3_5 ani"><img src="img/p3_5.png" width="100%"></div>
+				<div class="swiper3_6 ani"><img src="img/p3_6.png" width="100%"></div>
+				<div class="swiper3_7 ani"><img src="img/p3_7.png" width="100%"></div>
+				<div class="swiper3_8 ani"><img src="img/p3_8.png" width="100%"></div>
+				<div class="swiper3_9 ani"><img src="img/p3_9.png" width="100%"></div>
+				<div class="swiper3_3 ani"><img src="img/p3_3.png" width="100%"></div>
+				<div class="swiper3_4 ani"><img src="img/p3_4.png" width="100%"></div>
+				<div class="swiper3_10 ani"><img src="img/p3_10.png" width="100%"></div>
+			</div>
+			<!-- page4 -->
+			<div class="swiper-slide swiper-slide4 " data-hash="slide4">
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper3_1 ani"><img src="img/p3_1.png" width="100%"></div>
+				<div class="swiper4_1 ani"><img src="img/p4_1.png" width="100%"></div>
+				<div class="swiper4_2 ani"><img src="img/p4_2.png" width="100%"></div>
+				<div class="swiper4_3 ani"><img src="img/p4_3.png" width="100%"></div>
+				<div class="swiper4_4 ani"><img src="img/p4_4.png" width="100%"></div>
+				<div class="swiper4_5 ani"><img src="img/p4_5.png" width="100%"></div>
+				<div class="swiper4_6 ani"><img src="img/p4_6.png" width="100%"></div>
+			</div>
+			<!-- page5 -->
+			<div class="swiper-slide swiper-slide5 " data-hash="slide5">
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper3_1 ani"><img src="img/p3_1.png" width="100%"></div>
+				<div class="swiper5_1 ani"><img src="img/p5_1.png" width="100%"></div>
+				<div class="swiper5_2 ani"><img src="img/p5_2.png" width="100%"></div>
+				<div class="swiper5_3 ani"><img src="img/p5_3.png" width="100%"></div>
+				<div class="swiper5_4 ani"><img src="img/p5_4.png" width="100%"></div>
+				<div class="swiper5_5 ani"><img src="img/p5_5.png" width="100%"></div>
+				<div class="swiper5_6 ani"><img src="img/p5_6.png" width="100%"></div>
+				<div class="swiper5_7 ani"><img src="img/p5_7.png" width="100%"></div>
+				<div class="swiper5_8 ani"><img src="img/p5_8.png" width="100%"></div>
+				<div class="swiper5_9 ani"><img src="img/p5_9.png" width="100%"></div>
+			</div>
+			<!-- page6 -->
+			<div class="swiper-slide swiper-slide6 " data-hash="slide6">
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper3_1 ani"><img src="img/p3_1.png" width="100%"></div>
+				<div class="swiper6_1 ani"><img src="img/p6_1.png" width="100%"></div>
+				<div class="swiper6_2 ani"><img src="img/p6_2.png" width="100%"></div>
+				<div class="swiper6_3 ani"><img src="img/p6_3.png" width="100%"></div>
+				<div class="swiper6_4 ani"><img src="img/p6_4.png" width="100%"></div>
+				<div class="swiper6_5 ani"><img src="img/p6_5.png" width="100%"></div>
+			</div>
+			<!-- page7 -->
+			<div class="swiper-slide swiper-slide7 " data-hash="slide7">
+				<div class="swiper2_2 ani"><img src="img/p2_2.png" width="100%"></div>
+				<div class="swiper7_1 ani"><img src="img/p7_1.png" width="100%"></div>
+				<div class="swiper7_2 ani"><img src="img/p7_2.png" width="100%"></div>
+				<div class="swiper7_3 ani"><img src="img/p7_3.png" width="100%"></div>
+				<div class="swiper7_4 ani"><img src="img/p7_4.png" width="100%"></div>
+			</div>
+			<!-- page8 -->
+			<div class="swiper-slide swiper-slide8 " data-hash="slide8">
+				<div class="swiper8_1 ani"><img src="img/p8_1.png" width="100%"></div>
+				<div class="swiper8_2 ani"><img src="img/p8_2.png" width="100%"></div>
+				<div class="swiper8_3 ani"><img src="img/p8_3.png" width="100%"></div>
+				<div class="swiper8_4 ani"><img src="img/p8_4.png" width="100%"></div>
+			</div>
+		</div>
+		<div class="resize hide">
+			<img src="img/next.png" width="100%">
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+	<!-- </div> -->
+</body>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-events.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script>
+	window.wxShare && window.wxShare({
+		title: "这是一份来自萧山的内部机密文件 ", //分享标题
+		desc: "惊！！！", //分享描述
+		linkurl: "http://wx.bocweb.cn/wangjiaqi/xsrxend_h5_0111/", //分享链接
+		img: "http://wx.bocweb.cn/wangjiaqi/xsrxend_h5_0111/img/share.jpg" //分享图片
+	});
+</script>
+
+</html>

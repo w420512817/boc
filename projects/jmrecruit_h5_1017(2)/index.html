@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)猎鹰计划</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio>
+
+		<!-- page01 -->
+		<div class="page page01 hide" id="page01" nextHash="page02">
+			<div class="logo"><img src="img/p1_3.png" alt=""></div>
+			<div class="page-1_1"><img src="img/p1_1.png"></div>
+			<div class="page-1_2"><img src="img/p1_2.png"></div>
+			<div class="page-1_4"><img src="img/p1_4.png"></div>
+			<div class="page-1_5"><img src="img/p1_5.png"></div>
+			<div class="page-1_6"><img src="img/p1_6.png"></div>
+			<div class="page-1_7"><img src="img/p1_7.png"></div>
+			<div class="page-1_8"><img src="img/p1_8.png"></div>
+		</div>
+		<!-- page02 -->
+		<div class="page page02 hide" id="page02" nextHash="page03" prevHash="page01">
+			<div class="logo"><img src="img/p1_3.png"></div>
+			<div class="page-2_1"><img src="img/p2_1.png"></div>
+			<div class="page-2_2"><img src="img/p2_2.png"></div>
+			<div class="page-2_3"><img src="img/p2_3.png"></div>
+			<div class="page-2_4"><img src="img/p2_4.png"></div>
+			<div class="page-2_5"><img src="img/p2_5.png"></div>
+			<div class="page-2_6"><img src="img/p2_6.png"></div>
+			<div class="page-2_7"><img src="img/p2_7.png"></div>
+			<div class="page-2_8"><img src="img/p2_8.png"></div>
+			<div class="page-2_9"><img src="img/p2_9.png"></div>
+			<div class="page-2_10"><img src="img/p1_2.png"></div>
+		</div>
+		<!-- page3 -->
+		<div class="page page03 hide" id="page03" nextHash="page04" prevHash="page02">
+			<div class="logo "><img src="img/p1_3.png"></div>
+			<div class="page-3_1 "><img src="img/p3_1.png"></div>
+			<div class="page-3_2 "><img src="img/p3_2.png"></div>
+			<div class="page-3_3 "><img src="img/p3_3.png"></div>
+			<div class="page-3_4 "><img src="img/p3_4.png"></div>
+			<div class="page-3_7 "><img src="img/p1_2.png"></div>
+			<div class="page-3_6 "><img src="img/p2_1.png"></div>
+			<div class="page-3_5 "><img src="img/p2_2.png"></div>
+		</div>
+		<!-- page4 -->
+		<div class="page page04 hide" id="page04" nextHash="page05" prevHash="page03">
+			<div class="logo "><img src="img/p1_3.png"></div>
+			<div class="page-4_1 "><img src="img/p4_1.png"></div>
+			<div class="page-4_2 "><img src="img/p4_2.png"></div>
+			<div class="page-4_3 "><img src="img/p4_3.png"></div>
+			<div class="page-4_4 "><img src="img/p4_4.png"></div>
+			<div class="page-4_5 "><img src="img/p4_5.png"></div>
+			<div class="page-4_6 "><img src="img/p4_6.png"></div>
+			<div class="page-4_9 "><img src="img/p1_2.png"></div>
+			<div class="page-4_8 "><img src="img/p2_1.png"></div>
+			<div class="page-4_7 "><img src="img/p2_2.png"></div>
+		</div>
+		<!-- page5 -->
+		<div class="page page05 hide" id="page05" nextHash="page06" prevHash="page04">
+			<div class="logo "><img src="img/p1_3.png"></div>
+			<div class="page-5_1 "><img src="img/p5_1.png"></div>
+			<div class="page-5_2 "><img src="img/p5_2.png"></div>
+			<div class="page-5_3 "><img src="img/p5_3.png"></div>
+			<div class="page-5_6 "><img src="img/p1_2.png"></div>
+			<div class="page-5_5 "><img src="img/p2_1.png"></div>
+			<div class="page-5_4 "><img src="img/p2_2.png"></div>
+		</div>
+		<!-- page6 -->
+		<div class="page page06 hide" id="page06" nextHash="" prevHash="">
+			<div class="logo "><img src="img/p1_3.png"></div>
+			<div class="page-6_1 "><img src="img/p6_1.png"></div>
+			<div class="page-6_2 "><img src="img/p6_2.png"></div>
+			<div class="page-6_3 "><img src="img/p6_3_1.png"></div>
+			<div class="page-6_4 "><img src="img/p6_4.png"></div>
+			<!-- <div class="page-6_5 "><img src="img/p6_6.png"></div> -->
+			<div class="text-box "><img src="img/p6_5.png"></div>
+			<div class="page-6_6 "><img src="img/p1_2.png"></div>
+			
+		</div>
+		<!-- page7 -->
+		<div class="page page07 hide" id="page07" prevHash="page06">
+			<div class="logo "><img src="img/p1_3.png"></div>
+			<div class="page-7_6 "><img src="img/p1_2.png"></div>
+			<div class="page-7_5 "><img src="img/p6_1.png"></div>
+			<div class="page-7_4 "><img src="img/p6_2.png"></div>
+			<div class="page-7_1 "><img src="img/p7_1.png"></div>
+			<div class="page-7_2 "><img src="img/p7_2.png"></div>
+			<div class="page-7_3 "><img src="img/p7_3.png"></div>
+		</div>
+	</div>
+	<div class="resize">
+		<img src="img/next.png">
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "金茂杭州猎鹰计划——如果你要展翅高飞", //分享标题
+				desc: "雄鹰之位待猛禽", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/jmrecruit_h5_1017(2)/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/jmrecruit_h5_1017(2)/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>(测试)会说话的户型-承安·新都会</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body style="background-color:#fff;">
+    <section class="load ">
+        <div class="loading">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <p>Loading...<span id="load-progress">1</span>%</p>
+            <div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="music on" onclick="playClicked(this)"></div>
+        <audio src="media/music.mp3" id="audio_player" loop=""></audio>
+
+        <!-- page01 -->
+        <div class="page welcome hide" id="welcome">
+            <div class="page-img1"><img src="img/p1_1.png" alt=""></div>
+            <div class="page-img2"><img src="img/p1_2.png" alt=""></div>
+            <div class="page-img3"><img src="img/p1_3.png" alt=""></div>
+            <div class="page-img4"><img src="img/p1_4.png" alt=""></div>
+            <div class="page-btn"><img src="img/p1_5.png" alt=""></div>
+        </div>
+        <!-- page02 -->
+        <div class="page welcome2 hide" id="welcome2"></div>
+        <!-- page03 -->
+        <div class="page index hide" id="index">
+            <div class="page-btn1" onclick="play(5)"><img src="img/p2_1.png" alt=""></div>
+            <div class="page-btn2" onclick="play(1)"><img src="img/p2_1.png" alt=""></div>
+            <div class="page-btn3" onclick="play(2)"><img src="img/p2_1.png" alt=""></div>
+            <div class="page-btn4" onclick="play(4)"><img src="img/p2_1.png" alt=""></div>
+            <div class="page-btn5" onclick="play(3)"><img src="img/p2_1.png" alt=""></div>
+        </div>
+        <!-- page04 厨房 -->
+        <div class="page room1 hide" id="room1">
+            <input type="hidden" id="text1" value="宽大的厨房,我们一家三口在这里烹饪美食,也不显得局促,因为女儿总是要过来偷吃。">
+            <div class="page-text" id="intext1"></div>
+            <div class="page-back" onclick="pause(1)"><img src="img/p2_2.png" alt=""></div>
+        </div>
+        <!-- page05 电梯厅 -->
+        <div class="page room2 hide" id="room2">
+            <input type="hidden" id="text2" value="有这么一个独立玄关厅,再多的鞋子我也不用担心,既不占用室内空间,又能储藏,真是太完美了。">
+            <div class="page-text" id="intext2"></div>
+            <div class="page-back" onclick="pause(2)"><img src="img/p2_2.png" alt=""></div>
+        </div>
+        <!-- page06 主卧 -->
+        <div class="page room3 hide" id="room3">
+            <input type="hidden" id="text3" value="作为女主人的我,一直都想拥有一个宽敞的套房,不仅能有自己独立的梳妆空间,还能惬意的泡个热水澡而不受干扰。">
+            <div class="page-text" id="intext3"></div>
+            <div class="page-back" onclick="pause(3)"><img src="img/p2_2.png" alt=""></div>
+        </div>
+        <!-- page07 客厅 -->
+        <div class="page room4 hide" id="room4">
+            <input type="hidden" id="text4" value="下班回家,舒舒服服的坐在沙发上,与妻子女儿一同看看电视,看到他们脸上的笑容,再辛苦也值得了。">
+            <div class="page-text" id="intext4"></div>
+            <div class="page-back" onclick="pause(4)"><img src="img/p2_2.png" alt=""></div>
+        </div>
+        <!-- page08 书房-->
+        <div class="page room5 hide" id="room5">
+            <input type="hidden" id="text5" value="我喜欢偷偷的来到爸爸的书房,里面有许多有趣的书本,妈妈说这里都是爸爸的宝贝,可爸爸的宝贝不应该是我嘛。">
+            <div class="page-text" id="intext5"></div>
+            <div class="page-back" onclick="pause(5)"><img src="img/p2_2.png" alt=""></div>
+        </div>
+        
+    </div>
+    <audio src="media/m1.mp3" class="n-audio" id="audio1"></audio>
+	<audio src="media/m2.mp3" class="n-audio" id="audio2"></audio>
+	<audio src="media/m3.mp3" class="n-audio" id="audio3"></audio>
+	<audio src="media/m4.mp3" class="n-audio" id="audio4"></audio>
+	<audio src="media/m5.mp3" class="n-audio" id="audio5"></audio>
+    <!-- 提示 -->
+    <div class="orienLayer">
+        <div class="icons"></div>
+        <div class="txt">竖屏效果最佳</div>
+    </div>
+    <!-- 分享 -->
+    <div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+    <!-- <script src="js/zepto.min.js"></script> -->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/wxsdk.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function() {
+            window.wxShare && window.wxShare({
+                title: "会说话的户型-承安·新都会", //分享标题
+                desc: "在漫天的歌声里，我只读懂你的爱", //分享描述
+                linkurl: "http://wx.bocweb.cn/wangjiaqi/xdhhouse_h5_1226/", //分享链接
+                img: "http://wx.bocweb.cn/wangjiaqi/xdhhouse_h5_1226/img/share.jpg" //分享图片
+            });
+        })();
+    </script>
+</body>
+
+</html>

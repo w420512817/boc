@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)融信同学录</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="pagel">
+		<img src="img/bg1.jpg" alt="">
+		<!-- <img src="img/bg3.jpg" alt=""> -->
+		<form action="#">
+			<i>|</i>
+			<!-- <div class="form-img img1"><img src="img/p1_5.png"></div> -->
+			<textarea class="form-txt1" name="form-txt1"></textarea>
+			<textarea class="form-txt2" name="form-txt1" ></textarea>
+			<textarea class="form-txt3" name="form-txt1" ></textarea>
+			<textarea class="form-txt4" name="form-txt1" ></textarea>
+			<textarea class="form-txt5" name="form-txt1" ></textarea>
+			<textarea class="form-txt6" name="form-txt1" ></textarea>
+			<textarea class="form-txt7" name="form-txt1" ></textarea>
+			<textarea class="form-txt8" name="form-txt1" ></textarea>
+			<textarea class="form-txt9" name="form-txt1" ></textarea>
+			<textarea class="form-txt10" name="form-txt1" ></textarea>
+			<div class="form-name">
+				 <img src="img/p1_2.png" alt=""> 
+				 <input type="text" name="form-name" id="info-name">
+			</div>
+			<div class="form-class">
+				 <img src="img/p1_3.png" alt="">
+				 <input type="text" name="form-class" id="info-class">
+			</div>
+			<div class="form-phone">
+				 <img src="img/p1_4.png" alt="">
+				 <input type="text" name="form-phone" id="info-phone">
+			</div>
+			<div class="form-btn" id="form-submit"><img src="img/p1_1.png"></div>
+		</form>
+	</div>
+	<!-- 提示 -->
+	<!-- <div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div> -->
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "融信同学录", //分享标题
+				desc: "绘制我们曾经的青春", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/rxtxl_h5_0227/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/rxtxl_h5_0227/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

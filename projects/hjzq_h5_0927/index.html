@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)有些话，藏在心底很久了！</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- <link rel="stylesheet" href="css/swiper-3.4.1.min.css"> -->
+	<!-- <script src="js/swiper-3.4.1.min.js"></script> -->
+</head>
+
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="load-img1"><img src="img/p0_1.png" alt=""></div>
+			<div class="load-img2"><img src="img/p0_2.png" alt=""></div>
+			<div class="load-circle"><img src="img/p0_3.png" alt=""></div>
+			<!-- <div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div> -->
+			<p><span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="music on" onclick="playClicked(this)"></div>
+		<audio src="media/music.mp3" id="audio_player" loop=""></audio>
+		<audio src="media/record1.m4a" id="audio_record1" loop=""></audio>
+		<audio src="media/record2.m4a" id="audio_record2" loop=""></audio>
+		<audio src="media/record3.m4a" id="audio_record3" loop=""></audio>
+
+		<!-- page01 -->
+		<div class="page welcome hide" id="welcome">
+			<!-- <div class="logo"><img src="img/p1_3.png" alt=""></div> -->
+			<div class="page-logo"><img src="img/p1_1.png" alt=""></div>
+			<div class="page-img"><img src="img/p1_2.png" alt=""></div>
+			<div class="page-text1"><img src="img/p1_3.png" alt=""></div>
+			<div class="page-text2"><img src="img/p1_4.png" alt=""></div>
+			<div class="page-text3"><img src="img/p1_5.png" alt=""></div>
+			<div class="page-text4"><img src="img/p1_6.png" alt=""></div>
+			<div class="page-text5"><img src="img/p1_7.png" alt=""></div>
+			<div class="page-text6"><img src="img/p1_8.png" alt=""></div>
+			<div class="page-text7"><img src="img/p1_9.png" alt=""></div>
+			<div class="page-text8"><img src="img/p1_10.png" alt=""></div>
+			<div class="page-text9"><img src="img/p1_11.png" alt=""></div>
+			<div class="page-text10"><img src="img/p1_12.png" alt=""></div>
+			<div class="page-text11"><img src="img/p1_13.png" alt=""></div>
+		</div>
+		<!-- page02 -->
+		<div class="page record1 hide" id="record1">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-img"><img src="img/p2_2.png" alt=""></div>
+			<div class="page-title"><img src="img/p2_5.png" alt=""></div>
+			<div class="page-text"><img src="img/p2_6.png" alt=""></div>
+			<div class="page-tape"><img src="img/p2_3.png" alt=""></div>
+			<div class="page-click"><img src="img/click.png" alt=""></div>
+			<div class="record-btn1 btn-on"></div>
+			<div class="record-btn2"></div>
+			<div class="record-btn3"></div>
+			<div class="page-btn"><img src="img/p2_1.png" alt=""></div>
+		</div>
+		<!-- page03 -->
+		<div class="page record2 hide" id="record2">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-img"><img src="img/p2_2.png" alt=""></div>
+			<div class="page-title"><img src="img/p2_8.png" alt=""></div>
+			<div class="page-text"><img src="img/p2_9.png" alt=""></div>
+			<div class="page-tape"><img src="img/p2_7.png" alt=""></div>
+			<div class="page-click"><img src="img/click.png" alt=""></div>
+			<div class="record-btn1"></div>
+			<div class="record-btn2"></div>
+			<div class="record-btn3"></div>
+			<div class="page-btn"><img src="img/p2_1.png" alt=""></div>
+		</div>
+		<!-- page04 -->
+		<div class="page record3 hide" id="record3">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-img"><img src="img/p2_2.png" alt=""></div>
+			<div class="page-title"><img src="img/p2_11.png" alt=""></div>
+			<div class="page-text"><img src="img/p2_12.png" alt=""></div>
+			<div class="page-tape"><img src="img/p2_10.png" alt=""></div>
+			<div class="record-btn1"></div>
+			<div class="record-btn2"></div>
+			<div class="record-btn3"></div>
+			<div class="page-btn"><img src="img/p2_1.png" alt=""></div>
+		</div>
+		<!-- page05 -->
+		<div class="page letter hide" id="letter">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<!-- <div class="page-title"><img src="img/p3_2.png" alt=""></div> -->
+			<!-- <div class="page-text"><img src="img/p3_3.png" alt=""></div> -->
+			<form action="#">
+				<div class="page-paper">
+					<img src="img/p3_4.png" alt="">
+					<div id="info-name" class="t-name" contenteditable="true">(输入名字)</div>
+					<div id="info-text" class="t-text" contenteditable="true">你想对TA说：</div>
+				</div>
+				<div class="page-btn" id="form-submit"><img src="img/p3_1.png" alt=""></div>
+			</form>
+			<!-- <div class="page-img hide"><img src="" alt=""></div> -->
+		</div>
+		<!-- page06 -->
+		<div class="page move hide" id="move">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-img2"><img src="img/p3_5.png" alt=""></div>
+			<div class="page-img1"><img src="img/bg3.jpg" alt=""></div>
+			<div class="page-img3"><img src="img/p3_6.png" alt=""></div>
+			<div class="page-img4"><img src="img/p3_7.png" alt=""></div>
+			<div class="page-icon"><img src="img/p3_8.png" alt=""></div>
+		</div>
+		<!-- page07 -->
+		<div class="page share hide" id="share">
+			<div class="logo"><img src="img/p0_8.png" alt=""></div>
+			<div class="page-title"><img src="img/p3_11.png" alt=""></div>
+			<div class="page-img1"><img src="img/p3_13.png" alt=""></div>
+			<div class="page-img2"><img src="img/p3_9.png" alt=""></div>
+			<div class="page-img3"><img src="img/p3_12.png" alt=""></div>
+		</div>
+		<div class="resize hide">
+			<img src="img/next.png">
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/jquery.mobile-events.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('welcome');
+			// loadPage('share');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/hjzq_h5_0927/img/share1.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/hjzq_h5_0927/index.html",
+				desc: "对重要的他/她，说说藏在心底的话吧~",
+				title: "有些话，藏在心底很久了！"
+			});
+		})();
+	</script>
+</body>
+
+</html>

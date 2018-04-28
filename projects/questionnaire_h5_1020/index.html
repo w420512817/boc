@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)青岛星河湾业主兴趣爱好调查问卷</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<!-- <div class="container"> -->
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page01 -->
+		<!-- <div class="page welcome hide" id="welcome"> -->
+			<!-- <div class="page-img"><img src="img/" alt=""></div> -->
+		<!-- </div> -->
+		
+	<!-- </div> -->
+	<div class="pagel" id="pagel">
+		<img src="img/bg1.jpg" alt="">
+		<form action="#">
+			<!-- 基本资料 -->
+			<input class="form-name" type="text" name="uname" maxlength="5" id="info-name">
+			<input class="form-sex" type="radio" name="usex" data-value="男">
+			<input class="form-sex2" type="radio" name="usex" data-value="女">
+			<!-- 房号 -->
+			<input class="form-housenum1" type="text" name="housenum1" maxlength="3" data-value="号园">
+			<input class="form-housenum2" type="text" name="housenum1" maxlength="3" data-value="号楼">
+			<input class="form-housenum3" type="text" name="housenum1" maxlength="3" data-value="单元">
+			<input class="form-housenum4" type="text" name="housenum1" maxlength="3" data-value="室">
+			<!-- 1年龄 -->
+			<input class="form-age-a" type="radio" name="uage" data-value="25岁以下">
+			<input class="form-age-b" type="radio" name="uage" data-value="25-30">
+			<input class="form-age-c" type="radio" name="uage" data-value="31-40">
+			<input class="form-age-d" type="radio" name="uage" data-value="41-50">
+			<input class="form-age-e" type="radio" name="uage" data-value="51-60">
+			<input class="form-age-f" type="radio" name="uage" data-value="60以上">
+			<!-- 2职业 -->
+			<input class="form-job-a" type="radio" name="ujob" data-value="公务员">
+			<input class="form-job-b" type="radio" name="ujob" data-value="企事业管理人员">
+			<input class="form-job-c" type="radio" name="ujob" data-value="专业技术人员">
+			<input class="form-job-d" type="radio" name="ujob" data-value="教育工作者">
+			<input class="form-job-e" type="radio" name="ujob" data-value="金融行业从业者">
+			<input class="form-job-f" type="radio" name="ujob" data-value="职员">
+			<input class="form-job-g" type="radio" name="ujob" data-value="军人">
+			<input class="form-job-h" type="radio" name="ujob" data-value="企业主">
+			<input class="form-job-i" type="radio" name="ujob" data-value="离退休人员">
+			<input class="form-job-j" type="radio" name="ujob" data-value="学生">
+			<input class="form-job-k" type="radio" name="ujob" data-value="其他">
+			<input class="form-job-k2" type="text" name="ujob" maxlength="6">
+			<!-- 3您的家庭情况 -->
+			<input class="form-people-a" type="radio" name="upeople" data-value="单身">
+			<input class="form-people-b" type="radio" name="upeople" data-value="两口之家">
+			<input class="form-people-c" type="radio" name="upeople" data-value="三口之家">
+			<input class="form-people-d" type="radio" name="upeople" data-value="四口之家">
+			<input class="form-people-e" type="radio" name="upeople" data-value="三代同堂">
+			<!-- 4您对那种类型的活动较为感兴趣 -->
+			<input class="form-activity-aa" type="checkbox" name="ac-jr" data-value="经济论坛">
+			<input class="form-activity-ab" type="checkbox" name="ac-jr" data-value="投资讲座">
+			<input class="form-activity-ba" type="checkbox" name="ac-ys" data-value="音乐会">
+			<input class="form-activity-bb" type="checkbox" name="ac-ys" data-value="舞台剧（成人/儿童剧）">
+			<input class="form-activity-bb2" type="text" name="ac-ys" maxlength="3">
+			<input class="form-activity-bc" type="checkbox" name="ac-ys" data-value="书画展">
+			<input class="form-activity-bd" type="checkbox" name="ac-ys" data-value="科技展">
+			<input class="form-activity-be" type="checkbox" name="ac-ys" data-value="T台秀">
+			<input class="form-activity-bf" type="checkbox" name="ac-ys" data-value="品鉴类">
+			<input class="form-activity-bg" type="checkbox" name="ac-ys" data-value="奢侈品展">
+			<input class="form-activity-bh" type="checkbox" name="ac-ys" data-value="鉴宝活动">
+			<input class="form-activity-bi" type="checkbox" name="ac-ys" data-value="其他">
+			<input class="form-activity-bi2" type="text" name="ac-ys2" maxlength="5">
+			<input class="form-activity-ca" type="checkbox" name="ac-xx" data-value="插花活动">
+			<input class="form-activity-cb" type="checkbox" name="ac-xx" data-value="瑜伽活动">
+			<input class="form-activity-cc" type="checkbox" name="ac-xx" data-value="美食活动">
+			<input class="form-activity-cd" type="checkbox" name="ac-xx" data-value="茶道活动">
+			<input class="form-activity-ce" type="checkbox" name="ac-xx" data-value="养生讲座">
+			<input class="form-activity-cf" type="checkbox" name="ac-xx" data-value="其他">
+			<input class="form-activity-cf2" type="text" name="ac-xx" maxlength="5">
+			<input class="form-activity-da" type="checkbox" name="ac-jk" data-value="游泳">
+			<input class="form-activity-db" type="checkbox" name="ac-jk" data-value="跑步">
+			<input class="form-activity-dc" type="checkbox" name="ac-jk" data-value="网球">
+			<input class="form-activity-dd" type="checkbox" name="ac-jk" data-value="帆船类">
+			<input class="form-activity-de" type="checkbox" name="ac-jk" data-value="高尔夫">
+			<input class="form-activity-df" type="checkbox" name="ac-jk" data-value="击剑">
+			<input class="form-activity-dg" type="checkbox" name="ac-jk" data-value="骑行">
+			<input class="form-activity-dh" type="checkbox" name="ac-jk" data-value="羽毛球">
+			<input class="form-activity-e" type="text" name="ac-qt" data-value="其他" maxlength="4">
+			<!-- 5您孩子的年龄 -->
+			<input class="form-childrenage-a" type="radio" name="childrenage" data-value="目前没有小孩">
+			<input class="form-childrenage-b" type="radio" name="childrenage" data-value="一个小孩">
+			<input class="form-childrenage-b2" type="text" name="childrenage" data-value="年龄" maxlength="2">
+			<input class="form-childrenage-c" type="radio" name="childrenage" data-value="两个小孩">
+			<input class="form-childrenage-c2" type="text" name="childrenage" data-value="年龄1" maxlength="2">
+			<input class="form-childrenage-c3" type="text" name="childrenage" data-value="年龄2" maxlength="2">
+			<input class="form-childrenage-d" type="radio" name="childrenage" data-value="三个小孩">
+			<input class="form-childrenage-d2" type="text" name="childrenage" data-value="年龄1" maxlength="2">
+			<input class="form-childrenage-d3" type="text" name="childrenage" data-value="年龄2" maxlength="2">
+			<input class="form-childrenage-d4" type="text" name="childrenage" data-value="年龄3" maxlength="2">
+			<!-- 6您孩子的特长爱好是 -->
+			<input class="form-childrehobby-aa" type="checkbox" name="childrenhobby-yd" data-value="击剑">
+			<input class="form-childrehobby-ab" type="checkbox" name="childrenhobby-yd" data-value="游泳">
+			<input class="form-childrehobby-ac" type="checkbox" name="childrenhobby-yd" data-value="高尔夫">
+			<input class="form-childrehobby-ad" type="checkbox" name="childrenhobby-yd" data-value="羽毛球">
+			<input class="form-childrehobby-ae" type="checkbox" name="childrenhobby-yd" data-value="跑步">
+			<input class="form-childrehobby-af" type="checkbox" name="childrenhobby-yd" data-value="网球">
+			<input class="form-childrehobby-ag" type="checkbox" name="childrenhobby-yd" data-value="足球">
+			<input class="form-childrehobby-ah" type="checkbox" name="childrenhobby-yd" data-value="骑行">
+			<input class="form-childrehobby-ai" type="checkbox" name="childrenhobby-yd" data-value="其他">
+			<input class="form-childrehobby-ai2" type="text" name="childrenhobby-yd" maxlength="4">
+			<input class="form-childrehobby-ba" type="checkbox" name="childrenhobby-yq" data-value="钢琴">
+			<input class="form-childrehobby-bb" type="checkbox" name="childrenhobby-yq" data-value="小提琴">
+			<input class="form-childrehobby-bc" type="checkbox" name="childrenhobby-yq" data-value="萨克斯">
+			<input class="form-childrehobby-bd" type="checkbox" name="childrenhobby-yq" data-value="古筝">
+			<input class="form-childrehobby-be" type="checkbox" name="childrenhobby-yq" data-value="二胡">
+			<input class="form-childrehobby-bf" type="checkbox" name="childrenhobby-yq" data-value="电子琴">
+			<input class="form-childrehobby-bg" type="checkbox" name="childrenhobby-yq" data-value="架子鼓">
+			<input class="form-childrehobby-bh" type="checkbox" name="childrenhobby-yq" data-value="笛子">
+			<input class="form-childrehobby-bi" type="checkbox" name="childrenhobby-yq" data-value="吉他">
+			<input class="form-childrehobby-bj" type="checkbox" name="childrenhobby-yq" data-value="大提琴">
+			<input class="form-childrehobby-ca" type="checkbox" name="childrenhobby-ms" data-value="绘画">
+			<input class="form-childrehobby-cb" type="checkbox" name="childrenhobby-ms" data-value="雕塑">
+			<input class="form-childrehobby-cc" type="checkbox" name="childrenhobby-ms" data-value="摄影">
+			<input class="form-childrehobby-cd" type="checkbox" name="childrenhobby-ms" data-value="书法">
+			<input class="form-childrehobby-ce" type="checkbox" name="childrenhobby-ms" data-value="其他">
+			<input class="form-childrehobby-ce2" type="text" name="childrenhobby-ms" maxlength="3">
+			<input class="form-childrehobby-da" type="checkbox" name="childrenhobby-wd" data-value="舞蹈">
+			<input class="form-childrehobby-db" type="checkbox" name="childrenhobby-wd" data-value="舞台剧">
+			<!-- <input class="form-childrehobby-e" type="checkbox" name="childrenhobby-qt" data-value="其他"> -->
+			<input class="form-childrehobby-e2" type="text" name="childrenhobby-qt" maxlength="5">
+			<!-- <input class="form-submit" type="submit"> -->
+			<a id="form-submit" class="form-submit" href="#"></a>
+			
+		</form>
+	</div>
+	
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "青岛星河湾业主兴趣爱好调查问卷", //分享标题
+				desc: "青岛星河湾业主兴趣爱好调查问卷", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/questionnaire_h5_1020/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/questionnaire_h5_1020/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

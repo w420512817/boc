@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)绿城西溪雲庐客户预约系统</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<div class="page list-item aregister hide" id="aregister">
+			<div class="page-title"><img src="img/p1_16.png" alt=""></div>
+			<form action="#">
+				<div class="item-info register-info clearfix">
+					<div class="info-left">
+						<h1>客户信息</h1>
+						<span>CUSTOMER<br>INFORMATION</span>
+					</div>
+					<div class="info-right">
+						<ul>
+							<li>姓名: <span>娜可露露</span></li>
+							<li>性别: <span>女</span></li>
+							<li>获知途径: <span>朋友介绍</span></li>
+							<li>意向产品: <span>江南合院</span></li>
+							<li>手机: <span>137-8888-9999</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form-select form-register-reception">
+					<select name="" id="register-reception">
+						<option value="">选择接待指派</option>
+						<option value="1">杨艳</option>
+						<option value="2">章琪</option>
+						<option value="3">梁云松</option>
+						<option value="4">金晓琴</option>
+						<option value="5">李伊娜</option>
+					</select>
+				</div>
+				<div class="page-submit" id="registerback-submit"><img src="img/p1_4.png" alt=""></div>
+			</form>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/share_box.png" alt=""></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('aregister');
+			// loadPage('service-end');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "", //分享标题
+				desc: "", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/yysystem_h5_1107/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/yysystem_h5_1107/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

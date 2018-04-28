@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>（测试）信达中心</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#fff;">
+
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div> -->
+		<!-- <audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page14 自助点单 三级 -->
+		<div class="page drinkbar-order hide " id="drinkbar-order">
+			<div class="order-bg"><img src="img/p14_01.png" alt=""></div>
+			<form action="#">
+				<div class="form-input form-orderid"><input type="text" placeholder="请输入您的桌牌号" name="form-orderid"></div>
+				<div class="order-list">
+					<ul>
+						<li>
+							<div class="list-title">精选茶类</div>
+							<div class="list-body">
+								<p class="">
+									<span class="list-info"><i class="list-icon "></i> 中国高品绿茶（热）<input type="checkbox" name="form-item" ></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+								<p>
+									<span class="list-info"><i class="list-icon "></i> 法国西玫瑰红茶（热）<input type="checkbox" name="form-item" ></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+								<p>
+									<span class="list-info"><i class="list-icon "></i> 德国洋甘菊茶（热）<input type="checkbox" name="form-item" ></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-title">单品咖啡</div>
+							<div class="list-body">
+								<p>
+									<span class="list-info"><i class="list-icon "></i> 现磨咖啡（热）<input type="checkbox" name="form-item"></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+								<p>
+									<span class="list-info"><i class="list-icon "></i> 意式特浓（热）<input type="checkbox" name="form-item"></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+								<p>
+									<span class="list-info"><i class="list-icon "></i> 樱花拿铁（热）<input type="checkbox" name="form-item"></span>
+									<span class="list-num">
+										<strong>-</strong>
+										<input type="text" name="list-num" readonly="readonly" value="1">
+										<strong>+</strong>
+									</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-confirm"><img src="img/p16_04.png" alt=""></div>
+			</form>
+			<!-- 底部 -->
+			<div class="welcome-logo-bottom">
+				<img src="img/p01_10.png" alt="">
+				<img src="img/p01_11.png" alt="">
+			</div>
+		</div>
+
+		<!-- page15 点单成功 四级 -->
+		<div class="page drinkbar-order-finish hide " id="drinkbar-order-finish">
+			<div class="order-finish-bg"><img src="img/p15_01.png" alt=""></div>
+			<div class="order-finish-title"><img src="img/p15_02.png" alt=""></div>
+			<div class="order-finish-text"><img src="img/p15_03.png" alt=""></div>
+			<div class="btn-loading"><img src="img/p04_05.png" alt=""></div>
+			<div class="bottom-title"><img src="img/p04_04.png" alt=""></div>
+		</div>
+	</div>
+	<script src="js/zepto.min.js"></script>
+	<!-- <script src="js/jquery-2.2.0.min.js"></script> -->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('drinkbar-order');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/xdzx_h5/",
+				desc: "",
+				title: "信达中心"
+			});
+		})();
+	</script>
+</body>
+
+</html>

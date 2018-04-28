@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)融创东南</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#fff;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<!-- <div class="music on" onclick="playClicked(this)"></div>
+	<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+	
+	<div class="pagelong">
+		<div class="pagel ningbo hide" id="ningbo">
+			<img src="img/bg5.jpg">
+			<!-- 逸树 -->
+			<div class="page-btn btn1"><img src="img/p2_1.png"></div>
+			<!-- 宁波府 -->
+			<div class="page-btn btn2"><img src="img/p2_1.png"></div>
+			<!-- 悦湾 -->
+			<div class="page-btn btn3"><img src="img/p2_1.png"></div>
+			<!-- 涌宁福 -->
+			<div class="page-btn btn4"><img src="img/p2_1.png"></div>
+		</div>
+		<!-- 逸树 -->
+		<div class="pagel nb_yishu hide" id="nb_yishu">
+			<img src="img/bg36.jpg" >
+			<div class="page-back"><img src="img/p2_6.png"></div>
+			<div class="page-call"><img src="img/p2_4.png"></div>
+			<div class="page-link"><img src="img/p2_5.png"></div>
+		</div>
+		<!-- 宁波府 -->
+		<div class="pagel nb_ningbofu hide" id="nb_ningbofu">
+			<img src="img/bg37.jpg" >
+			<div class="page-back"><img src="img/p2_6.png"></div>
+			<div class="page-call"><img src="img/p2_4.png"></div>
+			<div class="page-link"><img src="img/p2_5.png"></div>
+		</div>
+		<!-- 悦湾 -->
+		<div class="pagel nb_yuewan hide" id="nb_yuewan">
+			<img src="img/bg38.jpg" >
+			<div class="page-back"><img src="img/p2_6.png"></div>
+			<div class="page-call"><img src="img/p2_4.png"></div>
+			<div class="page-link"><img src="img/p2_5.png"></div>
+		</div>
+		<!-- 涌宁福 -->
+		<div class="pagel nb_yongningfu hide" id="nb_yongningfu">
+			<img src="img/bg39.jpg" >
+			<div class="page-back"><img src="img/p2_6.png"></div>
+			<div class="page-call"><img src="img/p2_4.png"></div>
+			<div class="page-link"><img src="img/p2_5.png"></div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">竖屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		var loadRES = ['img/icon/boc.png',
+		'img/bg5.jpg',
+		'img/bg36_01.jpg','img/bg36_02.jpg','img/bg36_03.jpg',
+		'img/bg37_01.jpg','img/bg37_02.jpg','img/bg37_03.jpg',
+		'img/bg38_01.jpg','img/bg38_02.jpg','img/bg38_03.jpg',
+		'img/bg39_01.jpg','img/bg39_02.jpg',
+		'img/p2_1.png','img/p2_2.png','img/p2_3.png','img/p2_4.png','img/p2_5.png','img/p2_6.png',
+		];
+		loading(loadRES, function () {
+			loadPage('ningbo');
+			// loadPage('nb_yishu');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "融创东南", //分享标题
+				desc: "", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/rcdn_h5_0410/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/rcdn_h5_0410/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>

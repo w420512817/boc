@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>（测试）全民随手拍</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body style="background-color:#000;">
+
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div> -->
+		<!-- <audio src="music.mp3" id="audio_player" loop=""></audio> -->
+		<!-- page1	 -->
+		<div class="page welcome hide" id="welcome">
+			<div class="welcome-logo"><img src="img/p1_01.png" alt=""></div>
+			<div class="welcome-block-bg"><img src="img/p1_02.png" alt=""></div>
+			<div class="welcome-balloon-l"><img src="img/p1_09.png" alt=""></div>
+			<div class="welcome-block-n"><img src="img/p1_03.png" alt=""></div>
+			<div class="welcome-block-s"><img src="img/p1_27.png" alt=""></div>
+			<div class="welcome-cloud"><img src="img/p1_21.png" alt=""></div>
+			<div class="welcome-block-e"><img src="img/p1_30.png" alt=""></div>
+			<div class="welcome-block-w"><img src="img/p1_17.png" alt=""></div>
+			<div class="welcome-balloon-r"><img src="img/p1_13.png" alt=""></div>
+			<div class="welcome-film"><img src="img/p1_24.png" alt=""></div>
+			<div class="welcome-car"><img src="img/p1_33.png" alt=""></div>
+			<div class="welcome-btn1" id="welcome-btn1"><img src="img/p1_36.png" alt=""></div>
+			<div class="welcome-btn2" id="welcome-btn2"><img src="img/p1_38.png" alt=""></div>
+		</div>
+		<!-- page2	车险理赔问题反馈 -->
+		<div class="page form-car animate" id="form-car">
+			<div class="welcome-logo"><img src="img/p1_01.png" alt=""></div>
+			<div class="form-could1"><img src="img/p2_10.png" alt=""></div>
+			<div class="form-could2"><img src="img/p2_09.png" alt=""></div>
+			<form action="#">
+				<div class="form-ele">
+					<a href="https://ditu.so.com/?pid=7d2a82e6ebcb5bb0" class="form-car-addr">地址 / <input type="text" name="form-car-addr" readonly="readonly" value="安徽省合肥市滨湖新区南京路2677号D座"></a>
+					<a href="tel:0551-955518" class="form-car-phone">电话 / <input type="text" name="form-car-phone" readonly="readonly" value="0551-955518"></a>
+					<div class="form-car-advice"><input type="text" name="form-car-advice" placeholder="请填写您的意见或建议"></div>
+					<div class="form-car-img">
+						<p>上传图片<span>最多9张</span></p>
+						<ul class="form-file clearfix" id="form-car-img">
+							<li>
+								<img src="img/p2_11.png" alt="">
+								<input type="file" name="form-car-file">
+							</li>
+						</ul>
+					</div>
+					<div class="form-tips">填写姓名 手机号是便于日后和您取得联系</div>
+					<div class="form-car-myname">您的姓名 <span>*</span> <input type="text" name="form-car-myname" id="form-car-myname"></div>
+					<div class="form-car-myphone">您的手机 <span>*</span> <input type="text" name="form-car-myphone" id="form-car-myphone"></div>
+					<div class="form-submit" id="form-car-submit"><img src="img/p2_06.png" alt=""></div>
+				</div>
+				<a href="#" class="form-link"><img src="img/p2_08.png" alt=""></a>
+			</form>
+		</div>
+		<!-- page3 其他问题反馈 -->
+		<div class="page form-other hide" id="form-other">
+			<div class="welcome-logo"><img src="img/p1_01.png" alt=""></div>
+			<div class="form-could1"><img src="img/p2_10.png" alt=""></div>
+			<div class="form-could2"><img src="img/p2_09.png" alt=""></div>
+			<form action="#">
+				<div class="form-ele">
+					<a href="https://ditu.so.com/?pid=7d2a82e6ebcb5bb0" class="form-car-addr">地址 / <input type="text" name="form-other-addr" readonly="readonly" value="安徽省合肥市滨湖新区南京路2677号D座"></a>
+					<a href="tel:0551-955518" class="form-car-phone">电话 / <input type="text" name="form-other-phone" readonly="readonly" value="0551-955518"></a>
+					<div class="form-other-carid">车牌号 / <input type="text" name="form-other-carid"></div>
+					<div class="form-other-city">城市 <span>*</span>
+						<select name="form-other-city" id="form-other-city">
+							<option value="0">请选择</option>
+							<option value="1">杭州市</option>
+						</select>
+					</div>
+					<div class="form-other-attr">出险详细地址 / <input type="text" name="form-other-attr" placeholder="请输入出险详细地址"></div>
+					<div class="form-other-advice"><textarea name="form-other-advice" placeholder="请填写您的意见或建议" rows="3"></textarea></div>
+					<div class="form-car-img">
+						<p>上传图片<span>最多9张</span></p>
+						<ul class="form-file clearfix" id="form-other-img">
+							<li>
+								<img src="img/p2_11.png" alt="">
+								<input type="file" name="form-other-file">
+							</li>
+						</ul>
+					</div>
+					<div class="form-tips">填写姓名 手机号是便于日后和您取得联系</div>
+					<div class="form-car-myname">您的姓名 <span>*</span> <input type="text" name="form-other-myname" id="form-other-myname"></div>
+					<div class="form-car-myphone">您的手机 <span>*</span> <input type="text" name="form-other-myphone" id="form-other-myphone"></div>
+					<div class="form-submit" id="form-other-submit"><img src="img/p2_06.png" alt=""></div>
+				</div>
+				<a href="#" class="form-link"><img src="img/p3_07.png" alt=""></a>
+			</form>
+		</div>
+		<!-- page4	 -->
+		<div class="page form-record hide" id="form-record">
+			<div class="welcome-logo"><img src="img/p1_01.png" alt=""></div>
+			<div class="form-could1"><img src="img/p2_10.png" alt=""></div>
+			<div class="form-could2"><img src="img/p2_09.png" alt=""></div>
+			<div class="wx-img"></div>
+			<div class="wx-name">微信名</div>
+			<form action="#">
+				<div class="form-ele">
+					<a href="https://ditu.so.com/?pid=7d2a82e6ebcb5bb0" class="form-car-addr">地址 / <input type="text" readonly="readonly" value="安徽省合肥市滨湖新区南京路2677号D座"></a>
+					<a href="tel:0551-955518" class="form-car-phone">电话 / <input type="text" readonly="readonly" value="0551-955518"></a>
+					<div class="form-tips">车险理赔问题反馈1 <span class="form-tips-info">查看</span></div>
+					<div class="form-car-myname">姓名 <input type="text" readonly="readonly"></div>
+					<div class="form-car-advice"><input type="text" name="form-car-advice" placeholder="请填写您的意见或建议" readonly="readonly"></div>
+					<div class="form-time">提交时间：<span>2017/08/23 19:49</span> <img src="img/p4_01.png" alt=""></div>
+					<div class="form-tips">车险理赔问题反馈2 <span class="form-tips-info">查看</span></div>
+					<div class="form-car-myname">姓名 <input type="text" readonly="readonly"></div>
+					<div class="form-car-advice"><input type="text" name="form-car-advice" placeholder="请填写您的意见或建议" readonly="readonly"></div>
+					<div class="form-time">提交时间：<span>2017/08/23 19:49</span> <img src="img/p4_01.png" alt=""></div>
+				</div>
+			</form>
+			<div class="form-btn-back" ><img src="img/p05_01.png" alt=""></div>
+		</div>
+		<!-- page5	 -->
+		<div class="page form-record-more hide" id="form-record-more">
+			<div class="welcome-logo"><img src="img/p1_01.png" alt=""></div>
+			<div class="form-could1"><img src="img/p2_10.png" alt=""></div>
+			<div class="form-could2"><img src="img/p2_09.png" alt=""></div>
+			<div class="form-finish"><img src="img/p4_01.png" alt=""></div>
+			<div class="welcome-balloon-r"><img src="img/p1_13.png" alt=""></div>
+			<form action="#">
+				<div class="form-ele">
+					<div class="form-time">提交时间：<span>2017/08/23 19:49</span> </div>
+					<div class="form-tips">我的资料</div>
+					<div class="form-car-myname">姓名 <input type="text" readonly="readonly"></div>
+					<div class="form-car-myphone">手机 <input type="text" readonly="readonly"></div>
+					<div class="form-other-advice"><textarea name="" placeholder="请填写您的意见或建议" rows="3" readonly="readonly"></textarea></div>
+
+					<!-- <div class="form-other-carid">车牌号 <input type="text" readonly="readonly"></div>
+					<div class="form-other-city">城市 <input type="text" readonly="readonly"></div>
+					<div class="form-other-attr">出险详细地址 / <input type="text" placeholder="请输入出险详细地址" readonly="readonly"></div>
+					<div class="form-car-img">
+						<p>上传图片<span>最多9张</span></p>
+						<input type="file">
+					</div> -->
+				</div>
+			</form>
+			<div class="form-btn-back" id="form-btn-back"><img src="img/p05_01.png" alt=""></div>
+		</div>
+	</div>
+
+
+	<script src="js/zepto.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main-backup.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('welcome');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				img: "http://wx.bocweb.cn/wangjiaqi/cxts_h5/img/share.jpg",
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/cxts_h5/",
+				desc: "",
+				title: "全民随手拍"
+			});
+		})();
+	</script>
+</body>
+
+</html>

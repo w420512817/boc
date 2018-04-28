@@ -1,0 +1,214 @@
+@charset "UTF-8";
+ 
+body,div,html,img,p,span{margin:0;padding:0}
+html{width:100%;height:100%;position:relative;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin:0 auto}
+body{color:#333;font:16px "Helvetica Neue",Helvetica,STHeiTi,sans-serif;margin:0 auto;width:100%;height:100%;position:relative;-webkit-tap-highlight-color:transparent}
+body,html{height:100%}
+li,ol,ul{list-style:none;margin:0;padding:0}
+img{border:none;display:block;width:100%;}
+a{text-decoration:none}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+textarea{-webkit-appearance:none;outline:0;margin:0;padding:0;border:none;border-radius:0;background:0 0;resize: none;}
+input,select,textarea{outline: none;border:none;background: transparent;padding:0;margin: 0;}
+::-webkit-input-placeholder {color:#000;font-weight: bold;}
+::-webkit-scrollbar{width:.3em;height:.3em}
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);border-radius:10px;background-color:#1a1a1a}
+::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#fff}
+/*加载页*/
+.loading{position:absolute;width:100%;height:100%;z-index:888;top:0;left:0;bottom:0;color:#ccc;text-align:center;overflow:hidden;background-color:#fff;}
+.loaded{display:none}
+.load-img{position: absolute;top: 0;left: 0;width: 100%;}
+.spinner{margin:160px auto 0;width:150px;text-align:center}
+.spinner>div{width:20px;height:20px;background-color:#ccc;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out}
+.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}
+.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}
+.loading p{position: absolute;top: 57%;left: 40%;width: 20%;color: #000;}
+.load-progress{display:inline-block;margin-left:.2em}
+.copyright{position:absolute;left:35%;bottom:3%;width:30%}
+@-webkit-keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+@keyframes bouncedelay{
+  0%,100%,80%{-webkit-transform:scale(0);transform:scale(0);transform:scale(0)}
+  40%{-webkit-transform:scale(1);transform:scale(1);transform:scale(1)}
+}
+
+/**横屏竖屏提示start**/
+.orienLayer{position:absolute;z-index:501;width:100%;height:100%;background:#000;top:0;left:0}
+.orienLayer .txt{position:absolute;left:0;top:15%;color:#fff;width:100%;height:30px;text-align:center;line-height:30px}
+.orienLayer .icons{background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');position:absolute;width:67px;height:109px;left:50%;top:20%;margin:0 -33px 0;transform:rotate(90deg);-webkit-transform:rotate(90deg);-webkit-background-size:67px;background-size:67px}
+@media all and (orientation:landscape){
+  /*横屏*/
+  .orienLayer{display:block}
+}
+@media all and (orientation:portrait){
+  /*竖屏*/
+  .orienLayer{display:none}
+}
+/* music */
+.music{position:fixed;right:2%;top:0;display:block;z-index:99;width:30px;background:url(../img/music2.png) no-repeat center center;background-size:contain;height:50px;display:block}
+.music.on{-webkit-animation:reverseRotataZ 1.2s linear infinite}
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+@keyframes reverseRotataZ{
+    0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+
+.resize{width:6%;position:absolute;bottom:0;left:47%;z-index:99;-webkit-animation:resize 1s linear infinite;animation:resize 1s linear infinite}
+@-webkit-keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+@keyframes resize{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}
+  100%{opacity:0;-webkit-transform:translateY(-30%);transform:translateY(-30%)}
+}
+
+.container,.page{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.hide{display:none}
+.hidden{visibility:hidden}
+.page img{display:block;width:100%;height: 100%;visibility:hidden;}
+.page.animate img{visibility:visible;}
+.page.animate{animation:fadeIn 1s ease both}
+
+/* 通用 */
+.page [class^='page-']{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+/* .logo{position: absolute;top: 5%;left: 5%;width: 10%;} */
+/* .animate .logo{-webkit-animation: fadeInDown 1s ease both;animation: fadeInDown 1s ease both;} */
+/* page01 */
+.welcome{background:url(../img/bg1.jpg) no-repeat center center/100% 100%;}
+.welcome .page-btn1{top: auto;bottom: 5%;left: 20%;width: 25%;height: auto;}
+.welcome .page-btn2{top: auto;bottom: 5%;left: auto;right: 20%;width: 25%;height: auto;}
+.welcome .page-old{top: 43%;left: 10%;width: 80%;height: auto;}
+.welcome .page-snow img{height: auto;}
+
+.welcome.animate .page-title{-webkit-animation: fadeInDown 1.5s ease both;animation: fadeInDown 1.5s ease both;}
+.welcome.animate .page-line{-webkit-animation: fadeIn 2s .5s ease both;animation: fadeIn 2s .5s ease both;}
+.welcome.animate .page-snow{-webkit-animation: drop1 5s 1.5s linear infinite both;animation: drop1 5s 1.5s linear infinite both;}
+.welcome.animate .page-tree{-webkit-animation: fadeInUp1 1.5s .5s ease both;animation: fadeInUp1 1.5s .5s ease both;}
+/* .welcome.animate .page-old{-webkit-animation: fadeIn 1.5s 1s ease both;animation: fadeIn 1.5s 1s ease both;} */
+.welcome.animate .page-old{-webkit-animation: fadeIn 1s 1s ease both,swing1 4s 2s linear infinite both;animation: fadeIn 1s 1s ease both,swing1 4s 2s linear infinite both;}
+/* .welcome.animate .page-old{-webkit-animation: fadeIn 1s 1s ease both,swing1 4s 2s linear infinite both;animation: fadeIn 1s 1s ease both,swing2 1.5s 1.5s linear infinite both;} */
+.welcome.animate .page-text{-webkit-animation: zoomIn 1.5s 1.5s ease both;animation: zoomIn 1.5s 1.5s ease both;transform-origin: center 80%;}
+.welcome.animate .page-btn1{-webkit-animation: fadeInLeft 1.5s 2s ease both;animation: fadeInLeft 1.5s 2s ease both;}
+.welcome.animate .page-btn2{-webkit-animation: fadeInRight 1.5s 2s ease both;animation: fadeInRight 1.5s 2s ease both;}
+@keyframes swing1{
+    0%,100%{
+        transform: scale3d(1, 1, 1);
+    }
+    25%{
+        transform-origin: 30% bottom;
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    50%{
+        transform: none;
+    }
+    75%{
+        transform-origin: 70% bottom;
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, 3deg);
+    }
+}
+@keyframes swing2{
+    0%,100%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform-origin: center bottom;
+        transform: scale(1.2,1.3) ;
+    }
+}
+@keyframes drop1{
+    0%{
+        opacity: 1;
+        transform: translate3d(0, -100%, 0);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+/* page02 */
+.game{background:url(../img/bg2.jpg) no-repeat center center/100% 100%;}
+.game .page-img1 img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+.game .page-rocker{top: 29%;left: 74%;width: 10%;height: auto;}
+.game .page-snow img{height: auto;}
+/* 抽奖window */
+.game .page-window{top: 33%;width: 13%;height: 11%;overflow: hidden;}
+.page-window .imglong{position: relative;}
+.page-window.window1{left:28%;}
+.page-window.window2{left:42%;}
+.page-window.window3{left:56%;}
+
+.game .page-btn{top: 54%;left: 35%;width: 26%;height: auto;}
+/* 表单 */
+.game .page-form{background: url(../img/bg5.jpg) no-repeat center center/100% 100%;z-index: 5;-webkit-animation: fadeIn 1s ease both;animation: fadeIn 1s ease both;}
+.page-lamp{-webkit-animation: fadeInDown1 1s ease both;animation: fadeInDown1 1s ease both;}
+.page-form form{position: absolute;top: 50%;left: 20%;width: 60%;}
+form input{width: 100%;height: 2.5rem;background-color: #fff;font-size: 1rem;line-height: 2.5;text-indent: 5%;margin-bottom: 5%;}
+form .form-btn{width: 45%;margin: 5% auto 0;}
+/* 领奖方式 */
+.game .page-tip{background: url(../img/bg5.jpg) no-repeat center center/100% 100%;z-index: 5;-webkit-animation: fadeIn 1s ease both;animation: fadeIn 1s ease both;}
+.page-tip .tip-text{position: absolute;top: 20%;left: 20%;width: 60%;height: 57%;overflow-y: scroll;}
+.tip-text img{height: auto;}
+
+.game.animate .page-img1{-webkit-animation: fadeInDown 1.5s ease both;animation: fadeInDown 1.5s ease both;}
+.game.animate .page-img1 img:nth-child(2){-webkit-animation: fadeInDown 1.5s 1.5s ease both;animation: fadeInDown 1.5s 1.5s ease both;}
+.game.animate .page-img1 img:nth-child(3){-webkit-animation: fadeInDown 1.5s 2s ease both;animation: fadeInDown 1.5s 2s ease both;}
+.game.animate .page-img1 img:nth-child(4){-webkit-animation: fadeInDown 1.5s 2.5s ease both;animation: fadeInDown 1.5s 2.5s ease both;}
+
+.game.animate .page-img2{-webkit-animation: fadeInUp 1.5s ease both;animation: fadeInUp 1.5s ease both;}
+.game.animate .page-img3{-webkit-animation: fadeInUp 1.5s .3s ease both;animation: fadeInUp 1.5s .3s ease both;}
+.game.animate .page-img4{-webkit-animation: fadeInRight 1.5s 1s ease both;animation: fadeInRight 1.5s 1s ease both;}
+.game.animate .page-snow{-webkit-animation: drop1 5s 1.5s linear infinite both;animation: drop1 5s 1.5s linear infinite both;}
+.game.animate .page-bg,.game.animate .page-box,.game.animate .page-rocker,.game.animate .page-window{-webkit-animation: fadeIn 1.5s 1.5s ease both;animation: fadeIn 1.5s 1.5s ease both;}
+.game.animate .page-btn{-webkit-animation: fadeIn 1.5s 2s ease both;animation: fadeIn 1.5s 2s ease both;}
+/* @keyframes rot1{
+    0%{
+        transform: rotateX(0deg);
+        transform-origin: center bottom;
+    }
+    100%{
+        transform: rotateX(-45deg);
+        transform-origin: center bottom;
+
+    }
+} */
+
+
+
+
+.share-box{position: absolute;top: 0;left:0;width: 100%;z-index: 999;}
+.share-box img{width: 100%;}
+
+.dialogue-tips{background:rgba(0,0,0,.6);width:50%;position:fixed;left:20%;top:40%;margin-top:-25px;z-index:999;border-radius:10px;color:#fff;text-align:center;padding:5%;line-height:1.5}
+.dialogue-tips strong{position: absolute;top: 2%;right: 2%;background: #000;border-radius: 50%;color: #fff;width: 1rem;height: 1rem;font-size: 1rem;line-height: 1;padding: 1%;}
+
+@-webkit-keyframes zoomIna {
+	0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes zoomIna {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5);
+        -ms-transform: scale3d(1.5, 1.5, 1.5)
+    }
+    50% {
+        opacity: 1
+    }
+}

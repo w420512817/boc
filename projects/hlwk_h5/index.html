@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>(测试)超越奇迹</title>
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+    <script src="js/swiper-3.4.1.min.js"></script>
+</head>
+
+<body style="background: #000;">
+    <div class="app">
+        <!--加载页-->
+        <section class="load hide">
+            <div class="loading">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <p>Loading...<span id="load-progress">1</span>%</p>
+                <div class="copyright"><img src="img/boc.png" alt="bocweb" width="60%"></div>
+            </div>
+        </section>
+        <div class="music on" onclick="playClicked(this)"></div>
+        <audio src="music1.mp3" id="audio_player" loop=""></audio>
+        <div class="swiper-container" id="swiper1">
+            <div class="swiper-wrapper">
+                <!-- page1 -->
+                <div class="swiper-slide page-img01" data-hash="slide1">
+                    <div class="p1 ani">
+                        <div class="page-b1 ani"><img src="img/p0_01.png" alt=""></div>
+                        <div class="page-b2 ani"><img src="img/p0_02.png" alt=""></div>
+                        <div class="page-b3 ani"><img src="img/p0_03.png" alt=""></div>
+                        <div class="page-b4 ani"><img src="img/p0_04.png" alt=""></div>
+                        <div class="page-b5 ani"><img src="img/p0_05.png" alt=""></div>
+                        <div class="page-b6 ani"><img src="img/p0_06.png" alt=""></div>
+                        <div class="page-b7 ani"><img src="img/p0_07.png" alt=""></div>
+                        <div class="page-b8 ani"><img src="img/p0_08.png" alt=""></div>
+                        <div class="page-b9 ani"><img src="img/p0_09.png" alt=""></div>
+                        <div class="page-b10 ani"><img src="img/p0_10.png" alt=""></div>
+                        <div class="page-b11 ani"><img src="img/p0_11.png" alt=""></div>
+                        <div class="page-b12 ani"><img src="img/p0_12.png" alt=""></div>
+                        <div class="page-b13 ani"><img src="img/p0_13.png" alt=""></div>
+                        <div class="page-b14 ani"><img src="img/p0_14.png" alt=""></div>
+                        <div class="page-b15 ani"><img src="img/p0_15.png" alt=""></div>
+                        <div class="page-ball ani"><img src="img/p1_01.png" alt=""></div>
+                        <div class="page-glass ani"><img src="img/p1_02.png" alt=""></div>
+                        <div class="page-txt ani"><img src="img/bg02.jpg" alt=""></div>
+                    </div>
+                    <div class="p2 ani">
+                        <div class="page-ground ani"><img src="img/p3_06.png" alt=""></div>
+                        <div class="page-logo ani"><img src="img/p3_01.png" alt=""></div>
+                        <div class="page-title ani"><img src="img/p3_02.png" alt=""> </div>
+                        <div class="page-people ani"><img src="img/p3_04.png" alt=""></div>
+                        <div class="page-title2 ani"><img src="img/p3_03.png" alt=""> </div>
+                    </div>
+                </div>
+                <!-- page2 -->
+                <div class="swiper-slide page-img02" data-hash="slide2">
+                    <div class="p1 ani">
+                        <div class="page-txt ani"><img src="img/p4_01.png" alt=""></div>
+                        <div class="page-text2 ani"><img src="img/p6_02.png" alt=""></div>
+                        <div class="page-pic ani"><img src="img/p4_05.png" alt=""></div>
+                        <div class="page-text ani"><img src="img/p4_03.png" alt=""></div>
+                    </div>
+                    <div class="p2 ani">
+                        <div class="page-text ani"><img src="img/p6_01.png" alt=""></div>
+                        <div class="page-pic ani"><img src="img/p6_06.png" alt=""></div>
+                        <div class="page-text2 ani"><img src="img/p6_02.png" alt=""></div>
+                        <div class="page-txt ani"><img src="img/p4_01.png" alt=""></div>
+                    </div>
+                    <div class="p3 ani">
+                        <div class="page-bg3 ani"><img src="img/bg06.jpg" alt=""></div>
+                        <div class="page-text2 ani"><img src="img/p7_01.png" alt=""></div>
+                        <div class="page-text ani"><img src="img/p7_04.png" alt=""></div>
+                        <div class="page-txt ani"><img src="img/p4_01.png" alt=""></div>
+                    </div>
+                    <div class="p4 ani">
+                        <div class="page-txt ani"><img src="img/p8_04.png" alt=""></div>
+                        <div class="page-txt2 ani"><img src="img/p8_05.png" alt=""></div>
+                        <div class="page-txt3 ani"><img src="img/p8_03.jpg" alt=""></div>
+                    </div>
+                    <div class="p5 ani">
+                        <div class="page-title ani"><img src="img/p9_02.png" alt=""></div>
+                        <div class="page-pic ani"><img src="img/p9_03.png" alt=""></div>
+                        <div class="page-text ani"><img src="img/p9_04.png" alt=""></div>
+                    </div>
+                </div>
+                <!-- page3 -->
+                <div class="swiper-slide page-img03" data-hash="slide3">
+                    <div class="p1 ani">
+                        <div class="page-text ani"><img src="img/p10_01.png" alt=""></div>
+                        <div class="page-text2 ani"><img src="img/p10_02.jpg" alt=""></div>
+                        <div class="page-text3 ani"><img src="img/p10_03.jpg" alt=""></div>
+                    </div>
+                    <div class="p2 ani">
+                        <div class="page-block ani"></div>
+                        <div class="page-info-title ani"><img src="img/p11_03.png" alt=""></div>
+                        <div class="page-info ani"><img src="img/p11_02.png" alt=""></div>
+                        <div class="page-title ani"><img src="img/p3_02.png" alt=""></div>
+                    </div>
+                </div>
+                <!-- page4 -->
+                <div class="swiper-slide page-img04" data-hash="slide4">
+                    <div class="page-info-title ani"><img src="img/p12_02.png" alt=""></div>
+                    <div class="page-block ani"></div>
+                    <div class="page-info ani">
+                        <form action="#">
+                            <p>所属公司：<input type="text" name="f-company" style="width:70%"></p>
+                            <p class="pinfo">个人信息</p>
+                            <p>姓名：<input type="text" name="f-name" style="width:25%"> 花名：<input type="text" name="f-title" placeholder="(若无则填写无)"
+                                    style="width:40%"></p>
+                            <p>身份证信息：<input type="text" name="f-id" placeholder="(必填，以便为您购买保险)" style="width:66%"></p>
+                            <p>年龄：<input type="text" name="f-age" style="width:15%"> 性别：<input type="text" name="f-sex" style="width:15%">                                身高：<input type="text" name="f-height" style="width:15%">m</p>
+                            <p>体重：<input type="text" name="f-weight" style="width:15%">kg 单身：<input type="text" name="f-alone"
+                                    placeholder="是/否" style="width:15%"> 星座：<input type="text" name="f-c" style="width:15%"></p>
+                            <p>获奖情况：<input type="text" name="f-prize" placeholder="(若无则填写无)" style="width:71%"></p>
+                            <div class="oinfo"><img src="img/p12_01.png" alt=""></div>
+                            <div class="f-submit" id="f-submit"><img src="img/p12_03.png" alt=""></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="resize">
+                <img src="img/web-swipe-tip.png" width="100%">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-events.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/wxsdk.js"></script>
+<script type="text/javascript">
+    //这里是上传得到图片
+    function szImg(imgUrl) {
+        $('.uploadimg').css('background-image', 'url(' + imgUrl + ')');
+    }
+
+
+    //禁止窗口的默认滑动
+    document.ontouchmove = function (e) {
+        e.preventDefault();
+    }
+    var mySwiper = new Swiper('#swiper1', {
+        observer: true,
+        direction: 'vertical',
+        loop: false,
+        hashnav: true,
+        hashnavWatchState: true,
+        onSlideChangeEnd: function (swiper) {
+            console.log(swiper.activeIndex)
+            //	       alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+            $('#swiper1 .swiper-slide').eq(swiper.activeIndex).addClass('enter').siblings().removeClass(
+                'enter');
+            if (swiper.activeIndex == 3) {
+                $('.resize').hide();
+            } else {
+                $('.resize').show();
+            }
+        }
+    })
+
+
+    $('#swiper1 .swiper-slide').eq(0).addClass('enter');
+    // var i = 0;
+    // var a = 0;
+    // var b = 0;
+    // _gifT12 = setInterval(function () {
+    //     $('.lunbo2').find('img').eq(i).show().siblings('img').hide();
+    //     i++;
+    //     if (i == 3) {
+    //         i = 0;
+    //     }
+    // }, 1000)
+    // _gifT13 = setInterval(function () {
+    //     $('.lunbo3').find('img').eq(a).show().siblings('img').hide();
+    //     a++;
+    //     if (a == 2) {
+    //         a = 0;
+    //     }
+    // }, 1000)
+    // _gifT14 = setInterval(function () {
+    //     $('.lunbo1').find('img').eq(b).show().siblings('img').hide();
+    //     b++;
+    //     if (b == 2) {
+    //         b = 0;
+    //     }
+    // }, 1000)
+</script>
+<script>
+    $('body').height($(window).height());
+    //music
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio_player.play();
+    }, false);
+
+    $('#f-submit').on('click', function () {
+        var qCheck = true;
+        if ($('.page-img11 .page-info input[name="f-id"]').val() == '') {
+            tip('请输入内容！');
+            qCheck = false;
+        }
+        if (qCheck) {
+            // qAnser.push($('#answer-text').val());
+            tip('提交成功！')
+        }
+    });
+
+    function tip(txt) {
+        var qTip = '<div class="dialog-tip" id="qError">' + txt + '</div>';
+        if ($('.dialog-tip').length > 0) {
+            $('.dialog-tip').remove();
+            clearTimeout(t4);
+        }
+        $('body').append(qTip);
+        var t4 = setTimeout(function () {
+            $('#qError').remove();
+            clearTimeout(t4);
+        }, 1000);
+    }
+
+    function playClicked() {
+        if (audio_player.paused) {
+            audio_player.play();
+            $(".music").removeClass("off").addClass("on")
+        } else {
+            audio_player.pause();
+            $(".music").removeClass("on").addClass("off")
+        }
+    }
+    playClicked();
+
+
+    window.wxShare && window.wxShare({
+        title: "超越奇迹", //分享标题
+        desc: "星商汇杯黄龙万科中心3V3篮球挑战赛", //分享描述
+        linkurl: "http://wx.bocweb.cn/wangjiaqi/hlwk_h5/", //分享链接
+        img: "http://wx.bocweb.cn/wangjiaqi/hlwk_h5/img/share.jpg" //分享图片
+    });
+</script>
+
+</html>
