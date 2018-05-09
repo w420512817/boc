@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html> 
+  
+<head>
+	<meta charset="utf-8" />
+	<title>(测试)苏州桃花源微楼书</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body style="background-color:#eeeef0;">
+	<section class="load ">
+		<div class="loading">
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+			<p>Loading...<span id="load-progress">1</span>%</p>
+			<div class="copyright"><img src="img/icon/boc.png" alt="bocweb" width="60%"></div>
+		</div>
+	</section>
+
+	<div class="container">
+		<!-- <div class="music on" onclick="playClicked(this)"></div>
+		<audio src="music.mp3" id="audio_player" loop=""></audio> -->
+
+		<!-- page02 -->
+		<div class="page item1 hide" id="item1">
+			<div class="page-bg"><img src="img/bg2.jpg"></div>
+			<div class="page-map">
+				<img src="img/p6_1.png">
+				<div class="page-icon icon1"><img src="img/p2_1.png"></div>
+				<div class="page-icon icon2"><img src="img/p2_2.png"></div>
+				<div class="page-icon icon3"><img src="img/p2_3.png"></div>
+				<div class="page-icon icon4"><img src="img/p2_4.png"></div>
+				<div class="page-icon icon5"><img src="img/p2_5.png"></div>
+				<div class="page-icon icon6"><img src="img/p2_6.png"></div>
+				<div class="page-icon icon7"><img src="img/p2_7.png"></div>
+				<div class="page-icon icon8"><img src="img/p2_8.png"></div>
+			</div>
+			<div class="page-btn btn1"><img src="img/p2_9.png"></div>
+			<div class="page-btn btn2"><img src="img/p2_10.png"></div>
+			<div class="page-btn btn3"><img src="img/p2_11.png"></div>
+			<div class="page-btn btn4"><img src="img/p2_12.png"></div>
+			<div class="page-btn btn5"><img src="img/p2_13.png"></div>
+			<div class="page-btn btn6"><img src="img/p2_14.png"></div>
+			<div class="page-btn btn7"><img src="img/p2_15.png"></div>
+			<div class="page-btn btn8"><img src="img/p2_16.png"></div>
+		</div>
+	</div>
+	<!-- 提示 -->
+	<div class="orienLayer">
+		<div class="icons"></div>
+		<div class="txt">横屏效果最佳</div>
+	</div>
+	<!-- 分享 -->
+	<div class="share-box hide"><img src="img/arrow.png" ></div>
+
+	<!-- <script src="js/zepto.min.js"></script> -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxsdk.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		loading(loadRES, function () {
+			loadPage('item1');
+		});
+	</script>
+	<script>
+		(function () {
+			window.wxShare && window.wxShare({
+				title: "苏州桃花源微楼书", //分享标题
+				desc: "", //分享描述
+				linkurl: "http://wx.bocweb.cn/wangjiaqi/wls_h5_0504/", //分享链接
+				img: "http://wx.bocweb.cn/wangjiaqi/wls_h5_0504/img/share.jpg" //分享图片
+			});
+		})();
+	</script>
+</body>
+
+</html>
